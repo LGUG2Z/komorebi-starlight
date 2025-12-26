@@ -20,4 +20,4 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-src/contents/docs/reference/komorebic*.mdx
+src/content/docs/reference/komorebic*.mdx
