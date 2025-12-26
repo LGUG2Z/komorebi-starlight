@@ -1,0 +1,17 @@
+```
+Identify an application that sends EVENT_OBJECT_NAMECHANGE on launch
+
+Usage: identify-object-name-change-application <IDENTIFIER> <ID>
+
+Arguments:
+  <IDENTIFIER>
+          [possible values: exe, class, title, path]
+
+  <ID>
+          Identifier as a string
+
+Options:
+  -h, --help
+          Print help
+
+```

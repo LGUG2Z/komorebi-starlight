@@ -1,0 +1,3823 @@
+---
+title: "komorebi.bar.json (macOS)"
+description: "komorebi-bar for Mac configuration schema reference"
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+## Configuration
+
+### center_widgets {#center_widgets}
+
+<Badge text="optional" variant="note" /> `array` [`WidgetConfig`](#widgetconfig)
+
+Center widgets (ordered left-to-right)
+
+
+
+
+---
+### font_family {#font_family}
+
+<Badge text="optional" variant="note" /> `string`
+
+Font family
+
+
+
+
+---
+### font_size {#font_size}
+
+<Badge text="optional" variant="note" /> `number`
+
+Font size (default: 12.5)
+
+
+
+
+- **Format:** `float`
+
+
+---
+### frame {#frame}
+
+<Badge text="optional" variant="note" /> [`FrameConfig`](#frameconfig)
+
+Frame options (see: https://docs.rs/egui/latest/egui/containers/frame/struct.Frame.html)
+
+
+
+
+---
+### grouping {#grouping}
+
+<Badge text="optional" variant="note" /> [`Grouping`](#grouping)
+
+Visual grouping for widgets
+
+
+
+
+---
+### height {#height}
+
+<Badge text="optional" variant="note" /> `number`
+
+Bar height (default: 50)
+
+
+
+
+- **Format:** `float`
+
+
+---
+### icon_scale {#icon_scale}
+
+<Badge text="optional" variant="note" /> `number`
+
+Scale of the icons relative to the font_size [[1.0-2.0]]. (default: 1.4)
+
+
+
+
+- **Format:** `float`
+
+
+---
+### left_widgets {#left_widgets}
+
+<Badge text="required" variant="success" /> `array` [`WidgetConfig`](#widgetconfig)
+
+Options for mouse interaction on the bar
+Left side widgets (ordered left-to-right)
+
+
+
+
+---
+### margin {#margin}
+
+<Badge text="optional" variant="note" /> [`SpacingKind`](#spacingkind)
+
+Bar margin. Use one value for all sides or use a grouped margin for horizontal and/or
+vertical definition which can each take a single value for a symmetric margin or two
+values for each side, i.e.:
+"margin": \{
+    "horizontal": 10
+\}
+
+or:
+"margin": \{
+    "vertical": [top, bottom]
+\}
+
+You can also set individual margin on each side like this:
+"margin": \{
+    "top": 10,
+    "bottom": 10,
+    "left": 10,
+    "right": 10,
+\}
+
+By default, margin is set to 0 on all sides.
+
+
+
+
+---
+### max_label_width {#max_label_width}
+
+<Badge text="optional" variant="note" /> `number`
+
+Max label width before text truncation (default: 400.0)
+
+
+
+
+- **Format:** `float`
+
+
+---
+### monitor {#monitor}
+
+<Badge text="required" variant="success" /> [`MonitorConfigOrIndex`](#monitorconfigorindex)
+
+The monitor index or the full monitor options
+
+
+
+
+---
+### padding {#padding}
+
+<Badge text="optional" variant="note" /> [`SpacingKind`](#spacingkind)
+
+Bar padding. Use one value for all sides or use a grouped padding for horizontal and/or
+vertical definition which can each take a single value for a symmetric padding or two
+values for each side, i.e.:
+"padding": \{
+    "horizontal": 10
+\}
+
+or:
+"padding": \{
+    "horizontal": [left, right]
+\}
+
+You can also set individual padding on each side like this:
+"padding": \{
+    "top": 10,
+    "bottom": 10,
+    "left": 10,
+    "right": 10,
+\}
+
+By default, padding is set to 10 on all sides.
+
+
+
+
+---
+### position {#position}
+
+<Badge text="optional" variant="note" /> [`PositionConfig`](#positionconfig)
+
+Bar positioning options
+
+
+
+
+---
+### right_widgets {#right_widgets}
+
+<Badge text="required" variant="success" /> `array` [`WidgetConfig`](#widgetconfig)
+
+Right side widgets (ordered left-to-right)
+
+
+
+
+---
+### theme {#theme}
+
+<Badge text="optional" variant="note" /> [`KomobarTheme`](#komobartheme)
+
+Theme
+
+
+
+
+---
+### transparency_alpha {#transparency_alpha}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Alpha value for the color transparency [[0-255]] (default: 200)
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+
+---
+### widget_spacing {#widget_spacing}
+
+<Badge text="optional" variant="note" /> `number`
+
+Spacing between widgets (default: 10.0)
+
+
+
+
+- **Format:** `float`
+
+
+---
+
+
+
+## Type Definitions
+
+### AppConfig {#appconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (6)</summary>
+
+#### command {#appconfig-command}
+
+<Badge text="required" variant="success" /> `string`
+
+Command to execute (e.g. path to the application or shell command).
+
+
+
+#### display {#appconfig-display}
+
+<Badge text="optional" variant="note" /> [`ApplicationsDisplayFormat`](#applicationsdisplayformat)
+
+Display format for this application button (optional). Overrides global format if set.
+
+
+
+#### enable {#appconfig-enable}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Whether to enable this application button (optional).
+Inherits from the global Applications setting if omitted.
+
+
+
+#### icon {#appconfig-icon}
+
+<Badge text="optional" variant="note" /> `string`
+
+Optional icon: a path to an image or a text-based glyph (e.g., from Nerd Fonts).
+If not set, and if the command is a path to an executable, an icon might be extracted from it.
+Note: glyphs require a compatible font_family.
+
+
+
+#### name {#appconfig-name}
+
+<Badge text="required" variant="success" /> `string`
+
+Display name of the application.
+
+
+
+#### show_command_on_hover {#appconfig-show_command_on_hover}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Whether to show the launch command on hover (optional).
+Inherits from the global Applications setting if omitted.
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Applications.items[]`](#applicationsconfig-items)
+- [`.left_widgets[].Applications.items[]`](#applicationsconfig-items)
+- [`.right_widgets[].Applications.items[]`](#applicationsconfig-items)
+
+
+**Referenced by:**
+- [`ApplicationsConfig`](#applicationsconfig)
+
+
+
+---
+
+
+### ApplicationsConfig {#applicationsconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### display {#applicationsconfig-display}
+
+<Badge text="optional" variant="note" /> [`ApplicationsDisplayFormat`](#applicationsdisplayformat)
+
+Default display format for all applications (optional).
+Could be overridden per application. Defaults to Icon.
+
+
+
+#### enable {#applicationsconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enables or disables the applications widget.
+
+
+
+#### items {#applicationsconfig-items}
+
+<Badge text="required" variant="success" /> `array` [`AppConfig`](#appconfig)
+
+List of configured applications to display.
+
+
+
+#### show_command_on_hover {#applicationsconfig-show_command_on_hover}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Whether to show the launch command on hover (optional).
+Could be overridden per application. Defaults to false if not set.
+
+
+
+#### spacing {#applicationsconfig-spacing}
+
+<Badge text="optional" variant="note" /> `number`
+
+Horizontal spacing between application buttons.
+
+
+
+
+- **Format:** `float`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Applications`](#widgetconfig-oneof[0]-applications)
+- [`.left_widgets[].Applications`](#widgetconfig-oneof[0]-applications)
+- [`.right_widgets[].Applications`](#widgetconfig-oneof[0]-applications)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### ApplicationsDisplayFormat {#applicationsdisplayformat}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - Show only the application icon.
+
+
+**Value:** `"Icon"`
+
+---
+`string` - Show only the application name as text.
+
+
+**Value:** `"Text"`
+
+---
+`string` - Show both the application icon and name.
+
+
+**Value:** `"IconAndText"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Applications.display`](#applicationsconfig-display)
+- [`.center_widgets[].Applications.items[].display`](#appconfig-display)
+- [`.left_widgets[].Applications.display`](#applicationsconfig-display)
+- [`.left_widgets[].Applications.items[].display`](#appconfig-display)
+- [`.right_widgets[].Applications.display`](#applicationsconfig-display)
+- [`.right_widgets[].Applications.items[].display`](#appconfig-display)
+
+
+**Referenced by:**
+- [`AppConfig`](#appconfig)
+- [`ApplicationsConfig`](#applicationsconfig)
+
+
+
+---
+
+
+### Base16 {#base16}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (269)</summary>
+
+- `"3024"`
+- `"Apathy"`
+- `"Apprentice"`
+- `"Ashes"`
+- `"AtelierCaveLight"`
+- `"AtelierCave"`
+- `"AtelierDuneLight"`
+- `"AtelierDune"`
+- `"AtelierEstuaryLight"`
+- `"AtelierEstuary"`
+- `"AtelierForestLight"`
+- `"AtelierForest"`
+- `"AtelierHeathLight"`
+- `"AtelierHeath"`
+- `"AtelierLakesideLight"`
+- `"AtelierLakeside"`
+- `"AtelierPlateauLight"`
+- `"AtelierPlateau"`
+- `"AtelierSavannaLight"`
+- `"AtelierSavanna"`
+- `"AtelierSeasideLight"`
+- `"AtelierSeaside"`
+- `"AtelierSulphurpoolLight"`
+- `"AtelierSulphurpool"`
+- `"Atlas"`
+- `"AyuDark"`
+- `"AyuLight"`
+- `"AyuMirage"`
+- `"Aztec"`
+- `"Bespin"`
+- `"BlackMetalBathory"`
+- `"BlackMetalBurzum"`
+- `"BlackMetalDarkFuneral"`
+- `"BlackMetalGorgoroth"`
+- `"BlackMetalImmortal"`
+- `"BlackMetalKhold"`
+- `"BlackMetalMarduk"`
+- `"BlackMetalMayhem"`
+- `"BlackMetalNile"`
+- `"BlackMetalVenom"`
+- `"BlackMetal"`
+- `"Blueforest"`
+- `"Blueish"`
+- `"Brewer"`
+- `"Bright"`
+- `"Brogrammer"`
+- `"BrushtreesDark"`
+- `"Brushtrees"`
+- `"Caroline"`
+- `"CatppuccinFrappe"`
+- `"CatppuccinLatte"`
+- `"CatppuccinMacchiato"`
+- `"CatppuccinMocha"`
+- `"Chalk"`
+- `"Circus"`
+- `"ClassicDark"`
+- `"ClassicLight"`
+- `"Codeschool"`
+- `"Colors"`
+- `"Cupcake"`
+- `"Cupertino"`
+- `"DaOneBlack"`
+- `"DaOneGray"`
+- `"DaOneOcean"`
+- `"DaOnePaper"`
+- `"DaOneSea"`
+- `"DaOneWhite"`
+- `"DanqingLight"`
+- `"Danqing"`
+- `"Darcula"`
+- `"Darkmoss"`
+- `"Darktooth"`
+- `"Darkviolet"`
+- `"Decaf"`
+- `"DefaultDark"`
+- `"DefaultLight"`
+- `"Dirtysea"`
+- `"Dracula"`
+- `"EdgeDark"`
+- `"EdgeLight"`
+- `"Eighties"`
+- `"EmbersLight"`
+- `"Embers"`
+- `"Emil"`
+- `"EquilibriumDark"`
+- `"EquilibriumGrayDark"`
+- `"EquilibriumGrayLight"`
+- `"EquilibriumLight"`
+- `"Eris"`
+- `"Espresso"`
+- `"EvaDim"`
+- `"Eva"`
+- `"EvenokDark"`
+- `"EverforestDarkHard"`
+- `"Everforest"`
+- `"Flat"`
+- `"Framer"`
+- `"FruitSoda"`
+- `"Gigavolt"`
+- `"Github"`
+- `"GoogleDark"`
+- `"GoogleLight"`
+- `"Gotham"`
+- `"GrayscaleDark"`
+- `"GrayscaleLight"`
+- `"Greenscreen"`
+- `"Gruber"`
+- `"GruvboxDarkHard"`
+- `"GruvboxDarkMedium"`
+- `"GruvboxDarkPale"`
+- `"GruvboxDarkSoft"`
+- `"GruvboxLightHard"`
+- `"GruvboxLightMedium"`
+- `"GruvboxLightSoft"`
+- `"GruvboxMaterialDarkHard"`
+- `"GruvboxMaterialDarkMedium"`
+- `"GruvboxMaterialDarkSoft"`
+- `"GruvboxMaterialLightHard"`
+- `"GruvboxMaterialLightMedium"`
+- `"GruvboxMaterialLightSoft"`
+- `"Hardcore"`
+- `"Harmonic16Dark"`
+- `"Harmonic16Light"`
+- `"HeetchLight"`
+- `"Heetch"`
+- `"Helios"`
+- `"Hopscotch"`
+- `"HorizonDark"`
+- `"HorizonLight"`
+- `"HorizonTerminalDark"`
+- `"HorizonTerminalLight"`
+- `"HumanoidDark"`
+- `"HumanoidLight"`
+- `"IaDark"`
+- `"IaLight"`
+- `"Icy"`
+- `"Irblack"`
+- `"Isotope"`
+- `"Jabuti"`
+- `"Kanagawa"`
+- `"Katy"`
+- `"Kimber"`
+- `"Lime"`
+- `"Macintosh"`
+- `"Marrakesh"`
+- `"Materia"`
+- `"MaterialDarker"`
+- `"MaterialLighter"`
+- `"MaterialPalenight"`
+- `"MaterialVivid"`
+- `"Material"`
+- `"MeasuredDark"`
+- `"MeasuredLight"`
+- `"MellowPurple"`
+- `"MexicoLight"`
+- `"Mocha"`
+- `"Monokai"`
+- `"Moonlight"`
+- `"Mountain"`
+- `"Nebula"`
+- `"NordLight"`
+- `"Nord"`
+- `"Nova"`
+- `"Ocean"`
+- `"Oceanicnext"`
+- `"OneLight"`
+- `"OnedarkDark"`
+- `"Onedark"`
+- `"OutrunDark"`
+- `"OxocarbonDark"`
+- `"OxocarbonLight"`
+- `"Pandora"`
+- `"PapercolorDark"`
+- `"PapercolorLight"`
+- `"Paraiso"`
+- `"Pasque"`
+- `"Phd"`
+- `"Pico"`
+- `"Pinky"`
+- `"Pop"`
+- `"Porple"`
+- `"PreciousDarkEleven"`
+- `"PreciousDarkFifteen"`
+- `"PreciousLightWarm"`
+- `"PreciousLightWhite"`
+- `"PrimerDarkDimmed"`
+- `"PrimerDark"`
+- `"PrimerLight"`
+- `"Purpledream"`
+- `"Qualia"`
+- `"Railscasts"`
+- `"Rebecca"`
+- `"RosePineDawn"`
+- `"RosePineMoon"`
+- `"RosePine"`
+- `"Saga"`
+- `"Sagelight"`
+- `"Sakura"`
+- `"Sandcastle"`
+- `"SelenizedBlack"`
+- `"SelenizedDark"`
+- `"SelenizedLight"`
+- `"SelenizedWhite"`
+- `"Seti"`
+- `"ShadesOfPurple"`
+- `"ShadesmearDark"`
+- `"ShadesmearLight"`
+- `"Shapeshifter"`
+- `"SilkDark"`
+- `"SilkLight"`
+- `"Snazzy"`
+- `"SolarflareLight"`
+- `"Solarflare"`
+- `"SolarizedDark"`
+- `"SolarizedLight"`
+- `"Spaceduck"`
+- `"Spacemacs"`
+- `"Sparky"`
+- `"StandardizedDark"`
+- `"StandardizedLight"`
+- `"Stella"`
+- `"StillAlive"`
+- `"Summercamp"`
+- `"SummerfruitDark"`
+- `"SummerfruitLight"`
+- `"SynthMidnightDark"`
+- `"SynthMidnightLight"`
+- `"Tango"`
+- `"Tarot"`
+- `"Tender"`
+- `"TerracottaDark"`
+- `"Terracotta"`
+- `"TokyoCityDark"`
+- `"TokyoCityLight"`
+- `"TokyoCityTerminalDark"`
+- `"TokyoCityTerminalLight"`
+- `"TokyoNightDark"`
+- `"TokyoNightLight"`
+- `"TokyoNightMoon"`
+- `"TokyoNightStorm"`
+- `"TokyoNightTerminalDark"`
+- `"TokyoNightTerminalLight"`
+- `"TokyoNightTerminalStorm"`
+- `"TokyodarkTerminal"`
+- `"Tokyodark"`
+- `"TomorrowNightEighties"`
+- `"TomorrowNight"`
+- `"Tomorrow"`
+- `"Tube"`
+- `"Twilight"`
+- `"UnikittyDark"`
+- `"UnikittyLight"`
+- `"UnikittyReversible"`
+- `"Uwunicorn"`
+- `"Vesper"`
+- `"Vice"`
+- `"Vulcan"`
+- `"Windows10Light"`
+- `"Windows10"`
+- `"Windows95Light"`
+- `"Windows95"`
+- `"WindowsHighcontrastLight"`
+- `"WindowsHighcontrast"`
+- `"WindowsNtLight"`
+- `"WindowsNt"`
+- `"Woodland"`
+- `"XcodeDusk"`
+- `"Zenbones"`
+- `"Zenburn"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.name`](#komobartheme-oneof[1]-name)
+
+
+**Referenced by:**
+- [`KomobarTheme`](#komobartheme)
+
+
+
+---
+
+
+### Base16ColourPalette {#base16colourpalette}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (16)</summary>
+
+#### base_00 {#base16colourpalette-base_00}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_01 {#base16colourpalette-base_01}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_02 {#base16colourpalette-base_02}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_03 {#base16colourpalette-base_03}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_04 {#base16colourpalette-base_04}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_05 {#base16colourpalette-base_05}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_06 {#base16colourpalette-base_06}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_07 {#base16colourpalette-base_07}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_08 {#base16colourpalette-base_08}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_09 {#base16colourpalette-base_09}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0a {#base16colourpalette-base_0a}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0b {#base16colourpalette-base_0b}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0c {#base16colourpalette-base_0c}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0d {#base16colourpalette-base_0d}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0e {#base16colourpalette-base_0e}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0f {#base16colourpalette-base_0f}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.colours`](#komobartheme-oneof[2]-colours)
+
+
+**Referenced by:**
+- [`KomobarTheme`](#komobartheme)
+
+
+
+---
+
+
+### Base16Value {#base16value}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (16)</summary>
+
+- `"Base00"`
+- `"Base01"`
+- `"Base02"`
+- `"Base03"`
+- `"Base04"`
+- `"Base05"`
+- `"Base06"`
+- `"Base07"`
+- `"Base08"`
+- `"Base09"`
+- `"Base0A"`
+- `"Base0B"`
+- `"Base0C"`
+- `"Base0D"`
+- `"Base0E"`
+- `"Base0F"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.accent`](#komobartheme-oneof[1]-accent)
+- [`.theme.accent`](#komobartheme-oneof[2]-accent)
+- [`.theme.auto_select_fill`](#komobartheme-oneof[1]-auto_select_fill)
+- [`.theme.auto_select_fill`](#komobartheme-oneof[2]-auto_select_fill)
+- [`.theme.auto_select_text`](#komobartheme-oneof[1]-auto_select_text)
+- [`.theme.auto_select_text`](#komobartheme-oneof[2]-auto_select_text)
+
+
+**Referenced by:**
+- [`KomobarTheme`](#komobartheme)
+
+
+
+---
+
+
+### BatteryConfig {#batteryconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### auto_select_under {#batteryconfig-auto_select_under}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select when the current percentage is under this value [[1-100]]
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+#### data_refresh_interval {#batteryconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 10 seconds)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#batteryconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Battery widget
+
+
+
+#### hide_on_full_charge {#batteryconfig-hide_on_full_charge}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Hide the widget if the battery is at full charge
+
+
+
+#### label_prefix {#batteryconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Battery`](#widgetconfig-oneof[1]-battery)
+- [`.left_widgets[].Battery`](#widgetconfig-oneof[1]-battery)
+- [`.right_widgets[].Battery`](#widgetconfig-oneof[1]-battery)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### Catppuccin {#catppuccin}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+- `"Frappe"`
+- `"Latte"`
+- `"Macchiato"`
+- `"Mocha"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.name`](#komobartheme-oneof[0]-name)
+
+
+**Referenced by:**
+- [`KomobarTheme`](#komobartheme)
+
+
+
+---
+
+
+### CatppuccinValue {#catppuccinvalue}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (26)</summary>
+
+- `"Rosewater"`
+- `"Flamingo"`
+- `"Pink"`
+- `"Mauve"`
+- `"Red"`
+- `"Maroon"`
+- `"Peach"`
+- `"Yellow"`
+- `"Green"`
+- `"Teal"`
+- `"Sky"`
+- `"Sapphire"`
+- `"Blue"`
+- `"Lavender"`
+- `"Text"`
+- `"Subtext1"`
+- `"Subtext0"`
+- `"Overlay2"`
+- `"Overlay1"`
+- `"Overlay0"`
+- `"Surface2"`
+- `"Surface1"`
+- `"Surface0"`
+- `"Base"`
+- `"Mantle"`
+- `"Crust"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.accent`](#komobartheme-oneof[0]-accent)
+- [`.theme.auto_select_fill`](#komobartheme-oneof[0]-auto_select_fill)
+- [`.theme.auto_select_text`](#komobartheme-oneof[0]-auto_select_text)
+
+
+**Referenced by:**
+- [`KomobarTheme`](#komobartheme)
+
+
+
+---
+
+
+### Colour {#colour}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+[`Rgb`](#rgb) - Colour represented as RGB
+
+
+
+
+---
+[`Hex`](#hex) - Colour represented as Hex
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.colours.base_00`](#base16colourpalette-base_00)
+- [`.theme.colours.base_01`](#base16colourpalette-base_01)
+- [`.theme.colours.base_02`](#base16colourpalette-base_02)
+- [`.theme.colours.base_03`](#base16colourpalette-base_03)
+- [`.theme.colours.base_04`](#base16colourpalette-base_04)
+- [`.theme.colours.base_05`](#base16colourpalette-base_05)
+- [`.theme.colours.base_06`](#base16colourpalette-base_06)
+- [`.theme.colours.base_07`](#base16colourpalette-base_07)
+- [`.theme.colours.base_08`](#base16colourpalette-base_08)
+- [`.theme.colours.base_09`](#base16colourpalette-base_09)
+- [`.theme.colours.base_0a`](#base16colourpalette-base_0a)
+- [`.theme.colours.base_0b`](#base16colourpalette-base_0b)
+- [`.theme.colours.base_0c`](#base16colourpalette-base_0c)
+- [`.theme.colours.base_0d`](#base16colourpalette-base_0d)
+- [`.theme.colours.base_0e`](#base16colourpalette-base_0e)
+- [`.theme.colours.base_0f`](#base16colourpalette-base_0f)
+
+
+**Referenced by:**
+- [`Base16ColourPalette`](#base16colourpalette)
+
+
+
+---
+
+
+### CpuConfig {#cpuconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### auto_select_over {#cpuconfig-auto_select_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select when the current percentage is over this value [[1-100]]
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+#### data_refresh_interval {#cpuconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 10 seconds)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#cpuconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Cpu widget
+
+
+
+#### label_prefix {#cpuconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Cpu`](#widgetconfig-oneof[2]-cpu)
+- [`.left_widgets[].Cpu`](#widgetconfig-oneof[2]-cpu)
+- [`.right_widgets[].Cpu`](#widgetconfig-oneof[2]-cpu)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### CustomModifiers {#custommodifiers}
+
+`object`
+
+Custom format with additive modifiers for integer format specifiers
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### format {#custommodifiers-format}
+
+<Badge text="required" variant="success" /> `string`
+
+Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
+
+
+
+#### modifiers {#custommodifiers-modifiers}
+
+<Badge text="required" variant="success" /> `object`
+
+Additive modifiers for integer format specifiers (e.g. \{ "%U": 1 \} to increment the zero-indexed week number by 1)
+
+
+<details>
+<summary>Additional Properties</summary>
+
+`integer`
+
+
+
+- **Format:** `int32`
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Date.format.CustomModifiers`](#dateformat-oneof[5]-custommodifiers)
+- [`.left_widgets[].Date.format.CustomModifiers`](#dateformat-oneof[5]-custommodifiers)
+- [`.right_widgets[].Date.format.CustomModifiers`](#dateformat-oneof[5]-custommodifiers)
+
+
+**Referenced by:**
+- [`DateFormat`](#dateformat)
+
+
+
+---
+
+
+### DateConfig {#dateconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### enable {#dateconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Date widget
+
+
+
+#### format {#dateconfig-format}
+
+<Badge text="required" variant="success" /> [`DateFormat`](#dateformat)
+
+Set the Date format
+
+
+
+#### label_prefix {#dateconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+#### timezone {#dateconfig-timezone}
+
+<Badge text="optional" variant="note" /> `string`
+
+TimeZone (https://docs.rs/chrono-tz/latest/chrono_tz/enum.Tz.html)
+Use a custom format to display additional information, i.e.:
+\{
+    "Date": \{
+        "enable": true,
+        "format": \{ "Custom": "%D %Z (Tokyo)" \},
+        "timezone": "Asia/Tokyo"
+     \}
+\}
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Date`](#widgetconfig-oneof[3]-date)
+- [`.left_widgets[].Date`](#widgetconfig-oneof[3]-date)
+- [`.right_widgets[].Date`](#widgetconfig-oneof[3]-date)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### DateFormat {#dateformat}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (6)</summary>
+
+
+---
+`string` - Month/Date/Year format (09/08/24)
+
+
+**Value:** `"MonthDateYear"`
+
+---
+`string` - Year-Month-Date format (2024-09-08)
+
+
+**Value:** `"YearMonthDate"`
+
+---
+`string` - Date-Month-Year format (8-Sep-2024)
+
+
+**Value:** `"DateMonthYear"`
+
+---
+`string` - Day Date Month Year format (8 September 2024)
+
+
+**Value:** `"DayDateMonthYear"`
+
+---
+`object` - Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Custom {#dateformat-oneof[4]-custom}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+
+
+</details>
+
+---
+`object` - Custom format with modifiers
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### CustomModifiers {#dateformat-oneof[5]-custommodifiers}
+
+<Badge text="required" variant="success" /> [`CustomModifiers`](#custommodifiers)
+
+
+
+
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Date.format`](#dateconfig-format)
+- [`.left_widgets[].Date.format`](#dateconfig-format)
+- [`.right_widgets[].Date.format`](#dateconfig-format)
+
+
+**Referenced by:**
+- [`DateConfig`](#dateconfig)
+
+
+
+---
+
+
+### DefaultLayout {#defaultlayout}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (9)</summary>
+
+- `"BSP"`
+- `"Columns"`
+- `"Rows"`
+- `"VerticalStack"`
+- `"HorizontalStack"`
+- `"UltrawideVerticalStack"`
+- `"Grid"`
+- `"RightMainVerticalStack"`
+- `"Scrolling"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.layout.options[]`](#komorebilayout)
+- [`.left_widgets[].Komorebi.layout.options[]`](#komorebilayout)
+- [`.right_widgets[].Komorebi.layout.options[]`](#komorebilayout)
+
+
+**Referenced by:**
+- [`KomorebiLayout`](#komorebilayout)
+
+
+
+---
+
+
+### DisplayFormat {#displayformat}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (5)</summary>
+
+
+---
+`string` - Show only icon
+
+
+**Value:** `"Icon"`
+
+---
+`string` - Show only text
+
+
+**Value:** `"Text"`
+
+---
+`string` - Show an icon and text for the selected element, and text on the rest
+
+
+**Value:** `"TextAndIconOnSelected"`
+
+---
+`string` - Show both icon and text
+
+
+**Value:** `"IconAndText"`
+
+---
+`string` - Show an icon and text for the selected element, and icons on the rest
+
+
+**Value:** `"IconAndTextOnSelected"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.focused_container.display`](#komorebifocusedcontainerconfig-display)
+- [`.center_widgets[].Komorebi.layout.display`](#komorebilayoutconfig-display)
+- [`.center_widgets[].Komorebi.locked_container.display`](#komorebilockedcontainerconfig-display)
+- [`.center_widgets[].Komorebi.workspace_layer.display`](#komorebiworkspacelayerconfig-display)
+- [`.center_widgets[].Komorebi.workspaces.display`](#workspacesdisplayformat)
+- [`.left_widgets[].Komorebi.focused_container.display`](#komorebifocusedcontainerconfig-display)
+- [`.left_widgets[].Komorebi.layout.display`](#komorebilayoutconfig-display)
+- [`.left_widgets[].Komorebi.locked_container.display`](#komorebilockedcontainerconfig-display)
+- [`.left_widgets[].Komorebi.workspace_layer.display`](#komorebiworkspacelayerconfig-display)
+- [`.left_widgets[].Komorebi.workspaces.display`](#workspacesdisplayformat)
+- [`.right_widgets[].Komorebi.focused_container.display`](#komorebifocusedcontainerconfig-display)
+- [`.right_widgets[].Komorebi.layout.display`](#komorebilayoutconfig-display)
+- [`.right_widgets[].Komorebi.locked_container.display`](#komorebilockedcontainerconfig-display)
+- [`.right_widgets[].Komorebi.workspace_layer.display`](#komorebiworkspacelayerconfig-display)
+- [`.right_widgets[].Komorebi.workspaces.display`](#workspacesdisplayformat)
+
+
+**Referenced by:**
+- [`KomorebiFocusedContainerConfig`](#komorebifocusedcontainerconfig)
+- [`KomorebiLayoutConfig`](#komorebilayoutconfig)
+- [`KomorebiLockedContainerConfig`](#komorebilockedcontainerconfig)
+- [`KomorebiWorkspaceLayerConfig`](#komorebiworkspacelayerconfig)
+- [`WorkspacesDisplayFormat`](#workspacesdisplayformat)
+
+
+
+---
+
+
+### FrameConfig {#frameconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### inner_margin {#frameconfig-inner_margin}
+
+<Badge text="required" variant="success" /> [`Position`](#position)
+
+Margin inside the painted frame
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.frame`](#frame)
+
+
+
+
+---
+
+
+### GroupedSpacingConfig {#groupedspacingconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### horizontal {#groupedspacingconfig-horizontal}
+
+<Badge text="optional" variant="note" /> [`GroupedSpacingOptions`](#groupedspacingoptions)
+
+
+
+
+#### vertical {#groupedspacingconfig-vertical}
+
+<Badge text="optional" variant="note" /> [`GroupedSpacingOptions`](#groupedspacingoptions)
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.margin`](#spacingkind)
+- [`.padding`](#spacingkind)
+
+
+**Referenced by:**
+- [`SpacingKind`](#spacingkind)
+
+
+
+---
+
+
+### GroupedSpacingOptions {#groupedspacingoptions}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`number`
+
+
+
+- **Format:** `float`
+
+
+---
+`array` `[float; 2]`
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.margin.horizontal`](#groupedspacingconfig-horizontal)
+- [`.margin.vertical`](#groupedspacingconfig-vertical)
+- [`.padding.horizontal`](#groupedspacingconfig-horizontal)
+- [`.padding.vertical`](#groupedspacingconfig-vertical)
+
+
+**Referenced by:**
+- [`GroupedSpacingConfig`](#groupedspacingconfig)
+
+
+
+---
+
+
+### Grouping {#grouping}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+
+---
+`object` - No grouping is applied
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### kind {#grouping-oneof[0]-kind}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"None"`
+
+</details>
+
+---
+[`GroupingConfig`](#groupingconfig) - Widgets are grouped as a whole
+
+
+
+
+---
+[`GroupingConfig`](#groupingconfig) - Widgets are grouped by alignment
+
+
+
+
+---
+[`GroupingConfig`](#groupingconfig) - Widgets are grouped individually
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.grouping`](#grouping)
+
+
+
+
+---
+
+
+### GroupingConfig {#groupingconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### rounding {#groupingconfig-rounding}
+
+<Badge text="optional" variant="note" /> [`RoundingConfig`](#roundingconfig)
+
+Rounding values for the 4 corners. Can be a single or 4 values.
+
+
+
+#### style {#groupingconfig-style}
+
+<Badge text="optional" variant="note" /> [`GroupingStyle`](#groupingstyle)
+
+Styles for the grouping
+
+
+
+#### transparency_alpha {#groupingconfig-transparency_alpha}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Alpha value for the color transparency [[0-255]] (default: 200)
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.grouping`](#grouping)
+- [`.grouping`](#grouping)
+- [`.grouping`](#grouping)
+
+
+**Referenced by:**
+- [`Grouping`](#grouping)
+
+
+
+---
+
+
+### GroupingStyle {#groupingstyle}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (7)</summary>
+
+
+---
+`string`
+
+<details>
+<summary>Enum variants (1)</summary>
+
+- `"Default"`
+
+</details>
+
+---
+`string` - A shadow is added under the default group. (blur: 4, offset: x-1 y-1, spread: 3)
+
+
+**Value:** `"DefaultWithShadowB4O1S3"`
+
+---
+`string` - A shadow is added under the default group. (blur: 4, offset: x-0 y-0, spread: 3)
+
+
+**Value:** `"DefaultWithShadowB4O0S3"`
+
+---
+`string` - A shadow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 3)
+
+
+**Value:** `"DefaultWithShadowB0O1S3"`
+
+---
+`string` - A glow is added under the default group. (blur: 3, offset: x-1 y-1, spread: 2)
+
+
+**Value:** `"DefaultWithGlowB3O1S2"`
+
+---
+`string` - A glow is added under the default group. (blur: 3, offset: x-0 y-0, spread: 2)
+
+
+**Value:** `"DefaultWithGlowB3O0S2"`
+
+---
+`string` - A glow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 2)
+
+
+**Value:** `"DefaultWithGlowB0O1S2"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.grouping.style`](#groupingconfig-style)
+- [`.grouping.style`](#groupingconfig-style)
+- [`.grouping.style`](#groupingconfig-style)
+
+
+**Referenced by:**
+- [`GroupingConfig`](#groupingconfig)
+
+
+
+---
+
+
+### Hex {#hex}
+
+`string`
+
+
+
+
+
+- **Format:** `color-hex`
+
+
+#### Usages
+
+**Configuration:**
+- [`.theme.colours.base_00`](#colour)
+- [`.theme.colours.base_01`](#colour)
+- [`.theme.colours.base_02`](#colour)
+- [`.theme.colours.base_03`](#colour)
+- [`.theme.colours.base_04`](#colour)
+- [`.theme.colours.base_05`](#colour)
+- [`.theme.colours.base_06`](#colour)
+- [`.theme.colours.base_07`](#colour)
+- [`.theme.colours.base_08`](#colour)
+- [`.theme.colours.base_09`](#colour)
+- [`.theme.colours.base_0a`](#colour)
+- [`.theme.colours.base_0b`](#colour)
+- [`.theme.colours.base_0c`](#colour)
+- [`.theme.colours.base_0d`](#colour)
+- [`.theme.colours.base_0e`](#colour)
+- [`.theme.colours.base_0f`](#colour)
+
+
+**Referenced by:**
+- [`Colour`](#colour)
+
+
+
+---
+
+
+### IndividualSpacingConfig {#individualspacingconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### bottom {#individualspacingconfig-bottom}
+
+<Badge text="required" variant="success" /> `number`
+
+
+
+
+
+- **Format:** `float`
+
+#### left {#individualspacingconfig-left}
+
+<Badge text="required" variant="success" /> `number`
+
+
+
+
+
+- **Format:** `float`
+
+#### right {#individualspacingconfig-right}
+
+<Badge text="required" variant="success" /> `number`
+
+
+
+
+
+- **Format:** `float`
+
+#### top {#individualspacingconfig-top}
+
+<Badge text="required" variant="success" /> `number`
+
+
+
+
+
+- **Format:** `float`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.margin`](#spacingkind)
+- [`.padding`](#spacingkind)
+
+
+**Referenced by:**
+- [`SpacingKind`](#spacingkind)
+
+
+
+---
+
+
+### KomobarTheme {#komobartheme}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`object` - A theme from catppuccin-egui
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### accent {#komobartheme-oneof[0]-accent}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+
+
+
+#### auto_select_fill {#komobartheme-oneof[0]-auto_select_fill}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+
+
+
+#### auto_select_text {#komobartheme-oneof[0]-auto_select_text}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+
+
+
+#### name {#komobartheme-oneof[0]-name}
+
+<Badge text="required" variant="success" /> [`Catppuccin`](#catppuccin)
+
+Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catppuccin)
+
+
+
+#### palette {#komobartheme-oneof[0]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Catppuccin"`
+
+</details>
+
+---
+`object` - A theme from base16-egui-themes
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### accent {#komobartheme-oneof[1]-accent}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### auto_select_fill {#komobartheme-oneof[1]-auto_select_fill}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### auto_select_text {#komobartheme-oneof[1]-auto_select_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### name {#komobartheme-oneof[1]-name}
+
+<Badge text="required" variant="success" /> [`Base16`](#base16)
+
+Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinted-gallery/)
+
+
+
+#### palette {#komobartheme-oneof[1]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Base16"`
+
+</details>
+
+---
+`object` - A custom Base16 theme
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### accent {#komobartheme-oneof[2]-accent}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### auto_select_fill {#komobartheme-oneof[2]-auto_select_fill}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### auto_select_text {#komobartheme-oneof[2]-auto_select_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+
+
+
+#### colours {#komobartheme-oneof[2]-colours}
+
+<Badge text="required" variant="success" /> [`Base16ColourPalette`](#base16colourpalette)
+
+Colours of the custom Base16 theme palette
+
+
+
+#### palette {#komobartheme-oneof[2]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Custom"`
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme`](#theme)
+
+
+
+
+---
+
+
+### KomorebiConfig {#komorebiconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (6)</summary>
+
+#### configuration_switcher {#komorebiconfig-configuration_switcher}
+
+<Badge text="optional" variant="note" /> [`KomorebiConfigurationSwitcherConfig`](#komorebiconfigurationswitcherconfig)
+
+Configure the Configuration Switcher widget
+
+
+
+#### focused_container {#komorebiconfig-focused_container}
+
+<Badge text="optional" variant="note" /> [`KomorebiFocusedContainerConfig`](#komorebifocusedcontainerconfig)
+
+Configure the Focused Container widget
+
+
+
+#### layout {#komorebiconfig-layout}
+
+<Badge text="optional" variant="note" /> [`KomorebiLayoutConfig`](#komorebilayoutconfig)
+
+Configure the Layout widget
+
+
+
+#### locked_container {#komorebiconfig-locked_container}
+
+<Badge text="optional" variant="note" /> [`KomorebiLockedContainerConfig`](#komorebilockedcontainerconfig)
+
+Configure the Locked Container widget
+
+
+
+#### workspace_layer {#komorebiconfig-workspace_layer}
+
+<Badge text="optional" variant="note" /> [`KomorebiWorkspaceLayerConfig`](#komorebiworkspacelayerconfig)
+
+Configure the Workspace Layer widget
+
+
+
+#### workspaces {#komorebiconfig-workspaces}
+
+<Badge text="optional" variant="note" /> [`KomorebiWorkspacesConfig`](#komorebiworkspacesconfig)
+
+Configure the Workspaces widget
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi`](#widgetconfig-oneof[4]-komorebi)
+- [`.left_widgets[].Komorebi`](#widgetconfig-oneof[4]-komorebi)
+- [`.right_widgets[].Komorebi`](#widgetconfig-oneof[4]-komorebi)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### KomorebiConfigurationSwitcherConfig {#komorebiconfigurationswitcherconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### configurations {#komorebiconfigurationswitcherconfig-configurations}
+
+<Badge text="required" variant="success" /> `object`
+
+A map of display friendly name =&gt; path to configuration.json
+
+
+<details>
+<summary>Additional Properties</summary>
+
+`string`
+
+
+</details>
+#### enable {#komorebiconfigurationswitcherconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Configurations widget
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.configuration_switcher`](#komorebiconfig-configuration_switcher)
+- [`.left_widgets[].Komorebi.configuration_switcher`](#komorebiconfig-configuration_switcher)
+- [`.right_widgets[].Komorebi.configuration_switcher`](#komorebiconfig-configuration_switcher)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### KomorebiFocusedContainerConfig {#komorebifocusedcontainerconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### display {#komorebifocusedcontainerconfig-display}
+
+<Badge text="optional" variant="note" /> [`DisplayFormat`](#displayformat)
+
+Display format of the currently focused container
+
+
+
+#### enable {#komorebifocusedcontainerconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Focused Container widget
+
+
+
+#### show_icon {#komorebifocusedcontainerconfig-show_icon}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+DEPRECATED: use 'display' instead (Show the icon of the currently focused container)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.focused_container`](#komorebiconfig-focused_container)
+- [`.left_widgets[].Komorebi.focused_container`](#komorebiconfig-focused_container)
+- [`.right_widgets[].Komorebi.focused_container`](#komorebiconfig-focused_container)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### KomorebiLayout {#komorebilayout}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (5)</summary>
+
+
+---
+[`DefaultLayout`](#defaultlayout)
+
+
+
+---
+`null`
+
+
+
+---
+`null`
+
+
+
+---
+`null`
+
+
+
+---
+`null`
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.layout.options[]`](#komorebilayoutconfig-options)
+- [`.left_widgets[].Komorebi.layout.options[]`](#komorebilayoutconfig-options)
+- [`.right_widgets[].Komorebi.layout.options[]`](#komorebilayoutconfig-options)
+
+
+**Referenced by:**
+- [`KomorebiLayoutConfig`](#komorebilayoutconfig)
+
+
+
+---
+
+
+### KomorebiLayoutConfig {#komorebilayoutconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### display {#komorebilayoutconfig-display}
+
+<Badge text="optional" variant="note" /> [`DisplayFormat`](#displayformat)
+
+Display format of the current layout
+
+
+
+#### enable {#komorebilayoutconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Layout widget
+
+
+
+#### options {#komorebilayoutconfig-options}
+
+<Badge text="optional" variant="note" /> `array` [`KomorebiLayout`](#komorebilayout)
+
+List of layout options
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.layout`](#komorebiconfig-layout)
+- [`.left_widgets[].Komorebi.layout`](#komorebiconfig-layout)
+- [`.right_widgets[].Komorebi.layout`](#komorebiconfig-layout)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### KomorebiLockedContainerConfig {#komorebilockedcontainerconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### display {#komorebilockedcontainerconfig-display}
+
+<Badge text="optional" variant="note" /> [`DisplayFormat`](#displayformat)
+
+Display format of the current locked state
+
+
+
+#### enable {#komorebilockedcontainerconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Locked Container widget
+
+
+
+#### show_when_unlocked {#komorebilockedcontainerconfig-show_when_unlocked}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Show the widget event if the layer is unlocked
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.locked_container`](#komorebiconfig-locked_container)
+- [`.left_widgets[].Komorebi.locked_container`](#komorebiconfig-locked_container)
+- [`.right_widgets[].Komorebi.locked_container`](#komorebiconfig-locked_container)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### KomorebiWorkspaceLayerConfig {#komorebiworkspacelayerconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### display {#komorebiworkspacelayerconfig-display}
+
+<Badge text="optional" variant="note" /> [`DisplayFormat`](#displayformat)
+
+Display format of the current layer
+
+
+
+#### enable {#komorebiworkspacelayerconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Workspace Layer widget
+
+
+
+#### show_when_tiling {#komorebiworkspacelayerconfig-show_when_tiling}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Show the widget event if the layer is Tiling
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.workspace_layer`](#komorebiconfig-workspace_layer)
+- [`.left_widgets[].Komorebi.workspace_layer`](#komorebiconfig-workspace_layer)
+- [`.right_widgets[].Komorebi.workspace_layer`](#komorebiconfig-workspace_layer)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### KomorebiWorkspacesConfig {#komorebiworkspacesconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### display {#komorebiworkspacesconfig-display}
+
+<Badge text="optional" variant="note" /> [`WorkspacesDisplayFormat`](#workspacesdisplayformat)
+
+Display format of the workspace
+
+
+
+#### enable {#komorebiworkspacesconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Komorebi Workspaces widget
+
+
+
+#### hide_empty_workspaces {#komorebiworkspacesconfig-hide_empty_workspaces}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Hide workspaces without any windows
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.workspaces`](#komorebiconfig-workspaces)
+- [`.left_widgets[].Komorebi.workspaces`](#komorebiconfig-workspaces)
+- [`.right_widgets[].Komorebi.workspaces`](#komorebiconfig-workspaces)
+
+
+**Referenced by:**
+- [`KomorebiConfig`](#komorebiconfig)
+
+
+
+---
+
+
+### LabelPrefix {#labelprefix}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+
+---
+`string` - Show no prefix
+
+
+**Value:** `"None"`
+
+---
+`string` - Show an icon
+
+
+**Value:** `"Icon"`
+
+---
+`string` - Show text
+
+
+**Value:** `"Text"`
+
+---
+`string` - Show an icon and text
+
+
+**Value:** `"IconAndText"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Battery.label_prefix`](#batteryconfig-label_prefix)
+- [`.center_widgets[].Cpu.label_prefix`](#cpuconfig-label_prefix)
+- [`.center_widgets[].Date.label_prefix`](#dateconfig-label_prefix)
+- [`.center_widgets[].Memory.label_prefix`](#memoryconfig-label_prefix)
+- [`.center_widgets[].Network.label_prefix`](#networkconfig-label_prefix)
+- [`.center_widgets[].Storage.label_prefix`](#storageconfig-label_prefix)
+- [`.center_widgets[].Time.label_prefix`](#timeconfig-label_prefix)
+- [`.center_widgets[].Update.label_prefix`](#updateconfig-label_prefix)
+- [`.left_widgets[].Battery.label_prefix`](#batteryconfig-label_prefix)
+- [`.left_widgets[].Cpu.label_prefix`](#cpuconfig-label_prefix)
+- [`.left_widgets[].Date.label_prefix`](#dateconfig-label_prefix)
+- [`.left_widgets[].Memory.label_prefix`](#memoryconfig-label_prefix)
+- [`.left_widgets[].Network.label_prefix`](#networkconfig-label_prefix)
+- [`.left_widgets[].Storage.label_prefix`](#storageconfig-label_prefix)
+- [`.left_widgets[].Time.label_prefix`](#timeconfig-label_prefix)
+- [`.left_widgets[].Update.label_prefix`](#updateconfig-label_prefix)
+- [`.right_widgets[].Battery.label_prefix`](#batteryconfig-label_prefix)
+- [`.right_widgets[].Cpu.label_prefix`](#cpuconfig-label_prefix)
+- [`.right_widgets[].Date.label_prefix`](#dateconfig-label_prefix)
+- [`.right_widgets[].Memory.label_prefix`](#memoryconfig-label_prefix)
+- [`.right_widgets[].Network.label_prefix`](#networkconfig-label_prefix)
+- [`.right_widgets[].Storage.label_prefix`](#storageconfig-label_prefix)
+- [`.right_widgets[].Time.label_prefix`](#timeconfig-label_prefix)
+- [`.right_widgets[].Update.label_prefix`](#updateconfig-label_prefix)
+
+
+**Referenced by:**
+- [`BatteryConfig`](#batteryconfig)
+- [`CpuConfig`](#cpuconfig)
+- [`DateConfig`](#dateconfig)
+- [`MemoryConfig`](#memoryconfig)
+- [`NetworkConfig`](#networkconfig)
+- [`StorageConfig`](#storageconfig)
+- [`TimeConfig`](#timeconfig)
+- [`UpdateConfig`](#updateconfig)
+
+
+
+---
+
+
+### MemoryConfig {#memoryconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### auto_select_over {#memoryconfig-auto_select_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select when the current percentage is over this value [[1-100]]
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+#### data_refresh_interval {#memoryconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 10 seconds)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#memoryconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Memory widget
+
+
+
+#### label_prefix {#memoryconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Memory`](#widgetconfig-oneof[5]-memory)
+- [`.left_widgets[].Memory`](#widgetconfig-oneof[5]-memory)
+- [`.right_widgets[].Memory`](#widgetconfig-oneof[5]-memory)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### MonitorConfig {#monitorconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### index {#monitorconfig-index}
+
+<Badge text="required" variant="success" /> `integer`
+
+Komorebi monitor index of the monitor on which to render the bar
+
+
+
+
+- **Format:** `uint`
+- **Minimum:** 0
+
+#### work_area_offset {#monitorconfig-work_area_offset}
+
+<Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+Automatically apply a work area offset for this monitor to accommodate the bar
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitor`](#monitorconfigorindex)
+
+
+**Referenced by:**
+- [`MonitorConfigOrIndex`](#monitorconfigorindex)
+
+
+
+---
+
+
+### MonitorConfigOrIndex {#monitorconfigorindex}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`integer` - The monitor index where you want the bar to show
+
+
+
+
+- **Format:** `uint`
+- **Minimum:** 0
+
+
+---
+[`MonitorConfig`](#monitorconfig) - The full monitor options with the index and an optional work_area_offset
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitor`](#monitor)
+
+
+
+
+---
+
+
+### NetworkConfig {#networkconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (8)</summary>
+
+#### activity_left_padding {#networkconfig-activity_left_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Characters to reserve for received and transmitted activity
+
+
+
+
+- **Format:** `uint`
+- **Minimum:** 0
+
+#### auto_select {#networkconfig-auto_select}
+
+<Badge text="optional" variant="note" /> [`NetworkSelectConfig`](#networkselectconfig)
+
+Select when the value is over a limit (1MiB is 1048576 bytes (1024*1024))
+
+
+
+#### data_refresh_interval {#networkconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 10 seconds)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#networkconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Network widget
+
+
+
+#### label_prefix {#networkconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+#### show_activity {#networkconfig-show_activity}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Show received and transmitted activity
+
+
+
+#### show_default_interface {#networkconfig-show_default_interface}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Show default interface
+
+
+
+#### show_total_activity {#networkconfig-show_total_activity}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Show total received and transmitted activity
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Network`](#widgetconfig-oneof[6]-network)
+- [`.left_widgets[].Network`](#widgetconfig-oneof[6]-network)
+- [`.right_widgets[].Network`](#widgetconfig-oneof[6]-network)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### NetworkSelectConfig {#networkselectconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### received_over {#networkselectconfig-received_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select the received data when it's over this value
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### total_received_over {#networkselectconfig-total_received_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select the total received data when it's over this value
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### total_transmitted_over {#networkselectconfig-total_transmitted_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select the total transmitted data when it's over this value
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### transmitted_over {#networkselectconfig-transmitted_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select the transmitted data when it's over this value
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Network.auto_select`](#networkconfig-auto_select)
+- [`.left_widgets[].Network.auto_select`](#networkconfig-auto_select)
+- [`.right_widgets[].Network.auto_select`](#networkconfig-auto_select)
+
+
+**Referenced by:**
+- [`NetworkConfig`](#networkconfig)
+
+
+
+---
+
+
+### Position {#position}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### x {#position-x}
+
+<Badge text="required" variant="success" /> `number`
+
+X coordinate
+
+
+
+
+- **Format:** `float`
+
+#### y {#position-y}
+
+<Badge text="required" variant="success" /> `number`
+
+Y coordinate
+
+
+
+
+- **Format:** `float`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.frame.inner_margin`](#frameconfig-inner_margin)
+- [`.position.end`](#positionconfig-end)
+- [`.position.start`](#positionconfig-start)
+
+
+**Referenced by:**
+- [`FrameConfig`](#frameconfig)
+- [`PositionConfig`](#positionconfig)
+
+
+
+---
+
+
+### PositionConfig {#positionconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### end {#positionconfig-end}
+
+<Badge text="optional" variant="note" /> [`Position`](#position)
+
+The desired size of the bar from the starting position (usually monitor width x desired height)
+
+
+
+#### start {#positionconfig-start}
+
+<Badge text="optional" variant="note" /> [`Position`](#position)
+
+The desired starting position of the bar (0,0 = top left of the screen)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.position`](#position)
+
+
+
+
+---
+
+
+### Rect {#rect}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### bottom {#rect-bottom}
+
+<Badge text="required" variant="success" /> `integer`
+
+
+
+
+
+- **Format:** `int32`
+
+#### left {#rect-left}
+
+<Badge text="required" variant="success" /> `integer`
+
+
+
+
+
+- **Format:** `int32`
+
+#### right {#rect-right}
+
+<Badge text="required" variant="success" /> `integer`
+
+
+
+
+
+- **Format:** `int32`
+
+#### top {#rect-top}
+
+<Badge text="required" variant="success" /> `integer`
+
+
+
+
+
+- **Format:** `int32`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitor.work_area_offset`](#monitorconfig-work_area_offset)
+
+
+**Referenced by:**
+- [`MonitorConfig`](#monitorconfig)
+
+
+
+---
+
+
+### Rgb {#rgb}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### b {#rgb-b}
+
+<Badge text="required" variant="success" /> `integer`
+
+Blue
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+#### g {#rgb-g}
+
+<Badge text="required" variant="success" /> `integer`
+
+Green
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+#### r {#rgb-r}
+
+<Badge text="required" variant="success" /> `integer`
+
+Red
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.colours.base_00`](#colour)
+- [`.theme.colours.base_01`](#colour)
+- [`.theme.colours.base_02`](#colour)
+- [`.theme.colours.base_03`](#colour)
+- [`.theme.colours.base_04`](#colour)
+- [`.theme.colours.base_05`](#colour)
+- [`.theme.colours.base_06`](#colour)
+- [`.theme.colours.base_07`](#colour)
+- [`.theme.colours.base_08`](#colour)
+- [`.theme.colours.base_09`](#colour)
+- [`.theme.colours.base_0a`](#colour)
+- [`.theme.colours.base_0b`](#colour)
+- [`.theme.colours.base_0c`](#colour)
+- [`.theme.colours.base_0d`](#colour)
+- [`.theme.colours.base_0e`](#colour)
+- [`.theme.colours.base_0f`](#colour)
+
+
+**Referenced by:**
+- [`Colour`](#colour)
+
+
+
+---
+
+
+### RoundingConfig {#roundingconfig}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`number` - All 4 corners are the same
+
+
+
+
+- **Format:** `float`
+
+
+---
+`array` `number` - All 4 corners are custom. Order: NW, NE, SW, SE
+
+
+
+
+- **Min items:** 4
+- **Max items:** 4
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.grouping.rounding`](#groupingconfig-rounding)
+- [`.grouping.rounding`](#groupingconfig-rounding)
+- [`.grouping.rounding`](#groupingconfig-rounding)
+
+
+**Referenced by:**
+- [`GroupingConfig`](#groupingconfig)
+
+
+
+---
+
+
+### SpacingKind {#spacingkind}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`number`
+
+
+
+- **Format:** `float`
+
+
+---
+[`IndividualSpacingConfig`](#individualspacingconfig)
+
+
+
+---
+[`GroupedSpacingConfig`](#groupedspacingconfig)
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.margin`](#margin)
+- [`.padding`](#padding)
+
+
+
+
+---
+
+
+### StorageConfig {#storageconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (7)</summary>
+
+#### auto_hide_under {#storageconfig-auto_hide_under}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Hide when the current percentage is under this value [[1-100]]
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+#### auto_select_over {#storageconfig-auto_select_over}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Select when the current percentage is over this value [[1-100]]
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+#### data_refresh_interval {#storageconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 10 seconds)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#storageconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Storage widget
+
+
+
+#### label_prefix {#storageconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+#### show_read_only_disks {#storageconfig-show_read_only_disks}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Show disks that are read only. (default: false)
+
+
+
+#### show_removable_disks {#storageconfig-show_removable_disks}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Show removable disks. (default: true)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Storage`](#widgetconfig-oneof[7]-storage)
+- [`.left_widgets[].Storage`](#widgetconfig-oneof[7]-storage)
+- [`.right_widgets[].Storage`](#widgetconfig-oneof[7]-storage)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### TimeConfig {#timeconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (5)</summary>
+
+#### changing_icon {#timeconfig-changing_icon}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Change the icon depending on the time. The default icon is used between 8:30 and 12:00. (default: false)
+
+
+
+#### enable {#timeconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Time widget
+
+
+
+#### format {#timeconfig-format}
+
+<Badge text="required" variant="success" /> [`TimeFormat`](#timeformat)
+
+Set the Time format
+
+
+
+#### label_prefix {#timeconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+#### timezone {#timeconfig-timezone}
+
+<Badge text="optional" variant="note" /> `string`
+
+TimeZone (https://docs.rs/chrono-tz/latest/chrono_tz/enum.Tz.html)
+Use a custom format to display additional information, i.e.:
+\{
+    "Time": \{
+        "enable": true,
+        "format": \{ "Custom": "%T %Z (Tokyo)" \},
+        "timezone": "Asia/Tokyo"
+     \}
+\}
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Time`](#widgetconfig-oneof[8]-time)
+- [`.left_widgets[].Time`](#widgetconfig-oneof[8]-time)
+- [`.right_widgets[].Time`](#widgetconfig-oneof[8]-time)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### TimeFormat {#timeformat}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (7)</summary>
+
+
+---
+`string` - Twelve-hour format (with seconds)
+
+
+**Value:** `"TwelveHour"`
+
+---
+`string` - Twelve-hour format (without seconds)
+
+
+**Value:** `"TwelveHourWithoutSeconds"`
+
+---
+`string` - Twenty-four-hour format (with seconds)
+
+
+**Value:** `"TwentyFourHour"`
+
+---
+`string` - Twenty-four-hour format (without seconds)
+
+
+**Value:** `"TwentyFourHourWithoutSeconds"`
+
+---
+`string` - Twenty-four-hour format displayed as a binary clock with circles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
+
+
+**Value:** `"BinaryCircle"`
+
+---
+`string` - Twenty-four-hour format displayed as a binary clock with rectangles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
+
+
+**Value:** `"BinaryRectangle"`
+
+---
+`object` - Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Custom {#timeformat-oneof[6]-custom}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Time.format`](#timeconfig-format)
+- [`.left_widgets[].Time.format`](#timeconfig-format)
+- [`.right_widgets[].Time.format`](#timeconfig-format)
+
+
+**Referenced by:**
+- [`TimeConfig`](#timeconfig)
+
+
+
+---
+
+
+### UpdateConfig {#updateconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### data_refresh_interval {#updateconfig-data_refresh_interval}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Data refresh interval (default: 12 hours)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### enable {#updateconfig-enable}
+
+<Badge text="required" variant="success" /> `boolean`
+
+Enable the Update widget
+
+
+
+#### label_prefix {#updateconfig-label_prefix}
+
+<Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
+
+Display label prefix
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Update`](#widgetconfig-oneof[9]-update)
+- [`.left_widgets[].Update`](#widgetconfig-oneof[9]-update)
+- [`.right_widgets[].Update`](#widgetconfig-oneof[9]-update)
+
+
+**Referenced by:**
+- [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### WidgetConfig {#widgetconfig}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (10)</summary>
+
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Applications {#widgetconfig-oneof[0]-applications}
+
+<Badge text="required" variant="success" /> [`ApplicationsConfig`](#applicationsconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Battery {#widgetconfig-oneof[1]-battery}
+
+<Badge text="required" variant="success" /> [`BatteryConfig`](#batteryconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Cpu {#widgetconfig-oneof[2]-cpu}
+
+<Badge text="required" variant="success" /> [`CpuConfig`](#cpuconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Date {#widgetconfig-oneof[3]-date}
+
+<Badge text="required" variant="success" /> [`DateConfig`](#dateconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Komorebi {#widgetconfig-oneof[4]-komorebi}
+
+<Badge text="required" variant="success" /> [`KomorebiConfig`](#komorebiconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Memory {#widgetconfig-oneof[5]-memory}
+
+<Badge text="required" variant="success" /> [`MemoryConfig`](#memoryconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Network {#widgetconfig-oneof[6]-network}
+
+<Badge text="required" variant="success" /> [`NetworkConfig`](#networkconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Storage {#widgetconfig-oneof[7]-storage}
+
+<Badge text="required" variant="success" /> [`StorageConfig`](#storageconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Time {#widgetconfig-oneof[8]-time}
+
+<Badge text="required" variant="success" /> [`TimeConfig`](#timeconfig)
+
+
+
+
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### Update {#widgetconfig-oneof[9]-update}
+
+<Badge text="required" variant="success" /> [`UpdateConfig`](#updateconfig)
+
+
+
+
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[]`](#center_widgets)
+- [`.left_widgets[]`](#left_widgets)
+- [`.right_widgets[]`](#right_widgets)
+
+
+
+
+---
+
+
+### WorkspacesDisplayFormat {#workspacesdisplayformat}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+
+---
+`string` - Show all icons only
+
+
+**Value:** `"AllIcons"`
+
+---
+`string` - Show both all icons and text
+
+
+**Value:** `"AllIconsAndText"`
+
+---
+`string` - Show all icons and text for the selected element, and all icons on the rest
+
+
+**Value:** `"AllIconsAndTextOnSelected"`
+
+---
+[`DisplayFormat`](#displayformat)
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.center_widgets[].Komorebi.workspaces.display`](#komorebiworkspacesconfig-display)
+- [`.left_widgets[].Komorebi.workspaces.display`](#komorebiworkspacesconfig-display)
+- [`.right_widgets[].Komorebi.workspaces.display`](#komorebiworkspacesconfig-display)
+
+
+**Referenced by:**
+- [`KomorebiWorkspacesConfig`](#komorebiworkspacesconfig)
+
+
+
+---
+
+
+
+

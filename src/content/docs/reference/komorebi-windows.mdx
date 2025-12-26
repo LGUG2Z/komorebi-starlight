@@ -1,0 +1,3767 @@
+---
+title: "komorebi.json (Windows)"
+description: "komorebi for Windows configuration schema reference"
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+## Configuration
+
+### animation {#animation}
+
+<Badge text="optional" variant="note" /> [`AnimationsConfig`](#animationsconfig)
+
+Animations configuration options
+
+
+
+
+---
+### app_specific_configuration_path {#app_specific_configuration_path}
+
+<Badge text="optional" variant="note" /> [`AppSpecificConfigurationPath`](#appspecificconfigurationpath)
+
+Path to applications.json from komorebi-application-specific-configurations (default: None)
+
+
+
+
+---
+### bar_configurations {#bar_configurations}
+
+<Badge text="optional" variant="note" /> `array` [`PathBuf`](#pathbuf)
+
+Komorebi status bar configuration files for multiple instances on different monitors
+
+
+
+
+---
+### border {#border}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Display window borders (default: true)
+
+
+
+
+---
+### border_colours {#border_colours}
+
+<Badge text="optional" variant="note" /> [`BorderColours`](#bordercolours)
+
+Window border colours for different container types (has no effect if a theme is defined)
+
+
+
+
+---
+### border_implementation {#border_implementation}
+
+<Badge text="optional" variant="note" /> [`BorderImplementation`](#borderimplementation)
+
+Window border implementation (default: Komorebi)
+
+
+
+
+---
+### border_offset {#border_offset}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Offset of window borders (default: -1)
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### border_overflow_applications {#border_overflow_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify border overflow applications
+
+
+
+
+---
+### border_style {#border_style}
+
+<Badge text="optional" variant="note" /> [`BorderStyle`](#borderstyle)
+
+Window border style (default: System)
+
+
+
+
+---
+### border_width {#border_width}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Width of window borders (default: 8)
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### border_z_order {#border_z_order}
+
+<Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> [`ZOrder`](#zorder)
+
+DEPRECATED from v0.1.31: no longer required
+
+
+
+
+---
+### cross_boundary_behaviour {#cross_boundary_behaviour}
+
+<Badge text="optional" variant="note" /> [`CrossBoundaryBehaviour`](#crossboundarybehaviour)
+
+Determine what happens when an action is called on a window at a monitor boundary (default: Monitor)
+
+
+
+
+---
+### cross_monitor_move_behaviour {#cross_monitor_move_behaviour}
+
+<Badge text="optional" variant="note" /> [`MoveBehaviour`](#movebehaviour)
+
+Determine what happens when a window is moved across a monitor boundary (default: Swap)
+
+
+
+
+---
+### default_container_padding {#default_container_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Global default container padding (default: 10)
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### default_workspace_padding {#default_workspace_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Global default workspace padding (default: 10)
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### display_index_preferences {#display_index_preferences}
+
+<Badge text="optional" variant="note" /> `object`
+
+Set display index preferences
+
+
+
+
+
+**Key:** `"<integer>"` **→** `string`
+
+
+
+
+
+---
+### float_override {#float_override}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Enable or disable float override, which makes it so every new window opens in floating mode
+(default: false)
+
+
+
+
+---
+### float_override_placement {#float_override_placement}
+
+<Badge text="optional" variant="note" /> [`Placement`](#placement)
+
+Determines the Placement to be used when spawning a window with float override active
+(default: None)
+
+
+
+
+---
+### float_rule_placement {#float_rule_placement}
+
+<Badge text="optional" variant="note" /> [`Placement`](#placement)
+
+Determines the Placement to be used when spawning a window that matches a
+floating_applications rule (default: None)
+
+
+
+
+---
+### floating_applications {#floating_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify applications which should be managed as floating windows
+
+
+
+
+---
+### floating_layer_behaviour {#floating_layer_behaviour}
+
+<Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
+
+Determines what happens on a new window when on the FloatingLayer
+(default: Tile)
+
+
+
+
+---
+### floating_layer_placement {#floating_layer_placement}
+
+<Badge text="optional" variant="note" /> [`Placement`](#placement)
+
+Determines the Placement to be used when spawning a window on the floating layer with the
+FloatingLayerBehaviour set to FloatingLayerBehaviour::Float (default: Center)
+
+
+
+
+---
+### floating_window_aspect_ratio {#floating_window_aspect_ratio}
+
+<Badge text="optional" variant="note" /> [`AspectRatio`](#aspectratio)
+
+Aspect ratio to resize with when toggling floating mode for a window
+
+
+
+
+---
+### focus_follows_mouse {#focus_follows_mouse}
+
+<Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> [`FocusFollowsMouseImplementation`](#focusfollowsmouseimplementation)
+
+END OF LIFE FEATURE: Use https://github.com/LGUG2Z/masir instead
+
+
+
+
+---
+### global_work_area_offset {#global_work_area_offset}
+
+<Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+Global work area (space used for tiling) offset (default: None)
+
+
+
+
+---
+### ignore_rules {#ignore_rules}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Individual window floating rules
+
+
+
+
+---
+### invisible_borders {#invisible_borders}
+
+<Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+DEPRECATED from v0.1.22: no longer required
+
+
+
+
+---
+### layered_applications {#layered_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify applications that have the WS_EX_LAYERED extended window style
+
+
+
+
+---
+### manage_rules {#manage_rules}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Individual window force-manage rules
+
+
+
+
+---
+### minimum_window_height {#minimum_window_height}
+
+<Badge text="optional" variant="note" /> `integer`
+
+DISCOURAGED: Minimum height for a window to be eligible for tiling
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### minimum_window_width {#minimum_window_width}
+
+<Badge text="optional" variant="note" /> `integer`
+
+DISCOURAGED: Minimum width for a window to be eligible for tiling
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### monitor_index_preferences {#monitor_index_preferences}
+
+<Badge text="optional" variant="note" /> `object`
+
+Set monitor index preferences
+
+
+
+
+
+**Key:** `"<integer>"` **→** [`Rect`](#rect)
+
+
+
+
+
+---
+### monitors {#monitors}
+
+<Badge text="optional" variant="note" /> `array` [`MonitorConfig`](#monitorconfig)
+
+Monitor and workspace configurations
+
+
+
+
+---
+### mouse_follows_focus {#mouse_follows_focus}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Enable or disable mouse follows focus (default: true)
+
+
+
+
+---
+### object_name_change_applications {#object_name_change_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify applications that send EVENT_OBJECT_NAMECHANGE on launch (very rare)
+
+
+
+
+---
+### object_name_change_title_ignore_list {#object_name_change_title_ignore_list}
+
+<Badge text="optional" variant="note" /> `array` `string`
+
+Do not process EVENT_OBJECT_NAMECHANGE events as Show events for identified applications matching these title regexes
+
+
+
+
+---
+### remove_titlebar_applications {#remove_titlebar_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+HEAVILY DISCOURAGED: Identify applications for which komorebi should forcibly remove title bars
+
+
+
+
+---
+### resize_delta {#resize_delta}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Delta to resize windows by (default 50)
+
+
+
+
+- **Format:** `int32`
+
+
+---
+### slow_application_compensation_time {#slow_application_compensation_time}
+
+<Badge text="optional" variant="note" /> `integer`
+
+How long to wait when compensating for slow applications, in milliseconds (default: 20)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+
+---
+### slow_application_identifiers {#slow_application_identifiers}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify applications which are slow to send initial event notifications
+
+
+
+
+---
+### stackbar {#stackbar}
+
+<Badge text="optional" variant="note" /> [`StackbarConfig`](#stackbarconfig)
+
+Stackbar configuration options
+
+
+
+
+---
+### theme {#theme}
+
+<Badge text="optional" variant="note" /> [`KomorebiTheme`](#komorebitheme)
+
+Theme configuration options
+
+
+
+
+---
+### toggle_float_placement {#toggle_float_placement}
+
+<Badge text="optional" variant="note" /> [`Placement`](#placement)
+
+Determines the placement of a new window when toggling to float (default: CenterAndResize)
+
+
+
+
+---
+### transparency {#transparency}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Add transparency to unfocused windows (default: false)
+
+
+
+
+---
+### transparency_alpha {#transparency_alpha}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Alpha value for unfocused window transparency [[0-255]] (default: 200)
+
+
+
+
+- **Format:** `uint8`
+- **Minimum:** 0
+- **Maximum:** 255
+
+
+---
+### transparency_ignore_rules {#transparency_ignore_rules}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Individual window transparency ignore rules
+
+
+
+
+---
+### tray_and_multi_window_applications {#tray_and_multi_window_applications}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Identify tray and multi-window applications
+
+
+
+
+---
+### unmanaged_window_operation_behaviour {#unmanaged_window_operation_behaviour}
+
+<Badge text="optional" variant="note" /> [`OperationBehaviour`](#operationbehaviour)
+
+Determine what happens when commands are sent while an unmanaged window is in the foreground (default: Op)
+
+
+
+
+---
+### window_container_behaviour {#window_container_behaviour}
+
+<Badge text="optional" variant="note" /> [`WindowContainerBehaviour`](#windowcontainerbehaviour)
+
+Determine what happens when a new window is opened (default: Create)
+
+
+
+
+---
+### window_handling_behaviour {#window_handling_behaviour}
+
+<Badge text="optional" variant="note" /> [`WindowHandlingBehaviour`](#windowhandlingbehaviour)
+
+Which Windows API behaviour to use when manipulating windows (default: Sync)
+
+
+
+
+---
+### window_hiding_behaviour {#window_hiding_behaviour}
+
+<Badge text="optional" variant="note" /> [`HidingBehaviour`](#hidingbehaviour)
+
+Which Windows signal to use when hiding windows (default: Cloak)
+
+
+
+
+---
+
+
+
+## Type Definitions
+
+### AnimationStyle {#animationstyle}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string`
+
+<details>
+<summary>Enum variants (30)</summary>
+
+- `"Linear"`
+- `"EaseInSine"`
+- `"EaseOutSine"`
+- `"EaseInOutSine"`
+- `"EaseInQuad"`
+- `"EaseOutQuad"`
+- `"EaseInOutQuad"`
+- `"EaseInCubic"`
+- `"EaseInOutCubic"`
+- `"EaseInQuart"`
+- `"EaseOutQuart"`
+- `"EaseInOutQuart"`
+- `"EaseInQuint"`
+- `"EaseOutQuint"`
+- `"EaseInOutQuint"`
+- `"EaseInExpo"`
+- `"EaseOutExpo"`
+- `"EaseInOutExpo"`
+- `"EaseInCirc"`
+- `"EaseOutCirc"`
+- `"EaseInOutCirc"`
+- `"EaseInBack"`
+- `"EaseOutBack"`
+- `"EaseInOutBack"`
+- `"EaseInElastic"`
+- `"EaseOutElastic"`
+- `"EaseInOutElastic"`
+- `"EaseInBounce"`
+- `"EaseOutBounce"`
+- `"EaseInOutBounce"`
+
+</details>
+
+---
+`object`
+
+<details>
+<summary>Properties (1)</summary>
+
+#### CubicBezier {#animationstyle-oneof[1]-cubicbezier}
+
+<Badge text="required" variant="success" /> `array` `[float; 4]`
+
+
+
+
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.animation.style`](#peranimationprefixconfig3)
+- [`.animation.style[*]`](#peranimationprefixconfig3)
+
+
+**Referenced by:**
+- [`PerAnimationPrefixConfig`](#peranimationprefixconfig3)
+
+
+
+---
+
+
+### AnimationsConfig {#animationsconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### duration {#animationsconfig-duration}
+
+<Badge text="optional" variant="note" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig2) `integer`
+
+Set the animation duration in ms (default: 250)
+
+
+
+#### enabled {#animationsconfig-enabled}
+
+<Badge text="required" variant="success" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig) `boolean`
+
+Enable or disable animations (default: false)
+
+
+
+#### fps {#animationsconfig-fps}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Set the animation FPS (default: 60)
+
+
+
+
+- **Format:** `uint64`
+- **Minimum:** 0
+
+#### style {#animationsconfig-style}
+
+<Badge text="optional" variant="note" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig3) [`AnimationStyle`](#animationstyle)
+
+Set the animation style (default: Linear)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.animation`](#animation)
+
+
+
+
+---
+
+
+### AppSpecificConfigurationPath {#appspecificconfigurationpath}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+[`PathBuf`](#pathbuf) - A single applications.json file
+
+
+
+
+---
+`array` [`PathBuf`](#pathbuf) - Multiple applications.json files
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.app_specific_configuration_path`](#app_specific_configuration_path)
+
+
+
+
+---
+
+
+### ApplicationIdentifier {#applicationidentifier}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+- `"Exe"`
+- `"Class"`
+- `"Title"`
+- `"Path"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_overflow_applications[].kind`](#idwithidentifier-kind)
+- [`.border_overflow_applications[][].kind`](#idwithidentifier-kind)
+- [`.floating_applications[].kind`](#idwithidentifier-kind)
+- [`.floating_applications[][].kind`](#idwithidentifier-kind)
+- [`.ignore_rules[].kind`](#idwithidentifier-kind)
+- [`.ignore_rules[][].kind`](#idwithidentifier-kind)
+- [`.layered_applications[].kind`](#idwithidentifier-kind)
+- [`.layered_applications[][].kind`](#idwithidentifier-kind)
+- [`.manage_rules[].kind`](#idwithidentifier-kind)
+- [`.manage_rules[][].kind`](#idwithidentifier-kind)
+- [`.monitors[].workspaces[].initial_workspace_rules[].kind`](#idwithidentifier-kind)
+- [`.monitors[].workspaces[].initial_workspace_rules[][].kind`](#idwithidentifier-kind)
+- [`.monitors[].workspaces[].workspace_rules[].kind`](#idwithidentifier-kind)
+- [`.monitors[].workspaces[].workspace_rules[][].kind`](#idwithidentifier-kind)
+- [`.object_name_change_applications[].kind`](#idwithidentifier-kind)
+- [`.object_name_change_applications[][].kind`](#idwithidentifier-kind)
+- [`.remove_titlebar_applications[].kind`](#idwithidentifier-kind)
+- [`.remove_titlebar_applications[][].kind`](#idwithidentifier-kind)
+- [`.slow_application_identifiers[].kind`](#idwithidentifier-kind)
+- [`.slow_application_identifiers[][].kind`](#idwithidentifier-kind)
+- [`.transparency_ignore_rules[].kind`](#idwithidentifier-kind)
+- [`.transparency_ignore_rules[][].kind`](#idwithidentifier-kind)
+- [`.tray_and_multi_window_applications[].kind`](#idwithidentifier-kind)
+- [`.tray_and_multi_window_applications[][].kind`](#idwithidentifier-kind)
+
+
+**Referenced by:**
+- [`IdWithIdentifier`](#idwithidentifier)
+
+
+
+---
+
+
+### AspectRatio {#aspectratio}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+[`PredefinedAspectRatio`](#predefinedaspectratio) - A predefined aspect ratio
+
+
+
+
+---
+`array` `[integer; 2]` - A custom W:H aspect ratio
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.floating_window_aspect_ratio`](#floating_window_aspect_ratio)
+
+
+
+
+---
+
+
+### Axis {#axis}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+- `"Horizontal"`
+- `"Vertical"`
+- `"HorizontalAndVertical"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].layout_flip`](#workspaceconfig-layout_flip)
+
+
+**Referenced by:**
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### Base16 {#base16}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (269)</summary>
+
+- `"3024"`
+- `"Apathy"`
+- `"Apprentice"`
+- `"Ashes"`
+- `"AtelierCaveLight"`
+- `"AtelierCave"`
+- `"AtelierDuneLight"`
+- `"AtelierDune"`
+- `"AtelierEstuaryLight"`
+- `"AtelierEstuary"`
+- `"AtelierForestLight"`
+- `"AtelierForest"`
+- `"AtelierHeathLight"`
+- `"AtelierHeath"`
+- `"AtelierLakesideLight"`
+- `"AtelierLakeside"`
+- `"AtelierPlateauLight"`
+- `"AtelierPlateau"`
+- `"AtelierSavannaLight"`
+- `"AtelierSavanna"`
+- `"AtelierSeasideLight"`
+- `"AtelierSeaside"`
+- `"AtelierSulphurpoolLight"`
+- `"AtelierSulphurpool"`
+- `"Atlas"`
+- `"AyuDark"`
+- `"AyuLight"`
+- `"AyuMirage"`
+- `"Aztec"`
+- `"Bespin"`
+- `"BlackMetalBathory"`
+- `"BlackMetalBurzum"`
+- `"BlackMetalDarkFuneral"`
+- `"BlackMetalGorgoroth"`
+- `"BlackMetalImmortal"`
+- `"BlackMetalKhold"`
+- `"BlackMetalMarduk"`
+- `"BlackMetalMayhem"`
+- `"BlackMetalNile"`
+- `"BlackMetalVenom"`
+- `"BlackMetal"`
+- `"Blueforest"`
+- `"Blueish"`
+- `"Brewer"`
+- `"Bright"`
+- `"Brogrammer"`
+- `"BrushtreesDark"`
+- `"Brushtrees"`
+- `"Caroline"`
+- `"CatppuccinFrappe"`
+- `"CatppuccinLatte"`
+- `"CatppuccinMacchiato"`
+- `"CatppuccinMocha"`
+- `"Chalk"`
+- `"Circus"`
+- `"ClassicDark"`
+- `"ClassicLight"`
+- `"Codeschool"`
+- `"Colors"`
+- `"Cupcake"`
+- `"Cupertino"`
+- `"DaOneBlack"`
+- `"DaOneGray"`
+- `"DaOneOcean"`
+- `"DaOnePaper"`
+- `"DaOneSea"`
+- `"DaOneWhite"`
+- `"DanqingLight"`
+- `"Danqing"`
+- `"Darcula"`
+- `"Darkmoss"`
+- `"Darktooth"`
+- `"Darkviolet"`
+- `"Decaf"`
+- `"DefaultDark"`
+- `"DefaultLight"`
+- `"Dirtysea"`
+- `"Dracula"`
+- `"EdgeDark"`
+- `"EdgeLight"`
+- `"Eighties"`
+- `"EmbersLight"`
+- `"Embers"`
+- `"Emil"`
+- `"EquilibriumDark"`
+- `"EquilibriumGrayDark"`
+- `"EquilibriumGrayLight"`
+- `"EquilibriumLight"`
+- `"Eris"`
+- `"Espresso"`
+- `"EvaDim"`
+- `"Eva"`
+- `"EvenokDark"`
+- `"EverforestDarkHard"`
+- `"Everforest"`
+- `"Flat"`
+- `"Framer"`
+- `"FruitSoda"`
+- `"Gigavolt"`
+- `"Github"`
+- `"GoogleDark"`
+- `"GoogleLight"`
+- `"Gotham"`
+- `"GrayscaleDark"`
+- `"GrayscaleLight"`
+- `"Greenscreen"`
+- `"Gruber"`
+- `"GruvboxDarkHard"`
+- `"GruvboxDarkMedium"`
+- `"GruvboxDarkPale"`
+- `"GruvboxDarkSoft"`
+- `"GruvboxLightHard"`
+- `"GruvboxLightMedium"`
+- `"GruvboxLightSoft"`
+- `"GruvboxMaterialDarkHard"`
+- `"GruvboxMaterialDarkMedium"`
+- `"GruvboxMaterialDarkSoft"`
+- `"GruvboxMaterialLightHard"`
+- `"GruvboxMaterialLightMedium"`
+- `"GruvboxMaterialLightSoft"`
+- `"Hardcore"`
+- `"Harmonic16Dark"`
+- `"Harmonic16Light"`
+- `"HeetchLight"`
+- `"Heetch"`
+- `"Helios"`
+- `"Hopscotch"`
+- `"HorizonDark"`
+- `"HorizonLight"`
+- `"HorizonTerminalDark"`
+- `"HorizonTerminalLight"`
+- `"HumanoidDark"`
+- `"HumanoidLight"`
+- `"IaDark"`
+- `"IaLight"`
+- `"Icy"`
+- `"Irblack"`
+- `"Isotope"`
+- `"Jabuti"`
+- `"Kanagawa"`
+- `"Katy"`
+- `"Kimber"`
+- `"Lime"`
+- `"Macintosh"`
+- `"Marrakesh"`
+- `"Materia"`
+- `"MaterialDarker"`
+- `"MaterialLighter"`
+- `"MaterialPalenight"`
+- `"MaterialVivid"`
+- `"Material"`
+- `"MeasuredDark"`
+- `"MeasuredLight"`
+- `"MellowPurple"`
+- `"MexicoLight"`
+- `"Mocha"`
+- `"Monokai"`
+- `"Moonlight"`
+- `"Mountain"`
+- `"Nebula"`
+- `"NordLight"`
+- `"Nord"`
+- `"Nova"`
+- `"Ocean"`
+- `"Oceanicnext"`
+- `"OneLight"`
+- `"OnedarkDark"`
+- `"Onedark"`
+- `"OutrunDark"`
+- `"OxocarbonDark"`
+- `"OxocarbonLight"`
+- `"Pandora"`
+- `"PapercolorDark"`
+- `"PapercolorLight"`
+- `"Paraiso"`
+- `"Pasque"`
+- `"Phd"`
+- `"Pico"`
+- `"Pinky"`
+- `"Pop"`
+- `"Porple"`
+- `"PreciousDarkEleven"`
+- `"PreciousDarkFifteen"`
+- `"PreciousLightWarm"`
+- `"PreciousLightWhite"`
+- `"PrimerDarkDimmed"`
+- `"PrimerDark"`
+- `"PrimerLight"`
+- `"Purpledream"`
+- `"Qualia"`
+- `"Railscasts"`
+- `"Rebecca"`
+- `"RosePineDawn"`
+- `"RosePineMoon"`
+- `"RosePine"`
+- `"Saga"`
+- `"Sagelight"`
+- `"Sakura"`
+- `"Sandcastle"`
+- `"SelenizedBlack"`
+- `"SelenizedDark"`
+- `"SelenizedLight"`
+- `"SelenizedWhite"`
+- `"Seti"`
+- `"ShadesOfPurple"`
+- `"ShadesmearDark"`
+- `"ShadesmearLight"`
+- `"Shapeshifter"`
+- `"SilkDark"`
+- `"SilkLight"`
+- `"Snazzy"`
+- `"SolarflareLight"`
+- `"Solarflare"`
+- `"SolarizedDark"`
+- `"SolarizedLight"`
+- `"Spaceduck"`
+- `"Spacemacs"`
+- `"Sparky"`
+- `"StandardizedDark"`
+- `"StandardizedLight"`
+- `"Stella"`
+- `"StillAlive"`
+- `"Summercamp"`
+- `"SummerfruitDark"`
+- `"SummerfruitLight"`
+- `"SynthMidnightDark"`
+- `"SynthMidnightLight"`
+- `"Tango"`
+- `"Tarot"`
+- `"Tender"`
+- `"TerracottaDark"`
+- `"Terracotta"`
+- `"TokyoCityDark"`
+- `"TokyoCityLight"`
+- `"TokyoCityTerminalDark"`
+- `"TokyoCityTerminalLight"`
+- `"TokyoNightDark"`
+- `"TokyoNightLight"`
+- `"TokyoNightMoon"`
+- `"TokyoNightStorm"`
+- `"TokyoNightTerminalDark"`
+- `"TokyoNightTerminalLight"`
+- `"TokyoNightTerminalStorm"`
+- `"TokyodarkTerminal"`
+- `"Tokyodark"`
+- `"TomorrowNightEighties"`
+- `"TomorrowNight"`
+- `"Tomorrow"`
+- `"Tube"`
+- `"Twilight"`
+- `"UnikittyDark"`
+- `"UnikittyLight"`
+- `"UnikittyReversible"`
+- `"Uwunicorn"`
+- `"Vesper"`
+- `"Vice"`
+- `"Vulcan"`
+- `"Windows10Light"`
+- `"Windows10"`
+- `"Windows95Light"`
+- `"Windows95"`
+- `"WindowsHighcontrastLight"`
+- `"WindowsHighcontrast"`
+- `"WindowsNtLight"`
+- `"WindowsNt"`
+- `"Woodland"`
+- `"XcodeDusk"`
+- `"Zenbones"`
+- `"Zenburn"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.name`](#komorebitheme-oneof[1]-name)
+
+
+**Referenced by:**
+- [`KomorebiTheme`](#komorebitheme)
+
+
+
+---
+
+
+### Base16ColourPalette {#base16colourpalette}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (16)</summary>
+
+#### base_00 {#base16colourpalette-base_00}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_01 {#base16colourpalette-base_01}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_02 {#base16colourpalette-base_02}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_03 {#base16colourpalette-base_03}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_04 {#base16colourpalette-base_04}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_05 {#base16colourpalette-base_05}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_06 {#base16colourpalette-base_06}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_07 {#base16colourpalette-base_07}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_08 {#base16colourpalette-base_08}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_09 {#base16colourpalette-base_09}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0a {#base16colourpalette-base_0a}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0b {#base16colourpalette-base_0b}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0c {#base16colourpalette-base_0c}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0d {#base16colourpalette-base_0d}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0e {#base16colourpalette-base_0e}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+#### base_0f {#base16colourpalette-base_0f}
+
+<Badge text="required" variant="success" /> [`Colour`](#colour)
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.colours`](#komorebitheme-oneof[2]-colours)
+
+
+**Referenced by:**
+- [`KomorebiTheme`](#komorebitheme)
+
+
+
+---
+
+
+### Base16Value {#base16value}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (16)</summary>
+
+- `"Base00"`
+- `"Base01"`
+- `"Base02"`
+- `"Base03"`
+- `"Base04"`
+- `"Base05"`
+- `"Base06"`
+- `"Base07"`
+- `"Base08"`
+- `"Base09"`
+- `"Base0A"`
+- `"Base0B"`
+- `"Base0C"`
+- `"Base0D"`
+- `"Base0E"`
+- `"Base0F"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].wallpaper.theme_options.bar_accent`](#themeoptions-bar_accent)
+- [`.monitors[].wallpaper.theme_options.floating_border`](#themeoptions-floating_border)
+- [`.monitors[].wallpaper.theme_options.monocle_border`](#themeoptions-monocle_border)
+- [`.monitors[].wallpaper.theme_options.single_border`](#themeoptions-single_border)
+- [`.monitors[].wallpaper.theme_options.stack_border`](#themeoptions-stack_border)
+- [`.monitors[].wallpaper.theme_options.stackbar_background`](#themeoptions-stackbar_background)
+- [`.monitors[].wallpaper.theme_options.stackbar_focused_text`](#themeoptions-stackbar_focused_text)
+- [`.monitors[].wallpaper.theme_options.stackbar_unfocused_text`](#themeoptions-stackbar_unfocused_text)
+- [`.monitors[].wallpaper.theme_options.unfocused_border`](#themeoptions-unfocused_border)
+- [`.monitors[].wallpaper.theme_options.unfocused_locked_border`](#themeoptions-unfocused_locked_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.bar_accent`](#themeoptions-bar_accent)
+- [`.monitors[].workspaces[].wallpaper.theme_options.floating_border`](#themeoptions-floating_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.monocle_border`](#themeoptions-monocle_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.single_border`](#themeoptions-single_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.stack_border`](#themeoptions-stack_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.stackbar_background`](#themeoptions-stackbar_background)
+- [`.monitors[].workspaces[].wallpaper.theme_options.stackbar_focused_text`](#themeoptions-stackbar_focused_text)
+- [`.monitors[].workspaces[].wallpaper.theme_options.stackbar_unfocused_text`](#themeoptions-stackbar_unfocused_text)
+- [`.monitors[].workspaces[].wallpaper.theme_options.unfocused_border`](#themeoptions-unfocused_border)
+- [`.monitors[].workspaces[].wallpaper.theme_options.unfocused_locked_border`](#themeoptions-unfocused_locked_border)
+- [`.theme.bar_accent`](#komorebitheme-oneof[1]-bar_accent)
+- [`.theme.bar_accent`](#komorebitheme-oneof[2]-bar_accent)
+- [`.theme.floating_border`](#komorebitheme-oneof[1]-floating_border)
+- [`.theme.floating_border`](#komorebitheme-oneof[2]-floating_border)
+- [`.theme.monocle_border`](#komorebitheme-oneof[1]-monocle_border)
+- [`.theme.monocle_border`](#komorebitheme-oneof[2]-monocle_border)
+- [`.theme.single_border`](#komorebitheme-oneof[1]-single_border)
+- [`.theme.single_border`](#komorebitheme-oneof[2]-single_border)
+- [`.theme.stack_border`](#komorebitheme-oneof[1]-stack_border)
+- [`.theme.stack_border`](#komorebitheme-oneof[2]-stack_border)
+- [`.theme.stackbar_background`](#komorebitheme-oneof[1]-stackbar_background)
+- [`.theme.stackbar_background`](#komorebitheme-oneof[2]-stackbar_background)
+- [`.theme.stackbar_focused_text`](#komorebitheme-oneof[1]-stackbar_focused_text)
+- [`.theme.stackbar_focused_text`](#komorebitheme-oneof[2]-stackbar_focused_text)
+- [`.theme.stackbar_unfocused_text`](#komorebitheme-oneof[1]-stackbar_unfocused_text)
+- [`.theme.stackbar_unfocused_text`](#komorebitheme-oneof[2]-stackbar_unfocused_text)
+- [`.theme.unfocused_border`](#komorebitheme-oneof[1]-unfocused_border)
+- [`.theme.unfocused_border`](#komorebitheme-oneof[2]-unfocused_border)
+- [`.theme.unfocused_locked_border`](#komorebitheme-oneof[1]-unfocused_locked_border)
+- [`.theme.unfocused_locked_border`](#komorebitheme-oneof[2]-unfocused_locked_border)
+
+
+**Referenced by:**
+- [`KomorebiTheme`](#komorebitheme)
+- [`ThemeOptions`](#themeoptions)
+
+
+
+---
+
+
+### BorderColours {#bordercolours}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (6)</summary>
+
+#### floating {#bordercolours-floating}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container is in floating mode
+
+
+
+#### monocle {#bordercolours-monocle}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container is in monocle mode
+
+
+
+#### single {#bordercolours-single}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container contains a single window
+
+
+
+#### stack {#bordercolours-stack}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container contains multiple windows
+
+
+
+#### unfocused {#bordercolours-unfocused}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container is unfocused
+
+
+
+#### unfocused_locked {#bordercolours-unfocused_locked}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Border colour when the container is unfocused and locked
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_colours`](#border_colours)
+
+
+
+
+---
+
+
+### BorderImplementation {#borderimplementation}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - Use the adjustable komorebi border implementation
+
+
+**Value:** `"Komorebi"`
+
+---
+`string` - Use the thin Windows accent border implementation
+
+
+**Value:** `"Windows"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_implementation`](#border_implementation)
+
+
+
+
+---
+
+
+### BorderStyle {#borderstyle}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - Use the system border style
+
+
+**Value:** `"System"`
+
+---
+`string` - Use the Windows 11-style rounded borders
+
+
+**Value:** `"Rounded"`
+
+---
+`string` - Use the Windows 10-style square borders
+
+
+**Value:** `"Square"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_style`](#border_style)
+
+
+
+
+---
+
+
+### Catppuccin {#catppuccin}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+- `"Frappe"`
+- `"Latte"`
+- `"Macchiato"`
+- `"Mocha"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.name`](#komorebitheme-oneof[0]-name)
+
+
+**Referenced by:**
+- [`KomorebiTheme`](#komorebitheme)
+
+
+
+---
+
+
+### CatppuccinValue {#catppuccinvalue}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (26)</summary>
+
+- `"Rosewater"`
+- `"Flamingo"`
+- `"Pink"`
+- `"Mauve"`
+- `"Red"`
+- `"Maroon"`
+- `"Peach"`
+- `"Yellow"`
+- `"Green"`
+- `"Teal"`
+- `"Sky"`
+- `"Sapphire"`
+- `"Blue"`
+- `"Lavender"`
+- `"Text"`
+- `"Subtext1"`
+- `"Subtext0"`
+- `"Overlay2"`
+- `"Overlay1"`
+- `"Overlay0"`
+- `"Surface2"`
+- `"Surface1"`
+- `"Surface0"`
+- `"Base"`
+- `"Mantle"`
+- `"Crust"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme.bar_accent`](#komorebitheme-oneof[0]-bar_accent)
+- [`.theme.floating_border`](#komorebitheme-oneof[0]-floating_border)
+- [`.theme.monocle_border`](#komorebitheme-oneof[0]-monocle_border)
+- [`.theme.single_border`](#komorebitheme-oneof[0]-single_border)
+- [`.theme.stack_border`](#komorebitheme-oneof[0]-stack_border)
+- [`.theme.stackbar_background`](#komorebitheme-oneof[0]-stackbar_background)
+- [`.theme.stackbar_focused_text`](#komorebitheme-oneof[0]-stackbar_focused_text)
+- [`.theme.stackbar_unfocused_text`](#komorebitheme-oneof[0]-stackbar_unfocused_text)
+- [`.theme.unfocused_border`](#komorebitheme-oneof[0]-unfocused_border)
+- [`.theme.unfocused_locked_border`](#komorebitheme-oneof[0]-unfocused_locked_border)
+
+
+**Referenced by:**
+- [`KomorebiTheme`](#komorebitheme)
+
+
+
+---
+
+
+### Colour {#colour}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+[`Rgb`](#rgb) - Colour represented as RGB
+
+
+
+
+---
+[`Hex`](#hex) - Colour represented as Hex
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_colours.floating`](#bordercolours-floating)
+- [`.border_colours.monocle`](#bordercolours-monocle)
+- [`.border_colours.single`](#bordercolours-single)
+- [`.border_colours.stack`](#bordercolours-stack)
+- [`.border_colours.unfocused`](#bordercolours-unfocused)
+- [`.border_colours.unfocused_locked`](#bordercolours-unfocused_locked)
+- [`.stackbar.tabs.background`](#tabsconfig-background)
+- [`.stackbar.tabs.focused_text`](#tabsconfig-focused_text)
+- [`.stackbar.tabs.unfocused_text`](#tabsconfig-unfocused_text)
+- [`.theme.colours.base_00`](#base16colourpalette-base_00)
+- [`.theme.colours.base_01`](#base16colourpalette-base_01)
+- [`.theme.colours.base_02`](#base16colourpalette-base_02)
+- [`.theme.colours.base_03`](#base16colourpalette-base_03)
+- [`.theme.colours.base_04`](#base16colourpalette-base_04)
+- [`.theme.colours.base_05`](#base16colourpalette-base_05)
+- [`.theme.colours.base_06`](#base16colourpalette-base_06)
+- [`.theme.colours.base_07`](#base16colourpalette-base_07)
+- [`.theme.colours.base_08`](#base16colourpalette-base_08)
+- [`.theme.colours.base_09`](#base16colourpalette-base_09)
+- [`.theme.colours.base_0a`](#base16colourpalette-base_0a)
+- [`.theme.colours.base_0b`](#base16colourpalette-base_0b)
+- [`.theme.colours.base_0c`](#base16colourpalette-base_0c)
+- [`.theme.colours.base_0d`](#base16colourpalette-base_0d)
+- [`.theme.colours.base_0e`](#base16colourpalette-base_0e)
+- [`.theme.colours.base_0f`](#base16colourpalette-base_0f)
+
+
+**Referenced by:**
+- [`Base16ColourPalette`](#base16colourpalette)
+- [`BorderColours`](#bordercolours)
+- [`TabsConfig`](#tabsconfig)
+
+
+
+---
+
+
+### CrossBoundaryBehaviour {#crossboundarybehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - Attempt to perform actions across a workspace boundary
+
+
+**Value:** `"Workspace"`
+
+---
+`string` - Attempt to perform actions across a monitor boundary
+
+
+**Value:** `"Monitor"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.cross_boundary_behaviour`](#cross_boundary_behaviour)
+
+
+
+
+---
+
+
+### DefaultLayout {#defaultlayout}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (9)</summary>
+
+- `"BSP"`
+- `"Columns"`
+- `"Rows"`
+- `"VerticalStack"`
+- `"HorizontalStack"`
+- `"UltrawideVerticalStack"`
+- `"Grid"`
+- `"RightMainVerticalStack"`
+- `"Scrolling"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].layout`](#workspaceconfig-layout)
+- [`.monitors[].workspaces[].layout_rules[*]`](#workspaceconfig-layout_rules)
+
+
+**Referenced by:**
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### FloatingLayerBehaviour {#floatinglayerbehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - Tile new windows (unless they match a float rule or float override is active)
+
+
+**Value:** `"Tile"`
+
+---
+`string` - Float new windows
+
+
+**Value:** `"Float"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.floating_layer_behaviour`](#floating_layer_behaviour)
+- [`.monitors[].floating_layer_behaviour`](#monitorconfig-floating_layer_behaviour)
+- [`.monitors[].workspaces[].floating_layer_behaviour`](#workspaceconfig-floating_layer_behaviour)
+
+
+**Referenced by:**
+- [`MonitorConfig`](#monitorconfig)
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### FocusFollowsMouseImplementation {#focusfollowsmouseimplementation}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - A custom FFM implementation (slightly more CPU-intensive)
+
+
+**Value:** `"Komorebi"`
+
+---
+`string` - The native (legacy) Windows FFM implementation
+
+
+**Value:** `"Windows"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.focus_follows_mouse`](#focus_follows_mouse)
+
+
+
+
+---
+
+
+### GridLayoutOptions {#gridlayoutoptions}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (1)</summary>
+
+#### rows {#gridlayoutoptions-rows}
+
+<Badge text="required" variant="success" /> `integer`
+
+Maximum number of rows per grid column
+
+
+
+
+- **Format:** `uint`
+- **Minimum:** 0
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].layout_options.grid`](#layoutoptions-grid)
+
+
+**Referenced by:**
+- [`LayoutOptions`](#layoutoptions)
+
+
+
+---
+
+
+### Hex {#hex}
+
+`string`
+
+
+
+
+
+- **Format:** `color-hex`
+
+
+#### Usages
+
+**Configuration:**
+- [`.border_colours.floating`](#colour)
+- [`.border_colours.monocle`](#colour)
+- [`.border_colours.single`](#colour)
+- [`.border_colours.stack`](#colour)
+- [`.border_colours.unfocused`](#colour)
+- [`.border_colours.unfocused_locked`](#colour)
+- [`.stackbar.tabs.background`](#colour)
+- [`.stackbar.tabs.focused_text`](#colour)
+- [`.stackbar.tabs.unfocused_text`](#colour)
+- [`.theme.colours.base_00`](#colour)
+- [`.theme.colours.base_01`](#colour)
+- [`.theme.colours.base_02`](#colour)
+- [`.theme.colours.base_03`](#colour)
+- [`.theme.colours.base_04`](#colour)
+- [`.theme.colours.base_05`](#colour)
+- [`.theme.colours.base_06`](#colour)
+- [`.theme.colours.base_07`](#colour)
+- [`.theme.colours.base_08`](#colour)
+- [`.theme.colours.base_09`](#colour)
+- [`.theme.colours.base_0a`](#colour)
+- [`.theme.colours.base_0b`](#colour)
+- [`.theme.colours.base_0c`](#colour)
+- [`.theme.colours.base_0d`](#colour)
+- [`.theme.colours.base_0e`](#colour)
+- [`.theme.colours.base_0f`](#colour)
+
+
+**Referenced by:**
+- [`Colour`](#colour)
+
+
+
+---
+
+
+### HidingBehaviour {#hidingbehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - END OF LIFE FEATURE: Use the SW_HIDE flag to hide windows when switching workspaces (has issues with Electron apps)
+
+
+**Value:** `"Hide"`
+
+---
+`string` - Use the SW_MINIMIZE flag to hide windows when switching workspaces (has issues with frequent workspace switching)
+
+
+**Value:** `"Minimize"`
+
+---
+`string` - Use the undocumented SetCloak Win32 function to hide windows when switching workspaces
+
+
+**Value:** `"Cloak"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.window_hiding_behaviour`](#window_hiding_behaviour)
+
+
+
+
+---
+
+
+### IdWithIdentifier {#idwithidentifier}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### id {#idwithidentifier-id}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+
+#### kind {#idwithidentifier-kind}
+
+<Badge text="required" variant="success" /> [`ApplicationIdentifier`](#applicationidentifier)
+
+
+
+
+#### matching_strategy {#idwithidentifier-matching_strategy}
+
+<Badge text="optional" variant="note" /> [`MatchingStrategy`](#matchingstrategy)
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_overflow_applications[]`](#matchingrule)
+- [`.border_overflow_applications[][]`](#matchingrule)
+- [`.floating_applications[]`](#matchingrule)
+- [`.floating_applications[][]`](#matchingrule)
+- [`.ignore_rules[]`](#matchingrule)
+- [`.ignore_rules[][]`](#matchingrule)
+- [`.layered_applications[]`](#matchingrule)
+- [`.layered_applications[][]`](#matchingrule)
+- [`.manage_rules[]`](#matchingrule)
+- [`.manage_rules[][]`](#matchingrule)
+- [`.monitors[].workspaces[].initial_workspace_rules[]`](#matchingrule)
+- [`.monitors[].workspaces[].initial_workspace_rules[][]`](#matchingrule)
+- [`.monitors[].workspaces[].workspace_rules[]`](#matchingrule)
+- [`.monitors[].workspaces[].workspace_rules[][]`](#matchingrule)
+- [`.object_name_change_applications[]`](#matchingrule)
+- [`.object_name_change_applications[][]`](#matchingrule)
+- [`.remove_titlebar_applications[]`](#matchingrule)
+- [`.remove_titlebar_applications[][]`](#matchingrule)
+- [`.slow_application_identifiers[]`](#matchingrule)
+- [`.slow_application_identifiers[][]`](#matchingrule)
+- [`.transparency_ignore_rules[]`](#matchingrule)
+- [`.transparency_ignore_rules[][]`](#matchingrule)
+- [`.tray_and_multi_window_applications[]`](#matchingrule)
+- [`.tray_and_multi_window_applications[][]`](#matchingrule)
+
+
+**Referenced by:**
+- [`MatchingRule`](#matchingrule)
+
+
+
+---
+
+
+### KomorebiTheme {#komorebitheme}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`object` - A theme from catppuccin-egui
+
+
+<details>
+<summary>Properties (12)</summary>
+
+#### bar_accent {#komorebitheme-oneof[0]-bar_accent}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Komorebi status bar accent (default: Blue)
+
+
+
+#### floating_border {#komorebitheme-oneof[0]-floating_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the window is floating (default: Yellow)
+
+
+
+#### monocle_border {#komorebitheme-oneof[0]-monocle_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the container is in monocle mode (default: Pink)
+
+
+
+#### name {#komorebitheme-oneof[0]-name}
+
+<Badge text="required" variant="success" /> [`Catppuccin`](#catppuccin)
+
+Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catppuccin)
+
+
+
+#### palette {#komorebitheme-oneof[0]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Catppuccin"`
+#### single_border {#komorebitheme-oneof[0]-single_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the container contains a single window (default: Blue)
+
+
+
+#### stack_border {#komorebitheme-oneof[0]-stack_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the container contains multiple windows (default: Green)
+
+
+
+#### stackbar_background {#komorebitheme-oneof[0]-stackbar_background}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Stackbar tab background colour (default: Base)
+
+
+
+#### stackbar_focused_text {#komorebitheme-oneof[0]-stackbar_focused_text}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Stackbar focused tab text colour (default: Green)
+
+
+
+#### stackbar_unfocused_text {#komorebitheme-oneof[0]-stackbar_unfocused_text}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Stackbar unfocused tab text colour (default: Text)
+
+
+
+#### unfocused_border {#komorebitheme-oneof[0]-unfocused_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the container is unfocused (default: Base)
+
+
+
+#### unfocused_locked_border {#komorebitheme-oneof[0]-unfocused_locked_border}
+
+<Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
+
+Border colour when the container is unfocused and locked (default: Red)
+
+
+
+
+</details>
+
+---
+`object` - A theme from base16-egui-themes
+
+
+<details>
+<summary>Properties (12)</summary>
+
+#### bar_accent {#komorebitheme-oneof[1]-bar_accent}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Komorebi status bar accent (default: Base0D)
+
+
+
+#### floating_border {#komorebitheme-oneof[1]-floating_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the window is floating (default: Base09)
+
+
+
+#### monocle_border {#komorebitheme-oneof[1]-monocle_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is in monocle mode (default: Base0F)
+
+
+
+#### name {#komorebitheme-oneof[1]-name}
+
+<Badge text="required" variant="success" /> [`Base16`](#base16)
+
+Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinted-gallery/)
+
+
+
+#### palette {#komorebitheme-oneof[1]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Base16"`
+#### single_border {#komorebitheme-oneof[1]-single_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains a single window (default: Base0D)
+
+
+
+#### stack_border {#komorebitheme-oneof[1]-stack_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains multiple windows (default: Base0B)
+
+
+
+#### stackbar_background {#komorebitheme-oneof[1]-stackbar_background}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar tab background colour (default: Base01)
+
+
+
+#### stackbar_focused_text {#komorebitheme-oneof[1]-stackbar_focused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar focused tab text colour (default: Base0B)
+
+
+
+#### stackbar_unfocused_text {#komorebitheme-oneof[1]-stackbar_unfocused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar unfocused tab text colour (default: Base05)
+
+
+
+#### unfocused_border {#komorebitheme-oneof[1]-unfocused_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused (default: Base01)
+
+
+
+#### unfocused_locked_border {#komorebitheme-oneof[1]-unfocused_locked_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused and locked (default: Base08)
+
+
+
+
+</details>
+
+---
+`object` - A custom Base16 theme
+
+
+<details>
+<summary>Properties (12)</summary>
+
+#### bar_accent {#komorebitheme-oneof[2]-bar_accent}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Komorebi status bar accent (default: Base0D)
+
+
+
+#### colours {#komorebitheme-oneof[2]-colours}
+
+<Badge text="required" variant="success" /> [`Base16ColourPalette`](#base16colourpalette)
+
+Colours of the custom Base16 theme palette
+
+
+
+#### floating_border {#komorebitheme-oneof[2]-floating_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the window is floating (default: Base09)
+
+
+
+#### monocle_border {#komorebitheme-oneof[2]-monocle_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is in monocle mode (default: Base0F)
+
+
+
+#### palette {#komorebitheme-oneof[2]-palette}
+
+<Badge text="required" variant="success" /> `string`
+
+
+
+**Value:** `"Custom"`
+#### single_border {#komorebitheme-oneof[2]-single_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains a single window (default: Base0D)
+
+
+
+#### stack_border {#komorebitheme-oneof[2]-stack_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains multiple windows (default: Base0B)
+
+
+
+#### stackbar_background {#komorebitheme-oneof[2]-stackbar_background}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar tab background colour (default: Base01)
+
+
+
+#### stackbar_focused_text {#komorebitheme-oneof[2]-stackbar_focused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar focused tab text colour (default: Base0B)
+
+
+
+#### stackbar_unfocused_text {#komorebitheme-oneof[2]-stackbar_unfocused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar unfocused tab text colour (default: Base05)
+
+
+
+#### unfocused_border {#komorebitheme-oneof[2]-unfocused_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused (default: Base01)
+
+
+
+#### unfocused_locked_border {#komorebitheme-oneof[2]-unfocused_locked_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused and locked (default: Base08)
+
+
+
+
+</details>
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.theme`](#theme)
+
+
+
+
+---
+
+
+### LayoutOptions {#layoutoptions}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### grid {#layoutoptions-grid}
+
+<Badge text="optional" variant="note" /> [`GridLayoutOptions`](#gridlayoutoptions)
+
+Options related to the Grid layout
+
+
+
+#### scrolling {#layoutoptions-scrolling}
+
+<Badge text="optional" variant="note" /> [`ScrollingLayoutOptions`](#scrollinglayoutoptions)
+
+Options related to the Scrolling layout
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].layout_options`](#workspaceconfig-layout_options)
+
+
+**Referenced by:**
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### MatchingRule {#matchingrule}
+
+`enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+[`IdWithIdentifier`](#idwithidentifier)
+
+
+
+---
+`array` [`IdWithIdentifier`](#idwithidentifier)
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_overflow_applications[]`](#border_overflow_applications)
+- [`.floating_applications[]`](#floating_applications)
+- [`.ignore_rules[]`](#ignore_rules)
+- [`.layered_applications[]`](#layered_applications)
+- [`.manage_rules[]`](#manage_rules)
+- [`.monitors[].workspaces[].initial_workspace_rules[]`](#workspaceconfig-initial_workspace_rules)
+- [`.monitors[].workspaces[].workspace_rules[]`](#workspaceconfig-workspace_rules)
+- [`.object_name_change_applications[]`](#object_name_change_applications)
+- [`.remove_titlebar_applications[]`](#remove_titlebar_applications)
+- [`.slow_application_identifiers[]`](#slow_application_identifiers)
+- [`.transparency_ignore_rules[]`](#transparency_ignore_rules)
+- [`.tray_and_multi_window_applications[]`](#tray_and_multi_window_applications)
+
+
+**Referenced by:**
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### MatchingStrategy {#matchingstrategy}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (10)</summary>
+
+- `"Legacy"`
+- `"Equals"`
+- `"StartsWith"`
+- `"EndsWith"`
+- `"Contains"`
+- `"Regex"`
+- `"DoesNotEndWith"`
+- `"DoesNotStartWith"`
+- `"DoesNotEqual"`
+- `"DoesNotContain"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_overflow_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.border_overflow_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.floating_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.floating_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.ignore_rules[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.ignore_rules[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.layered_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.layered_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.manage_rules[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.manage_rules[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.monitors[].workspaces[].initial_workspace_rules[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.monitors[].workspaces[].initial_workspace_rules[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.monitors[].workspaces[].workspace_rules[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.monitors[].workspaces[].workspace_rules[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.object_name_change_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.object_name_change_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.remove_titlebar_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.remove_titlebar_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.slow_application_identifiers[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.slow_application_identifiers[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.transparency_ignore_rules[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.transparency_ignore_rules[][].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.tray_and_multi_window_applications[].matching_strategy`](#idwithidentifier-matching_strategy)
+- [`.tray_and_multi_window_applications[][].matching_strategy`](#idwithidentifier-matching_strategy)
+
+
+**Referenced by:**
+- [`IdWithIdentifier`](#idwithidentifier)
+
+
+
+---
+
+
+### MonitorConfig {#monitorconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (8)</summary>
+
+#### container_padding {#monitorconfig-container_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Container padding (default: global)
+
+
+
+
+- **Format:** `int32`
+
+#### floating_layer_behaviour {#monitorconfig-floating_layer_behaviour}
+
+<Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
+
+Determine what happens to a new window when the Floating workspace layer is active (default: Tile)
+
+
+
+#### wallpaper {#monitorconfig-wallpaper}
+
+<Badge text="optional" variant="note" /> [`Wallpaper`](#wallpaper)
+
+Specify a wallpaper for this monitor
+
+
+
+#### window_based_work_area_offset {#monitorconfig-window_based_work_area_offset}
+
+<Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+Window based work area offset (default: None)
+
+
+
+#### window_based_work_area_offset_limit {#monitorconfig-window_based_work_area_offset_limit}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Open window limit after which the window based work area offset will no longer be applied (default: 1)
+
+
+
+
+- **Format:** `int`
+
+#### work_area_offset {#monitorconfig-work_area_offset}
+
+<Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+Monitor-specific work area offset (default: None)
+
+
+
+#### workspace_padding {#monitorconfig-workspace_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Workspace padding (default: global)
+
+
+
+
+- **Format:** `int32`
+
+#### workspaces {#monitorconfig-workspaces}
+
+<Badge text="required" variant="success" /> `array` [`WorkspaceConfig`](#workspaceconfig)
+
+Workspace configurations
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[]`](#monitors)
+
+
+
+
+---
+
+
+### MoveBehaviour {#movebehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - Swap the window container with the window container at the edge of the adjacent monitor
+
+
+**Value:** `"Swap"`
+
+---
+`string` - Insert the window container into the focused workspace on the adjacent monitor
+
+
+**Value:** `"Insert"`
+
+---
+`string` - Do nothing if trying to move a window container in the direction of an adjacent monitor
+
+
+**Value:** `"NoOp"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.cross_monitor_move_behaviour`](#cross_monitor_move_behaviour)
+
+
+
+
+---
+
+
+### OperationBehaviour {#operationbehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - Process komorebic commands on temporarily unmanaged/floated windows
+
+
+**Value:** `"Op"`
+
+---
+`string` - Ignore komorebic commands on temporarily unmanaged/floated windows
+
+
+**Value:** `"NoOp"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.unmanaged_window_operation_behaviour`](#unmanaged_window_operation_behaviour)
+
+
+
+
+---
+
+
+### PathBuf {#pathbuf}
+
+`string`
+
+
+
+
+
+#### Usages
+
+**Configuration:**
+- [`.app_specific_configuration_path`](#appspecificconfigurationpath)
+- [`.app_specific_configuration_path[]`](#appspecificconfigurationpath)
+- [`.bar_configurations[]`](#bar_configurations)
+- [`.monitors[].wallpaper.path`](#wallpaper-path)
+- [`.monitors[].workspaces[].custom_layout`](#workspaceconfig-custom_layout)
+- [`.monitors[].workspaces[].wallpaper.path`](#wallpaper-path)
+
+
+**Referenced by:**
+- [`AppSpecificConfigurationPath`](#appspecificconfigurationpath)
+- [`Wallpaper`](#wallpaper)
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### PerAnimationPrefixConfig {#peranimationprefixconfig}
+
+`boolean`
+
+
+
+
+
+#### Usages
+
+**Configuration:**
+- [`.animation.enabled`](#animationsconfig-enabled)
+
+
+**Referenced by:**
+- [`AnimationsConfig`](#animationsconfig)
+
+
+
+---
+
+
+### PerAnimationPrefixConfig {#peranimationprefixconfig2}
+
+`integer`
+
+
+
+
+
+#### Usages
+
+**Configuration:**
+- [`.animation.duration`](#animationsconfig-duration)
+
+
+**Referenced by:**
+- [`AnimationsConfig`](#animationsconfig)
+
+
+
+---
+
+
+### PerAnimationPrefixConfig {#peranimationprefixconfig3}
+
+[`AnimationStyle`](#animationstyle)
+
+
+
+
+
+#### Usages
+
+**Configuration:**
+- [`.animation.style`](#animationsconfig-style)
+
+
+**Referenced by:**
+- [`AnimationsConfig`](#animationsconfig)
+
+
+
+---
+
+
+### Placement {#placement}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - Does not change the size or position of the window
+
+
+**Value:** `"None"`
+
+---
+`string` - Center the window without changing the size
+
+
+**Value:** `"Center"`
+
+---
+`string` - Center the window and resize it according to the AspectRatio
+
+
+**Value:** `"CenterAndResize"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.float_override_placement`](#float_override_placement)
+- [`.float_rule_placement`](#float_rule_placement)
+- [`.floating_layer_placement`](#floating_layer_placement)
+- [`.toggle_float_placement`](#toggle_float_placement)
+
+
+
+
+---
+
+
+### PredefinedAspectRatio {#predefinedaspectratio}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+
+---
+`string` - 21:9
+
+
+**Value:** `"Ultrawide"`
+
+---
+`string` - 16:9
+
+
+**Value:** `"Widescreen"`
+
+---
+`string` - 4:3
+
+
+**Value:** `"Standard"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.floating_window_aspect_ratio`](#aspectratio)
+
+
+**Referenced by:**
+- [`AspectRatio`](#aspectratio)
+
+
+
+---
+
+
+### Rect {#rect}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### bottom {#rect-bottom}
+
+<Badge text="required" variant="success" /> `integer`
+
+The bottom point in a Win32 Rect
+
+
+
+
+- **Format:** `int32`
+
+#### left {#rect-left}
+
+<Badge text="required" variant="success" /> `integer`
+
+The left point in a Win32 Rect
+
+
+
+
+- **Format:** `int32`
+
+#### right {#rect-right}
+
+<Badge text="required" variant="success" /> `integer`
+
+The right point in a Win32 Rect
+
+
+
+
+- **Format:** `int32`
+
+#### top {#rect-top}
+
+<Badge text="required" variant="success" /> `integer`
+
+The top point in a Win32 Rect
+
+
+
+
+- **Format:** `int32`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.global_work_area_offset`](#global_work_area_offset)
+- [`.invisible_borders`](#invisible_borders)
+- [`.monitor_index_preferences[*]`](#monitor_index_preferences)
+- [`.monitors[].window_based_work_area_offset`](#monitorconfig-window_based_work_area_offset)
+- [`.monitors[].work_area_offset`](#monitorconfig-work_area_offset)
+- [`.monitors[].workspaces[].work_area_offset`](#workspaceconfig-work_area_offset)
+
+
+**Referenced by:**
+- [`MonitorConfig`](#monitorconfig)
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### Rgb {#rgb}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### b {#rgb-b}
+
+<Badge text="required" variant="success" /> `integer`
+
+Blue
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+#### g {#rgb-g}
+
+<Badge text="required" variant="success" /> `integer`
+
+Green
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+#### r {#rgb-r}
+
+<Badge text="required" variant="success" /> `integer`
+
+Red
+
+
+
+
+- **Format:** `uint32`
+- **Minimum:** 0
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_colours.floating`](#colour)
+- [`.border_colours.monocle`](#colour)
+- [`.border_colours.single`](#colour)
+- [`.border_colours.stack`](#colour)
+- [`.border_colours.unfocused`](#colour)
+- [`.border_colours.unfocused_locked`](#colour)
+- [`.stackbar.tabs.background`](#colour)
+- [`.stackbar.tabs.focused_text`](#colour)
+- [`.stackbar.tabs.unfocused_text`](#colour)
+- [`.theme.colours.base_00`](#colour)
+- [`.theme.colours.base_01`](#colour)
+- [`.theme.colours.base_02`](#colour)
+- [`.theme.colours.base_03`](#colour)
+- [`.theme.colours.base_04`](#colour)
+- [`.theme.colours.base_05`](#colour)
+- [`.theme.colours.base_06`](#colour)
+- [`.theme.colours.base_07`](#colour)
+- [`.theme.colours.base_08`](#colour)
+- [`.theme.colours.base_09`](#colour)
+- [`.theme.colours.base_0a`](#colour)
+- [`.theme.colours.base_0b`](#colour)
+- [`.theme.colours.base_0c`](#colour)
+- [`.theme.colours.base_0d`](#colour)
+- [`.theme.colours.base_0e`](#colour)
+- [`.theme.colours.base_0f`](#colour)
+
+
+**Referenced by:**
+- [`Colour`](#colour)
+
+
+
+---
+
+
+### ScrollingLayoutOptions {#scrollinglayoutoptions}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (2)</summary>
+
+#### center_focused_column {#scrollinglayoutoptions-center_focused_column}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+With an odd number of visible columns, keep the focused window column centered
+
+
+
+#### columns {#scrollinglayoutoptions-columns}
+
+<Badge text="required" variant="success" /> `integer`
+
+Desired number of visible columns (default: 3)
+
+
+
+
+- **Format:** `uint`
+- **Minimum:** 0
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].layout_options.scrolling`](#layoutoptions-scrolling)
+
+
+**Referenced by:**
+- [`LayoutOptions`](#layoutoptions)
+
+
+
+---
+
+
+### StackbarConfig {#stackbarconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (4)</summary>
+
+#### height {#stackbarconfig-height}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Stackbar height
+
+
+
+
+- **Format:** `int32`
+
+#### label {#stackbarconfig-label}
+
+<Badge text="optional" variant="note" /> [`StackbarLabel`](#stackbarlabel)
+
+Stackbar label
+
+
+
+#### mode {#stackbarconfig-mode}
+
+<Badge text="optional" variant="note" /> [`StackbarMode`](#stackbarmode)
+
+Stackbar mode (default: Never)
+
+
+
+#### tabs {#stackbarconfig-tabs}
+
+<Badge text="optional" variant="note" /> [`TabsConfig`](#tabsconfig)
+
+Stackbar tab configuration options
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.stackbar`](#stackbar)
+
+
+
+
+---
+
+
+### StackbarLabel {#stackbarlabel}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+- `"Process"`
+- `"Title"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.stackbar.label`](#stackbarconfig-label)
+
+
+**Referenced by:**
+- [`StackbarConfig`](#stackbarconfig)
+
+
+
+---
+
+
+### StackbarMode {#stackbarmode}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (3)</summary>
+
+- `"Always"`
+- `"Never"`
+- `"OnStack"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.stackbar.mode`](#stackbarconfig-mode)
+
+
+**Referenced by:**
+- [`StackbarConfig`](#stackbarconfig)
+
+
+
+---
+
+
+### TabsConfig {#tabsconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (6)</summary>
+
+#### background {#tabsconfig-background}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Tab background colour
+
+
+
+#### focused_text {#tabsconfig-focused_text}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Focused tab text colour
+
+
+
+#### font_family {#tabsconfig-font_family}
+
+<Badge text="optional" variant="note" /> `string`
+
+Font family
+
+
+
+#### font_size {#tabsconfig-font_size}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Font size
+
+
+
+
+- **Format:** `int32`
+
+#### unfocused_text {#tabsconfig-unfocused_text}
+
+<Badge text="optional" variant="note" /> [`Colour`](#colour)
+
+Unfocused tab text colour
+
+
+
+#### width {#tabsconfig-width}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Width of a stackbar tab
+
+
+
+
+- **Format:** `int32`
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.stackbar.tabs`](#stackbarconfig-tabs)
+
+
+**Referenced by:**
+- [`StackbarConfig`](#stackbarconfig)
+
+
+
+---
+
+
+### ThemeOptions {#themeoptions}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (11)</summary>
+
+#### bar_accent {#themeoptions-bar_accent}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Komorebi status bar accent (default: Base0D)
+
+
+
+#### floating_border {#themeoptions-floating_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the window is floating (default: Base09)
+
+
+
+#### monocle_border {#themeoptions-monocle_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is in monocle mode (default: Base0F)
+
+
+
+#### single_border {#themeoptions-single_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains a single window (default: Base0D)
+
+
+
+#### stack_border {#themeoptions-stack_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container contains multiple windows (default: Base0B)
+
+
+
+#### stackbar_background {#themeoptions-stackbar_background}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar tab background colour (default: Base01)
+
+
+
+#### stackbar_focused_text {#themeoptions-stackbar_focused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar focused tab text colour (default: Base0B)
+
+
+
+#### stackbar_unfocused_text {#themeoptions-stackbar_unfocused_text}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Stackbar unfocused tab text colour (default: Base05)
+
+
+
+#### theme_variant {#themeoptions-theme_variant}
+
+<Badge text="optional" variant="note" /> [`ThemeVariant`](#themevariant)
+
+Specify Light or Dark variant for theme generation (default: Dark)
+
+
+
+#### unfocused_border {#themeoptions-unfocused_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused (default: Base01)
+
+
+
+#### unfocused_locked_border {#themeoptions-unfocused_locked_border}
+
+<Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
+
+Border colour when the container is unfocused and locked (default: Base08)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].wallpaper.theme_options`](#wallpaper-theme_options)
+- [`.monitors[].workspaces[].wallpaper.theme_options`](#wallpaper-theme_options)
+
+
+**Referenced by:**
+- [`Wallpaper`](#wallpaper)
+
+
+
+---
+
+
+### ThemeVariant {#themevariant}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+- `"Dark"`
+- `"Light"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].wallpaper.theme_options.theme_variant`](#themeoptions-theme_variant)
+- [`.monitors[].workspaces[].wallpaper.theme_options.theme_variant`](#themeoptions-theme_variant)
+
+
+**Referenced by:**
+- [`ThemeOptions`](#themeoptions)
+
+
+
+---
+
+
+### Wallpaper {#wallpaper}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (3)</summary>
+
+#### generate_theme {#wallpaper-generate_theme}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Generate and apply Base16 theme for this wallpaper (default: true)
+
+
+
+#### path {#wallpaper-path}
+
+<Badge text="required" variant="success" /> [`PathBuf`](#pathbuf)
+
+Path to the wallpaper image file
+
+
+
+#### theme_options {#wallpaper-theme_options}
+
+<Badge text="optional" variant="note" /> [`ThemeOptions`](#themeoptions)
+
+Specify Light or Dark variant for theme generation (default: Dark)
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].wallpaper`](#monitorconfig-wallpaper)
+- [`.monitors[].workspaces[].wallpaper`](#workspaceconfig-wallpaper)
+
+
+**Referenced by:**
+- [`MonitorConfig`](#monitorconfig)
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### WindowContainerBehaviour {#windowcontainerbehaviour}
+
+`string` `enum`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+
+---
+`string` - Create a new container for each new window
+
+
+**Value:** `"Create"`
+
+---
+`string` - Append new windows to the focused window container
+
+
+**Value:** `"Append"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[].window_container_behaviour`](#workspaceconfig-window_container_behaviour)
+- [`.monitors[].workspaces[].window_container_behaviour_rules[*]`](#workspaceconfig-window_container_behaviour_rules)
+- [`.window_container_behaviour`](#window_container_behaviour)
+
+
+**Referenced by:**
+- [`WorkspaceConfig`](#workspaceconfig)
+
+
+
+---
+
+
+### WindowHandlingBehaviour {#windowhandlingbehaviour}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (2)</summary>
+
+- `"Sync"`
+- `"Async"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.window_handling_behaviour`](#window_handling_behaviour)
+
+
+
+
+---
+
+
+### WorkspaceConfig {#workspaceconfig}
+
+`object`
+
+
+
+
+<details>
+<summary>Properties (19)</summary>
+
+#### apply_window_based_work_area_offset {#workspaceconfig-apply_window_based_work_area_offset}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Apply this monitor's window-based work area offset (default: true)
+
+
+
+#### container_padding {#workspaceconfig-container_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Container padding (default: global)
+
+
+
+
+- **Format:** `int32`
+
+#### custom_layout {#workspaceconfig-custom_layout}
+
+<Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> [`PathBuf`](#pathbuf)
+
+END OF LIFE FEATURE: Custom Layout (default: None)
+
+
+
+#### custom_layout_rules {#workspaceconfig-custom_layout_rules}
+
+<Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> `object`
+
+END OF LIFE FEATURE: Custom layout rules (default: None)
+
+
+
+
+
+**Key:** `"<integer>"` **→** `string`
+
+
+
+
+#### float_override {#workspaceconfig-float_override}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Enable or disable float override, which makes it so every new window opens in floating mode (default: false)
+
+
+
+#### floating_layer_behaviour {#workspaceconfig-floating_layer_behaviour}
+
+<Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
+
+Determine what happens to a new window when the Floating workspace layer is active (default: Tile)
+
+
+
+#### initial_workspace_rules {#workspaceconfig-initial_workspace_rules}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Initial workspace application rules
+
+
+
+#### layout {#workspaceconfig-layout}
+
+<Badge text="optional" variant="note" /> [`DefaultLayout`](#defaultlayout)
+
+Layout (default: BSP)
+
+
+
+#### layout_flip {#workspaceconfig-layout_flip}
+
+<Badge text="optional" variant="note" /> [`Axis`](#axis)
+
+Specify an axis on which to flip the selected layout (default: None)
+
+
+
+#### layout_options {#workspaceconfig-layout_options}
+
+<Badge text="optional" variant="note" /> [`LayoutOptions`](#layoutoptions)
+
+Layout-specific options (default: None)
+
+
+
+#### layout_rules {#workspaceconfig-layout_rules}
+
+<Badge text="optional" variant="note" /> `object`
+
+Layout rules in the format of threshold =&gt; layout (default: None)
+
+
+
+
+
+**Key:** `"<integer>"` **→** [`DefaultLayout`](#defaultlayout)
+
+
+
+
+#### name {#workspaceconfig-name}
+
+<Badge text="required" variant="success" /> `string`
+
+Name
+
+
+
+#### tile {#workspaceconfig-tile}
+
+<Badge text="optional" variant="note" /> `boolean`
+
+Enable or disable tiling for the workspace (default: true)
+
+
+
+#### wallpaper {#workspaceconfig-wallpaper}
+
+<Badge text="optional" variant="note" /> [`Wallpaper`](#wallpaper)
+
+Specify a wallpaper for this workspace
+
+
+
+#### window_container_behaviour {#workspaceconfig-window_container_behaviour}
+
+<Badge text="optional" variant="note" /> [`WindowContainerBehaviour`](#windowcontainerbehaviour)
+
+Determine what happens when a new window is opened (default: Create)
+
+
+
+#### window_container_behaviour_rules {#workspaceconfig-window_container_behaviour_rules}
+
+<Badge text="optional" variant="note" /> `object`
+
+Window container behaviour rules in the format of threshold =&gt; behaviour (default: None)
+
+
+
+
+
+**Key:** `"<integer>"` **→** [`WindowContainerBehaviour`](#windowcontainerbehaviour)
+
+
+
+
+#### work_area_offset {#workspaceconfig-work_area_offset}
+
+<Badge text="optional" variant="note" /> [`Rect`](#rect)
+
+Workspace specific work area offset (default: None)
+
+
+
+#### workspace_padding {#workspaceconfig-workspace_padding}
+
+<Badge text="optional" variant="note" /> `integer`
+
+Workspace padding (default: global)
+
+
+
+
+- **Format:** `int32`
+
+#### workspace_rules {#workspaceconfig-workspace_rules}
+
+<Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
+
+Permanent workspace application rules
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.monitors[].workspaces[]`](#monitorconfig-workspaces)
+
+
+**Referenced by:**
+- [`MonitorConfig`](#monitorconfig)
+
+
+
+---
+
+
+### ZOrder {#zorder}
+
+`string`
+
+
+
+
+<details>
+<summary>Enum variants (4)</summary>
+
+- `"Top"`
+- `"NoTopMost"`
+- `"Bottom"`
+- `"TopMost"`
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.border_z_order`](#border_z_order)
+
+
+
+
+---
+
+
+
+
