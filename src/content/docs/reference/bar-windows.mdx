@@ -15,7 +15,6 @@ Center widgets (ordered left-to-right)
 
 
 
-
 ---
 ### font_family {#font_family}
 
@@ -25,18 +24,19 @@ Font family
 
 
 
-
 ---
 ### font_size {#font_size}
 
 <Badge text="optional" variant="note" /> `number`
 
-Font size (default: 12.5)
-
+Font size
 
 
 
 - **Format:** `float`
+
+
+**Default:** `12.5`
 
 
 ---
@@ -45,7 +45,6 @@ Font size (default: 12.5)
 <Badge text="optional" variant="note" /> [`FrameConfig`](#frameconfig)
 
 Frame options (see: https://docs.rs/egui/latest/egui/containers/frame/struct.Frame.html)
-
 
 
 
@@ -58,18 +57,19 @@ Visual grouping for widgets
 
 
 
-
 ---
 ### height {#height}
 
 <Badge text="optional" variant="note" /> `number`
 
-Bar height (default: 50)
-
+Bar height
 
 
 
 - **Format:** `float`
+
+
+**Default:** `50.0`
 
 
 ---
@@ -77,12 +77,14 @@ Bar height (default: 50)
 
 <Badge text="optional" variant="note" /> `number`
 
-Scale of the icons relative to the font_size [[1.0-2.0]]. (default: 1.4)
-
+Scale of the icons relative to the font_size [[1.0-2.0]]
 
 
 
 - **Format:** `float`
+
+
+**Default:** `1.399999976158142`
 
 
 ---
@@ -94,7 +96,6 @@ Left side widgets (ordered left-to-right)
 
 
 
-
 ---
 ### margin {#margin}
 
@@ -103,25 +104,27 @@ Left side widgets (ordered left-to-right)
 Bar margin. Use one value for all sides or use a grouped margin for horizontal and/or
 vertical definition which can each take a single value for a symmetric margin or two
 values for each side, i.e.:
-"margin": \{
+```json
+"margin": {
     "horizontal": 10
-\}
-
+}
+```
 or:
-"margin": \{
+```json
+"margin": {
     "vertical": [top, bottom]
-\}
-
+}
+```
 You can also set individual margin on each side like this:
-"margin": \{
+```json
+"margin": {
     "top": 10,
     "bottom": 10,
     "left": 10,
     "right": 10,
-\}
-
+}
+```
 By default, margin is set to 0 on all sides.
-
 
 
 
@@ -130,12 +133,14 @@ By default, margin is set to 0 on all sides.
 
 <Badge text="optional" variant="note" /> `number`
 
-Max label width before text truncation (default: 400.0)
-
+Max label width before text truncation
 
 
 
 - **Format:** `float`
+
+
+**Default:** `400.0`
 
 
 ---
@@ -144,7 +149,6 @@ Max label width before text truncation (default: 400.0)
 <Badge text="required" variant="success" /> [`MonitorConfigOrIndex`](#monitorconfigorindex)
 
 The monitor index or the full monitor options
-
 
 
 
@@ -157,7 +161,6 @@ Options for mouse interaction on the bar
 
 
 
-
 ---
 ### padding {#padding}
 
@@ -166,25 +169,27 @@ Options for mouse interaction on the bar
 Bar padding. Use one value for all sides or use a grouped padding for horizontal and/or
 vertical definition which can each take a single value for a symmetric padding or two
 values for each side, i.e.:
-"padding": \{
+```json
+"padding": {
     "horizontal": 10
-\}
-
+}
+```
 or:
-"padding": \{
+```json
+"padding": {
     "horizontal": [left, right]
-\}
-
+}
+```
 You can also set individual padding on each side like this:
-"padding": \{
+```json
+"padding": {
     "top": 10,
     "bottom": 10,
     "left": 10,
     "right": 10,
-\}
-
+}
+```
 By default, padding is set to 10 on all sides.
-
 
 
 
@@ -197,14 +202,12 @@ Bar positioning options
 
 
 
-
 ---
 ### right_widgets {#right_widgets}
 
 <Badge text="required" variant="success" /> `array` [`WidgetConfig`](#widgetconfig)
 
 Right side widgets (ordered left-to-right)
-
 
 
 
@@ -217,14 +220,12 @@ Theme
 
 
 
-
 ---
 ### transparency_alpha {#transparency_alpha}
 
 <Badge text="optional" variant="note" /> `integer`
 
-Alpha value for the color transparency [[0-255]] (default: 200)
-
+Alpha value for the color transparency [[0-255]]
 
 
 
@@ -233,17 +234,22 @@ Alpha value for the color transparency [[0-255]] (default: 200)
 - **Maximum:** 255
 
 
+**Default:** `200`
+
+
 ---
 ### widget_spacing {#widget_spacing}
 
 <Badge text="optional" variant="note" /> `number`
 
-Spacing between widgets (default: 10.0)
-
+Spacing between widgets
 
 
 
 - **Format:** `float`
+
+
+**Default:** `10.0`
 
 
 ---
@@ -319,7 +325,6 @@ Spacing between widgets (default: 10.0)
 
 ---
 `string`
-
 <details>
 <summary>Enum variants (30)</summary>
 
@@ -358,7 +363,6 @@ Spacing between widgets (default: 10.0)
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -412,7 +416,6 @@ Spacing between widgets (default: 10.0)
 Command to execute (e.g. path to the application or shell command).
 
 
-
 #### display {#appconfig-display}
 
 <Badge text="optional" variant="note" /> [`ApplicationsDisplayFormat`](#applicationsdisplayformat)
@@ -420,14 +423,12 @@ Command to execute (e.g. path to the application or shell command).
 Display format for this application button (optional). Overrides global format if set.
 
 
-
 #### enable {#appconfig-enable}
 
 <Badge text="optional" variant="note" /> `boolean`
 
 Whether to enable this application button (optional).
-Inherits from the global Applications setting if omitted.
-
+Inherits from the global `Applications` setting if omitted.
 
 
 #### icon {#appconfig-icon}
@@ -435,9 +436,8 @@ Inherits from the global Applications setting if omitted.
 <Badge text="optional" variant="note" /> `string`
 
 Optional icon: a path to an image or a text-based glyph (e.g., from Nerd Fonts).
-If not set, and if the command is a path to an executable, an icon might be extracted from it.
-Note: glyphs require a compatible font_family.
-
+If not set, and if the `command` is a path to an executable, an icon might be extracted from it.
+Note: glyphs require a compatible `font_family`.
 
 
 #### name {#appconfig-name}
@@ -447,14 +447,12 @@ Note: glyphs require a compatible font_family.
 Display name of the application.
 
 
-
 #### show_command_on_hover {#appconfig-show_command_on_hover}
 
 <Badge text="optional" variant="note" /> `boolean`
 
 Whether to show the launch command on hover (optional).
-Inherits from the global Applications setting if omitted.
-
+Inherits from the global `Applications` setting if omitted.
 
 
 
@@ -618,8 +616,7 @@ Inherits from the global Applications setting if omitted.
 <Badge text="optional" variant="note" /> [`ApplicationsDisplayFormat`](#applicationsdisplayformat)
 
 Default display format for all applications (optional).
-Could be overridden per application. Defaults to Icon.
-
+Could be overridden per application. Defaults to `Icon`.
 
 
 #### enable {#applicationsconfig-enable}
@@ -629,7 +626,6 @@ Could be overridden per application. Defaults to Icon.
 Enables or disables the applications widget.
 
 
-
 #### items {#applicationsconfig-items}
 
 <Badge text="required" variant="success" /> `array` [`AppConfig`](#appconfig)
@@ -637,14 +633,12 @@ Enables or disables the applications widget.
 List of configured applications to display.
 
 
-
 #### show_command_on_hover {#applicationsconfig-show_command_on_hover}
 
 <Badge text="optional" variant="note" /> `boolean`
 
 Whether to show the launch command on hover (optional).
-Could be overridden per application. Defaults to false if not set.
-
+Could be overridden per application. Defaults to `false` if not set.
 
 
 #### spacing {#applicationsconfig-spacing}
@@ -652,7 +646,6 @@ Could be overridden per application. Defaults to false if not set.
 <Badge text="optional" variant="note" /> `number`
 
 Horizontal spacing between application buttons.
-
 
 
 
@@ -688,21 +681,15 @@ Horizontal spacing between application buttons.
 
 
 ---
-`string` - Show only the application icon.
-
-
+Show only the application icon.
 **Value:** `"Icon"`
 
 ---
-`string` - Show only the application name as text.
-
-
+Show only the application name as text.
 **Value:** `"Text"`
 
 ---
-`string` - Show both the application icon and name.
-
-
+Show both the application icon and name.
 **Value:** `"IconAndText"`
 
 </details>
@@ -1471,7 +1458,6 @@ Select when the current percentage is under this value [[1-100]]
 
 
 
-
 - **Format:** `uint8`
 - **Minimum:** 0
 - **Maximum:** 255
@@ -1480,20 +1466,21 @@ Select when the current percentage is under this value [[1-100]]
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 10 seconds)
-
+Data refresh interval in seconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
 
+
+**Default:** `10`
+
 #### enable {#batteryconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Enable the Battery widget
-
 
 
 #### hide_on_full_charge {#batteryconfig-hide_on_full_charge}
@@ -1503,13 +1490,11 @@ Enable the Battery widget
 Hide the widget if the battery is at full charge
 
 
-
 #### label_prefix {#batteryconfig-label_prefix}
 
 <Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
 
 Display label prefix
-
 
 
 
@@ -1542,15 +1527,11 @@ Display label prefix
 
 
 ---
-`string` - Use the adjustable komorebi border implementation
-
-
+Use the adjustable komorebi border implementation
 **Value:** `"Komorebi"`
 
 ---
-`string` - Use the thin Windows accent border implementation
-
-
+Use the thin Windows accent border implementation
 **Value:** `"Windows"`
 
 </details>
@@ -1588,21 +1569,15 @@ Display label prefix
 
 
 ---
-`string` - Use the system border style
-
-
+Use the system border style
 **Value:** `"System"`
 
 ---
-`string` - Use the Windows 11-style rounded borders
-
-
+Use the Windows 11-style rounded borders
 **Value:** `"Rounded"`
 
 ---
-`string` - Use the Windows 10-style square borders
-
-
+Use the Windows 10-style square borders
 **Value:** `"Square"`
 
 </details>
@@ -1828,12 +1803,8 @@ Display label prefix
 [`Rgb`](#rgb) - Colour represented as RGB
 
 
-
-
 ---
 [`Hex`](#hex) - Colour represented as Hex
-
-
 
 
 </details>
@@ -2028,7 +1999,6 @@ Select when the current percentage is over this value [[1-100]]
 
 
 
-
 - **Format:** `uint8`
 - **Minimum:** 0
 - **Maximum:** 255
@@ -2037,13 +2007,15 @@ Select when the current percentage is over this value [[1-100]]
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 10 seconds)
-
+Data refresh interval in seconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
+
+
+**Default:** `10`
 
 #### enable {#cpuconfig-enable}
 
@@ -2052,13 +2024,11 @@ Data refresh interval (default: 10 seconds)
 Enable the Cpu widget
 
 
-
 #### label_prefix {#cpuconfig-label_prefix}
 
 <Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
 
 Display label prefix
-
 
 
 
@@ -2086,7 +2056,6 @@ Display label prefix
 Custom format with additive modifiers for integer format specifiers
 
 
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -2097,19 +2066,16 @@ Custom format with additive modifiers for integer format specifiers
 Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
 
 
-
 #### modifiers {#custommodifiers-modifiers}
 
 <Badge text="required" variant="success" /> `object`
 
 Additive modifiers for integer format specifiers (e.g. \{ "%U": 1 \} to increment the zero-indexed week number by 1)
 
-
 <details>
 <summary>Additional Properties</summary>
 
 `integer`
-
 
 
 - **Format:** `int32`
@@ -2294,13 +2260,11 @@ Additive modifiers for integer format specifiers (e.g. \{ "%U": 1 \} to incremen
 Enable the Date widget
 
 
-
 #### format {#dateconfig-format}
 
 <Badge text="required" variant="success" /> [`DateFormat`](#dateformat)
 
 Set the Date format
-
 
 
 #### label_prefix {#dateconfig-label_prefix}
@@ -2310,22 +2274,22 @@ Set the Date format
 Display label prefix
 
 
-
 #### timezone {#dateconfig-timezone}
 
 <Badge text="optional" variant="note" /> `string`
 
 TimeZone (https://docs.rs/chrono-tz/latest/chrono_tz/enum.Tz.html)
+
 Use a custom format to display additional information, i.e.:
-\{
-    "Date": \{
+```json
+{
+    "Date": {
         "enable": true,
-        "format": \{ "Custom": "%D %Z (Tokyo)" \},
+        "format": { "Custom": "%D %Z (Tokyo)" },
         "timezone": "Asia/Tokyo"
-     \}
-\}
-
-
+     }
+}
+```
 
 
 
@@ -2358,33 +2322,23 @@ Use a custom format to display additional information, i.e.:
 
 
 ---
-`string` - Month/Date/Year format (09/08/24)
-
-
+Month/Date/Year format (09/08/24)
 **Value:** `"MonthDateYear"`
 
 ---
-`string` - Year-Month-Date format (2024-09-08)
-
-
+Year-Month-Date format (2024-09-08)
 **Value:** `"YearMonthDate"`
 
 ---
-`string` - Date-Month-Year format (8-Sep-2024)
-
-
+Date-Month-Year format (8-Sep-2024)
 **Value:** `"DateMonthYear"`
 
 ---
-`string` - Day Date Month Year format (8 September 2024)
-
-
+Day Date Month Year format (8 September 2024)
 **Value:** `"DayDateMonthYear"`
 
 ---
 `object` - Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
-
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -2400,8 +2354,6 @@ Use a custom format to display additional information, i.e.:
 
 ---
 `object` - Custom format with modifiers
-
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -2527,33 +2479,23 @@ Use a custom format to display additional information, i.e.:
 
 
 ---
-`string` - Show only icon
-
-
+Show only icon
 **Value:** `"Icon"`
 
 ---
-`string` - Show only text
-
-
+Show only text
 **Value:** `"Text"`
 
 ---
-`string` - Show an icon and text for the selected element, and text on the rest
-
-
+Show an icon and text for the selected element, and text on the rest
 **Value:** `"TextAndIconOnSelected"`
 
 ---
-`string` - Show both icon and text
-
-
+Show both icon and text
 **Value:** `"IconAndText"`
 
 ---
-`string` - Show an icon and text for the selected element, and icons on the rest
-
-
+Show an icon and text for the selected element, and icons on the rest
 **Value:** `"IconAndTextOnSelected"`
 
 </details>
@@ -2601,15 +2543,11 @@ Use a custom format to display additional information, i.e.:
 
 
 ---
-`string` - A custom FFM implementation (slightly more CPU-intensive)
-
-
+A custom FFM implementation (slightly more CPU-intensive)
 **Value:** `"Komorebi"`
 
 ---
-`string` - The native (legacy) Windows FFM implementation
-
-
+The native (legacy) Windows FFM implementation
 **Value:** `"Windows"`
 
 </details>
@@ -2659,7 +2597,6 @@ Use a custom format to display additional information, i.e.:
 <Badge text="required" variant="success" /> [`Position`](#position)
 
 Margin inside the painted frame
-
 
 
 
@@ -2731,13 +2668,11 @@ Margin inside the painted frame
 `number`
 
 
-
 - **Format:** `float`
 
 
 ---
 `array` `[float; 2]`
-
 
 
 </details>
@@ -2771,8 +2706,6 @@ Margin inside the painted frame
 
 ---
 `object` - No grouping is applied
-
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -2790,18 +2723,12 @@ Margin inside the painted frame
 [`GroupingConfig`](#groupingconfig) - Widgets are grouped as a whole
 
 
-
-
 ---
 [`GroupingConfig`](#groupingconfig) - Widgets are grouped by alignment
 
 
-
-
 ---
 [`GroupingConfig`](#groupingconfig) - Widgets are grouped individually
-
-
 
 
 </details>
@@ -2833,7 +2760,6 @@ Margin inside the painted frame
 Rounding values for the 4 corners. Can be a single or 4 values.
 
 
-
 #### style {#groupingconfig-style}
 
 <Badge text="optional" variant="note" /> [`GroupingStyle`](#groupingstyle)
@@ -2841,13 +2767,11 @@ Rounding values for the 4 corners. Can be a single or 4 values.
 Styles for the grouping
 
 
-
 #### transparency_alpha {#groupingconfig-transparency_alpha}
 
 <Badge text="optional" variant="note" /> `integer`
 
 Alpha value for the color transparency [[0-255]] (default: 200)
-
 
 
 
@@ -2886,7 +2810,6 @@ Alpha value for the color transparency [[0-255]] (default: 200)
 
 ---
 `string`
-
 <details>
 <summary>Enum variants (1)</summary>
 
@@ -2895,39 +2818,27 @@ Alpha value for the color transparency [[0-255]] (default: 200)
 </details>
 
 ---
-`string` - A shadow is added under the default group. (blur: 4, offset: x-1 y-1, spread: 3)
-
-
+A shadow is added under the default group. (blur: 4, offset: x-1 y-1, spread: 3)
 **Value:** `"DefaultWithShadowB4O1S3"`
 
 ---
-`string` - A shadow is added under the default group. (blur: 4, offset: x-0 y-0, spread: 3)
-
-
+A shadow is added under the default group. (blur: 4, offset: x-0 y-0, spread: 3)
 **Value:** `"DefaultWithShadowB4O0S3"`
 
 ---
-`string` - A shadow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 3)
-
-
+A shadow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 3)
 **Value:** `"DefaultWithShadowB0O1S3"`
 
 ---
-`string` - A glow is added under the default group. (blur: 3, offset: x-1 y-1, spread: 2)
-
-
+A glow is added under the default group. (blur: 3, offset: x-1 y-1, spread: 2)
 **Value:** `"DefaultWithGlowB3O1S2"`
 
 ---
-`string` - A glow is added under the default group. (blur: 3, offset: x-0 y-0, spread: 2)
-
-
+A glow is added under the default group. (blur: 3, offset: x-0 y-0, spread: 2)
 **Value:** `"DefaultWithGlowB3O0S2"`
 
 ---
-`string` - A glow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 2)
-
-
+A glow is added under the default group. (blur: 0, offset: x-1 y-1, spread: 2)
 **Value:** `"DefaultWithGlowB0O1S2"`
 
 </details>
@@ -3143,21 +3054,15 @@ Alpha value for the color transparency [[0-255]] (default: 200)
 
 
 ---
-`string` - END OF LIFE FEATURE: Use the SW_HIDE flag to hide windows when switching workspaces (has issues with Electron apps)
-
-
+END OF LIFE FEATURE: Use the `SW_HIDE` flag to hide windows when switching workspaces (has issues with Electron apps)
 **Value:** `"Hide"`
 
 ---
-`string` - Use the SW_MINIMIZE flag to hide windows when switching workspaces (has issues with frequent workspace switching)
-
-
+Use the `SW_MINIMIZE` flag to hide windows when switching workspaces (has issues with frequent workspace switching)
 **Value:** `"Minimize"`
 
 ---
-`string` - Use the undocumented SetCloak Win32 function to hide windows when switching workspaces
-
-
+Use the undocumented SetCloak Win32 function to hide windows when switching workspaces
 **Value:** `"Cloak"`
 
 </details>
@@ -3264,13 +3169,15 @@ Alpha value for the color transparency [[0-255]] (default: 200)
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 1 second)
-
+Data refresh interval
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
+
+
+**Default:** `10`
 
 #### enable {#keyboardconfig-enable}
 
@@ -3279,13 +3186,11 @@ Data refresh interval (default: 1 second)
 Enable the Input widget
 
 
-
 #### label_prefix {#keyboardconfig-label_prefix}
 
 <Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
 
 Display label prefix
-
 
 
 
@@ -3319,8 +3224,6 @@ Display label prefix
 
 ---
 `object` - A theme from catppuccin-egui
-
-
 <details>
 <summary>Properties (5)</summary>
 
@@ -3352,7 +3255,6 @@ Display label prefix
 Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catppuccin)
 
 
-
 #### palette {#komobartheme-oneof[0]-palette}
 
 <Badge text="required" variant="success" /> `string`
@@ -3365,8 +3267,6 @@ Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catp
 
 ---
 `object` - A theme from base16-egui-themes
-
-
 <details>
 <summary>Properties (5)</summary>
 
@@ -3398,7 +3298,6 @@ Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catp
 Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinted-gallery/)
 
 
-
 #### palette {#komobartheme-oneof[1]-palette}
 
 <Badge text="required" variant="success" /> `string`
@@ -3411,8 +3310,6 @@ Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinte
 
 ---
 `object` - A custom Base16 theme
-
-
 <details>
 <summary>Properties (5)</summary>
 
@@ -3442,7 +3339,6 @@ Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinte
 <Badge text="required" variant="success" /> [`Base16ColourPalette`](#base16colourpalette)
 
 Colours of the custom Base16 theme palette
-
 
 
 #### palette {#komobartheme-oneof[2]-palette}
@@ -3484,13 +3380,11 @@ Colours of the custom Base16 theme palette
 Configure the Configuration Switcher widget
 
 
-
 #### focused_container {#komorebiconfig-focused_container}
 
 <Badge text="optional" variant="note" /> [`KomorebiFocusedContainerConfig`](#komorebifocusedcontainerconfig)
 
 Configure the Focused Container widget
-
 
 
 #### layout {#komorebiconfig-layout}
@@ -3500,13 +3394,11 @@ Configure the Focused Container widget
 Configure the Layout widget
 
 
-
 #### locked_container {#komorebiconfig-locked_container}
 
 <Badge text="optional" variant="note" /> [`KomorebiLockedContainerConfig`](#komorebilockedcontainerconfig)
 
 Configure the Locked Container widget
-
 
 
 #### workspace_layer {#komorebiconfig-workspace_layer}
@@ -3516,13 +3408,11 @@ Configure the Locked Container widget
 Configure the Workspace Layer widget
 
 
-
 #### workspaces {#komorebiconfig-workspaces}
 
 <Badge text="optional" variant="note" /> [`KomorebiWorkspacesConfig`](#komorebiworkspacesconfig)
 
 Configure the Workspaces widget
-
 
 
 
@@ -3557,14 +3447,12 @@ Configure the Workspaces widget
 
 <Badge text="required" variant="success" /> `object`
 
-A map of display friendly name =&gt; path to configuration.json
-
+A map of display friendly name => path to configuration.json
 
 <details>
 <summary>Additional Properties</summary>
 
 `string`
-
 
 </details>
 #### enable {#komorebiconfigurationswitcherconfig-enable}
@@ -3572,7 +3460,6 @@ A map of display friendly name =&gt; path to configuration.json
 <Badge text="required" variant="success" /> `boolean`
 
 Enable the Komorebi Configurations widget
-
 
 
 
@@ -3610,7 +3497,6 @@ Enable the Komorebi Configurations widget
 Display format of the currently focused container
 
 
-
 #### enable {#komorebifocusedcontainerconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
@@ -3618,13 +3504,11 @@ Display format of the currently focused container
 Enable the Komorebi Focused Container widget
 
 
-
 #### show_icon {#komorebifocusedcontainerconfig-show_icon}
 
 <Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> `boolean`
 
-DEPRECATED: use display instead (Show the icon of the currently focused container)
-
+DEPRECATED: use `display` instead (Show the icon of the currently focused container)
 
 
 
@@ -3660,25 +3544,20 @@ DEPRECATED: use display instead (Show the icon of the currently focused containe
 [`DefaultLayout`](#defaultlayout)
 
 
-
 ---
 `null`
-
-
-
----
-`null`
-
 
 
 ---
 `null`
 
 
-
 ---
 `null`
 
+
+---
+`null`
 
 
 </details>
@@ -3715,7 +3594,6 @@ DEPRECATED: use display instead (Show the icon of the currently focused containe
 Display format of the current layout
 
 
-
 #### enable {#komorebilayoutconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
@@ -3723,13 +3601,11 @@ Display format of the current layout
 Enable the Komorebi Layout widget
 
 
-
 #### options {#komorebilayoutconfig-options}
 
 <Badge text="optional" variant="note" /> `array` [`KomorebiLayout`](#komorebilayout)
 
 List of layout options
-
 
 
 
@@ -3767,7 +3643,6 @@ List of layout options
 Display format of the current locked state
 
 
-
 #### enable {#komorebilockedcontainerconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
@@ -3775,13 +3650,11 @@ Display format of the current locked state
 Enable the Komorebi Locked Container widget
 
 
-
 #### show_when_unlocked {#komorebilockedcontainerconfig-show_when_unlocked}
 
 <Badge text="optional" variant="note" /> `boolean`
 
 Show the widget event if the layer is unlocked
-
 
 
 
@@ -3816,24 +3689,27 @@ Show the widget event if the layer is unlocked
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Send the FocusMonitorAtCursor message (default:true)
+Send the FocusMonitorAtCursor message
 
 
+
+**Default:** `true`
 
 #### ignore_mouse_follows_focus {#komorebimousemessage-ignore_mouse_follows_focus}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Wrap the \{message\} with a MouseFollowsFocus(false) and MouseFollowsFocus(\{original.value\}) message (default:true)
+Wrap the \{message\} with a MouseFollowsFocus(false) and MouseFollowsFocus(\{original.value\}) message
 
 
+
+**Default:** `true`
 
 #### message {#komorebimousemessage-message}
 
 <Badge text="required" variant="success" /> [`SocketMessage`](#socketmessage)
 
 The message to send to the komorebi client
-
 
 
 
@@ -3873,8 +3749,6 @@ The message to send to the komorebi client
 
 ---
 `object` - A theme from catppuccin-egui
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -3882,32 +3756,37 @@ The message to send to the komorebi client
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Komorebi status bar accent (default: Blue)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Blue"`](#catppuccinvalue)
 
 #### floating_border {#komorebitheme-oneof[0]-floating_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the window is floating (default: Yellow)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Yellow"`](#catppuccinvalue)
 
 #### monocle_border {#komorebitheme-oneof[0]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is in monocle mode (default: Pink)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Pink"`](#catppuccinvalue)
 
 #### name {#komorebitheme-oneof[0]-name}
 
 <Badge text="required" variant="success" /> [`Catppuccin`](#catppuccin)
 
 Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catppuccin)
-
 
 
 #### palette {#komorebitheme-oneof[0]-palette}
@@ -3921,65 +3800,77 @@ Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catp
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container contains a single window (default: Blue)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Blue"`](#catppuccinvalue)
 
 #### stack_border {#komorebitheme-oneof[0]-stack_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container contains multiple windows (default: Green)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Green"`](#catppuccinvalue)
 
 #### stackbar_background {#komorebitheme-oneof[0]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar tab background colour (default: Base)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base"`](#catppuccinvalue)
 
 #### stackbar_focused_text {#komorebitheme-oneof[0]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar focused tab text colour (default: Green)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Green"`](#catppuccinvalue)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[0]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar unfocused tab text colour (default: Text)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Text"`](#catppuccinvalue)
 
 #### unfocused_border {#komorebitheme-oneof[0]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is unfocused (default: Base)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base"`](#catppuccinvalue)
 
 #### unfocused_locked_border {#komorebitheme-oneof[0]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is unfocused and locked (default: Red)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Red"`](#catppuccinvalue)
 
 
 </details>
 
 ---
 `object` - A theme from base16-egui-themes
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -3987,32 +3878,37 @@ Border colour when the container is unfocused and locked (default: Red)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Komorebi status bar accent (default: Base0D)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### floating_border {#komorebitheme-oneof[1]-floating_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the window is floating (default: Base09)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Base09"`](#base16value)
 
 #### monocle_border {#komorebitheme-oneof[1]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is in monocle mode (default: Base0F)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Base0F"`](#base16value)
 
 #### name {#komorebitheme-oneof[1]-name}
 
 <Badge text="required" variant="success" /> [`Base16`](#base16)
 
 Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinted-gallery/)
-
 
 
 #### palette {#komorebitheme-oneof[1]-palette}
@@ -4026,65 +3922,77 @@ Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinte
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains a single window (default: Base0D)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### stack_border {#komorebitheme-oneof[1]-stack_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains multiple windows (default: Base0B)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_background {#komorebitheme-oneof[1]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar tab background colour (default: Base01)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### stackbar_focused_text {#komorebitheme-oneof[1]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar focused tab text colour (default: Base0B)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[1]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar unfocused tab text colour (default: Base05)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Base05"`](#base16value)
 
 #### unfocused_border {#komorebitheme-oneof[1]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused (default: Base01)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### unfocused_locked_border {#komorebitheme-oneof[1]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused and locked (default: Base08)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Base08"`](#base16value)
 
 
 </details>
 
 ---
 `object` - A custom Base16 theme
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -4092,9 +4000,11 @@ Border colour when the container is unfocused and locked (default: Base08)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Komorebi status bar accent (default: Base0D)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### colours {#komorebitheme-oneof[2]-colours}
 
@@ -4103,22 +4013,25 @@ Komorebi status bar accent (default: Base0D)
 Colours of the custom Base16 theme palette
 
 
-
 #### floating_border {#komorebitheme-oneof[2]-floating_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the window is floating (default: Base09)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Base09"`](#base16value)
 
 #### monocle_border {#komorebitheme-oneof[2]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is in monocle mode (default: Base0F)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Base0F"`](#base16value)
 
 #### palette {#komorebitheme-oneof[2]-palette}
 
@@ -4131,57 +4044,71 @@ Border colour when the container is in monocle mode (default: Base0F)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains a single window (default: Base0D)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### stack_border {#komorebitheme-oneof[2]-stack_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains multiple windows (default: Base0B)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_background {#komorebitheme-oneof[2]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar tab background colour (default: Base01)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### stackbar_focused_text {#komorebitheme-oneof[2]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar focused tab text colour (default: Base0B)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[2]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar unfocused tab text colour (default: Base05)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Base05"`](#base16value)
 
 #### unfocused_border {#komorebitheme-oneof[2]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused (default: Base01)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### unfocused_locked_border {#komorebitheme-oneof[2]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused and locked (default: Base08)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Base08"`](#base16value)
 
 
 </details>
@@ -4226,7 +4153,6 @@ Border colour when the container is unfocused and locked (default: Base08)
 Display format of the current layer
 
 
-
 #### enable {#komorebiworkspacelayerconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
@@ -4234,13 +4160,11 @@ Display format of the current layer
 Enable the Komorebi Workspace Layer widget
 
 
-
 #### show_when_tiling {#komorebiworkspacelayerconfig-show_when_tiling}
 
 <Badge text="optional" variant="note" /> `boolean`
 
 Show the widget event if the layer is Tiling
-
 
 
 
@@ -4278,7 +4202,6 @@ Show the widget event if the layer is Tiling
 Display format of the workspace
 
 
-
 #### enable {#komorebiworkspacesconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
@@ -4286,13 +4209,11 @@ Display format of the workspace
 Enable the Komorebi Workspaces widget
 
 
-
 #### hide_empty_workspaces {#komorebiworkspacesconfig-hide_empty_workspaces}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Hide workspaces without any windows
-
 
 
 
@@ -4325,27 +4246,19 @@ Hide workspaces without any windows
 
 
 ---
-`string` - Show no prefix
-
-
+Show no prefix
 **Value:** `"None"`
 
 ---
-`string` - Show an icon
-
-
+Show an icon
 **Value:** `"Icon"`
 
 ---
-`string` - Show text
-
-
+Show text
 **Value:** `"Text"`
 
 ---
-`string` - Show an icon and text
-
-
+Show an icon and text
 **Value:** `"IconAndText"`
 
 </details>
@@ -4415,7 +4328,6 @@ Enable the Media widget
 
 
 
-
 </details>
 #### Usages
 
@@ -4451,7 +4363,6 @@ Select when the current percentage is over this value [[1-100]]
 
 
 
-
 - **Format:** `uint8`
 - **Minimum:** 0
 - **Maximum:** 255
@@ -4460,13 +4371,15 @@ Select when the current percentage is over this value [[1-100]]
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 10 seconds)
-
+Data refresh interval in seconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
+
+
+**Default:** `10`
 
 #### enable {#memoryconfig-enable}
 
@@ -4475,13 +4388,11 @@ Data refresh interval (default: 10 seconds)
 Enable the Memory widget
 
 
-
 #### label_prefix {#memoryconfig-label_prefix}
 
 <Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
 
 Display label prefix
-
 
 
 
@@ -4520,7 +4431,6 @@ Komorebi monitor index of the monitor on which to render the bar
 
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -4529,7 +4439,6 @@ Komorebi monitor index of the monitor on which to render the bar
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
 Automatically apply a work area offset for this monitor to accommodate the bar
-
 
 
 
@@ -4563,16 +4472,12 @@ Automatically apply a work area offset for this monitor to accommodate the bar
 `integer` - The monitor index where you want the bar to show
 
 
-
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 ---
 [`MonitorConfig`](#monitorconfig) - The full monitor options with the index and an optional work_area_offset
-
-
 
 
 </details>
@@ -4601,19 +4506,20 @@ Automatically apply a work area offset for this monitor to accommodate the bar
 
 <Badge text="optional" variant="note" /> `number`
 
-Defines how many points a user needs to scroll horizontally to make a "tick" on a mouse/touchpad/touchscreen (default: 30)
-
+Defines how many points a user needs to scroll horizontally to make a "tick" on a mouse/touchpad/touchscreen
 
 
 
 - **Format:** `float`
+
+
+**Default:** `30.0`
 
 #### on_extra1_click {#mouseconfig-on_extra1_click}
 
 <Badge text="optional" variant="note" /> [`MouseMessage`](#mousemessage)
 
 Command to send on extra1/back button click
-
 
 
 #### on_extra2_click {#mouseconfig-on_extra2_click}
@@ -4623,13 +4529,11 @@ Command to send on extra1/back button click
 Command to send on extra2/forward button click
 
 
-
 #### on_middle_click {#mouseconfig-on_middle_click}
 
 <Badge text="optional" variant="note" /> [`MouseMessage`](#mousemessage)
 
 Command to send on middle button click
-
 
 
 #### on_primary_double_click {#mouseconfig-on_primary_double_click}
@@ -4639,13 +4543,11 @@ Command to send on middle button click
 Command to send on primary/left double button click
 
 
-
 #### on_scroll_down {#mouseconfig-on_scroll_down}
 
 <Badge text="optional" variant="note" /> [`MouseMessage`](#mousemessage)
 
 Command to send on scrolling down (every tick)
-
 
 
 #### on_scroll_left {#mouseconfig-on_scroll_left}
@@ -4655,13 +4557,11 @@ Command to send on scrolling down (every tick)
 Command to send on scrolling left (every tick)
 
 
-
 #### on_scroll_right {#mouseconfig-on_scroll_right}
 
 <Badge text="optional" variant="note" /> [`MouseMessage`](#mousemessage)
 
 Command to send on scrolling right (every tick)
-
 
 
 #### on_scroll_up {#mouseconfig-on_scroll_up}
@@ -4671,7 +4571,6 @@ Command to send on scrolling right (every tick)
 Command to send on scrolling up (every tick)
 
 
-
 #### on_secondary_click {#mouseconfig-on_secondary_click}
 
 <Badge text="optional" variant="note" /> [`MouseMessage`](#mousemessage)
@@ -4679,17 +4578,18 @@ Command to send on scrolling up (every tick)
 Command to send on secondary/right button click
 
 
-
 #### vertical_scroll_threshold {#mouseconfig-vertical_scroll_threshold}
 
 <Badge text="optional" variant="note" /> `number`
 
-Defines how many points a user needs to scroll vertically to make a "tick" on a mouse/touchpad/touchscreen (default: 30)
-
+Defines how many points a user needs to scroll vertically to make a "tick" on a mouse/touchpad/touchscreen
 
 
 
 - **Format:** `float`
+
+
+**Default:** `30.0`
 
 
 </details>
@@ -4718,44 +4618,44 @@ Defines how many points a user needs to scroll vertically to make a "tick" on a 
 ---
 [`KomorebiMouseMessage`](#komorebimousemessage) - Send a message to the komorebi client.
 By default, a batch of messages are sent in the following order:
-FocusMonitorAtCursor =&gt;
-MouseFollowsFocus(false) =&gt;
-\{message\} =&gt;
+FocusMonitorAtCursor =>
+MouseFollowsFocus(false) =>
+\{message\} =>
 MouseFollowsFocus(\{original.value\})
-Example:
-"on_extra2_click": \{
-  "message": \{
-    "type": "NewWorkspace"
-  \}
-\},
 
+Example:
+```json
+"on_extra2_click": {
+  "message": {
+    "type": "NewWorkspace"
+  }
+},
+```
 or:
-"on_middle_click": \{
+```json
+"on_middle_click": {
   "focus_monitor_at_cursor": false,
   "ignore_mouse_follows_focus": false,
-  "message": \{
+  "message": {
     "type": "TogglePause"
-  \}
-\}
-
+  }
+}
+```
 or:
-"on_scroll_up": \{
-  "message": \{
+```json
+"on_scroll_up": {
+  "message": {
     "type": "CycleFocusWorkspace",
     "content": "Previous"
-  \}
-\}
-
-
-
+  }
+}
+```
 
 
 ---
 `string` - Execute a custom command.
 CMD (%variable%), Bash ($variable) and PowerShell ($Env:variable) variables will be resolved.
-Example: komorebic toggle-pause
-
-
+Example: `komorebic toggle-pause`
 
 
 </details>
@@ -4793,21 +4693,15 @@ Example: komorebic toggle-pause
 
 
 ---
-`string` - Swap the window container with the window container at the edge of the adjacent monitor
-
-
+Swap the window container with the window container at the edge of the adjacent monitor
 **Value:** `"Swap"`
 
 ---
-`string` - Insert the window container into the focused workspace on the adjacent monitor
-
-
+Insert the window container into the focused workspace on the adjacent monitor
 **Value:** `"Insert"`
 
 ---
-`string` - Do nothing if trying to move a window container in the direction of an adjacent monitor
-
-
+Do nothing if trying to move a window container in the direction of an adjacent monitor
 **Value:** `"NoOp"`
 
 </details>
@@ -4851,7 +4745,6 @@ Characters to reserve for received and transmitted activity
 
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -4862,25 +4755,25 @@ Characters to reserve for received and transmitted activity
 Select when the value is over a limit (1MiB is 1048576 bytes (1024*1024))
 
 
-
 #### data_refresh_interval {#networkconfig-data_refresh_interval}
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 10 seconds)
-
+Data refresh interval in seconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
 
+
+**Default:** `10`
+
 #### enable {#networkconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Enable the Network widget
-
 
 
 #### label_prefix {#networkconfig-label_prefix}
@@ -4890,13 +4783,11 @@ Enable the Network widget
 Display label prefix
 
 
-
 #### show_activity {#networkconfig-show_activity}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Show received and transmitted activity
-
 
 
 #### show_default_interface {#networkconfig-show_default_interface}
@@ -4906,13 +4797,11 @@ Show received and transmitted activity
 Show default interface
 
 
-
 #### show_total_activity {#networkconfig-show_total_activity}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Show total received and transmitted activity
-
 
 
 
@@ -4951,7 +4840,6 @@ Select the received data when it's over this value
 
 
 
-
 - **Format:** `uint64`
 - **Minimum:** 0
 
@@ -4960,7 +4848,6 @@ Select the received data when it's over this value
 <Badge text="optional" variant="note" /> `integer`
 
 Select the total received data when it's over this value
-
 
 
 
@@ -4975,7 +4862,6 @@ Select the total transmitted data when it's over this value
 
 
 
-
 - **Format:** `uint64`
 - **Minimum:** 0
 
@@ -4984,7 +4870,6 @@ Select the total transmitted data when it's over this value
 <Badge text="optional" variant="note" /> `integer`
 
 Select the transmitted data when it's over this value
-
 
 
 
@@ -5021,15 +4906,11 @@ Select the transmitted data when it's over this value
 
 
 ---
-`string` - Process komorebic commands on temporarily unmanaged/floated windows
-
-
+Process komorebic commands on temporarily unmanaged/floated windows
 **Value:** `"Op"`
 
 ---
-`string` - Ignore komorebic commands on temporarily unmanaged/floated windows
-
-
+Ignore komorebic commands on temporarily unmanaged/floated windows
 **Value:** `"NoOp"`
 
 </details>
@@ -5258,7 +5139,6 @@ X coordinate
 
 
 
-
 - **Format:** `float`
 
 #### y {#position-y}
@@ -5266,7 +5146,6 @@ X coordinate
 <Badge text="required" variant="success" /> `number`
 
 Y coordinate
-
 
 
 
@@ -5308,13 +5187,11 @@ Y coordinate
 The desired size of the bar from the starting position (usually monitor width x desired height)
 
 
-
 #### start {#positionconfig-start}
 
 <Badge text="optional" variant="note" /> [`Position`](#position)
 
 The desired starting position of the bar (0,0 = top left of the screen)
-
 
 
 
@@ -5348,7 +5225,6 @@ The bottom point in a Win32 Rect
 
 
 
-
 - **Format:** `int32`
 
 #### left {#rect-left}
@@ -5356,7 +5232,6 @@ The bottom point in a Win32 Rect
 <Badge text="required" variant="success" /> `integer`
 
 The left point in a Win32 Rect
-
 
 
 
@@ -5370,7 +5245,6 @@ The right point in a Win32 Rect
 
 
 
-
 - **Format:** `int32`
 
 #### top {#rect-top}
@@ -5378,7 +5252,6 @@ The right point in a Win32 Rect
 <Badge text="required" variant="success" /> `integer`
 
 The top point in a Win32 Rect
-
 
 
 
@@ -5455,7 +5328,6 @@ Blue
 
 
 
-
 - **Format:** `uint32`
 - **Minimum:** 0
 
@@ -5467,7 +5339,6 @@ Green
 
 
 
-
 - **Format:** `uint32`
 - **Minimum:** 0
 
@@ -5476,7 +5347,6 @@ Green
 <Badge text="required" variant="success" /> `integer`
 
 Red
-
 
 
 
@@ -5673,15 +5543,11 @@ Red
 `number` - All 4 corners are the same
 
 
-
-
 - **Format:** `float`
 
 
 ---
 `array` `number` - All 4 corners are custom. Order: NW, NE, SW, SE
-
-
 
 
 - **Min items:** 4
@@ -5781,7 +5647,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5804,7 +5669,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5827,7 +5691,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5850,7 +5713,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -5866,7 +5728,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5889,7 +5750,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5912,7 +5772,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5935,7 +5794,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -5951,7 +5809,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5974,7 +5831,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -5997,7 +5853,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6024,7 +5879,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6040,7 +5894,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6056,7 +5909,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6077,9 +5929,7 @@ Red
 **[0]** [`OperationDirection`](#operationdirection)
 
 
-
 **[1]** [`Sizing`](#sizing)
-
 
 
 </details>
@@ -6095,7 +5945,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6116,9 +5965,7 @@ Red
 **[0]** [`Axis`](#axis)
 
 
-
 **[1]** [`Sizing`](#sizing)
-
 
 
 </details>
@@ -6134,7 +5981,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6150,7 +5996,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6166,7 +6011,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6193,7 +6037,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6216,7 +6059,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6243,7 +6085,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6266,7 +6107,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6289,7 +6129,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6316,7 +6155,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6339,7 +6177,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6366,7 +6203,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6389,7 +6225,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6412,7 +6247,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6435,7 +6269,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6458,7 +6291,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6481,7 +6313,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6508,7 +6339,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6535,7 +6365,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6551,7 +6380,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6567,7 +6395,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6583,7 +6410,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6599,7 +6425,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6615,7 +6440,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6631,7 +6455,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6654,7 +6477,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6677,7 +6499,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6700,7 +6521,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6723,7 +6543,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6739,7 +6558,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6755,7 +6573,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6771,7 +6588,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6787,7 +6603,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6803,7 +6618,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6819,7 +6633,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6842,7 +6655,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6858,7 +6670,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6881,7 +6692,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6904,7 +6714,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6920,7 +6729,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -6936,7 +6744,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6957,9 +6764,7 @@ Red
 **[0]** [`Sizing`](#sizing)
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `int32`
@@ -6978,7 +6783,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -6999,9 +6803,7 @@ Red
 **[0]** [`Sizing`](#sizing)
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `int32`
@@ -7020,7 +6822,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7043,7 +6844,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7066,7 +6866,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7093,7 +6892,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7116,7 +6914,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7139,7 +6936,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7155,7 +6951,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7171,7 +6966,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7194,7 +6988,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7215,13 +7008,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[1]** `string`
-
 
 
 </details>
@@ -7237,7 +7028,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7260,7 +7050,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7281,13 +7070,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[1]** `array` `string`
-
 
 
 </details>
@@ -7303,7 +7090,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7319,7 +7105,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7335,7 +7120,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7351,7 +7135,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7367,7 +7150,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7383,7 +7165,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7399,7 +7180,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7415,7 +7195,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7431,7 +7210,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7447,7 +7225,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7470,7 +7247,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7493,7 +7269,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7516,7 +7291,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7539,7 +7313,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7562,7 +7335,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7589,7 +7361,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7605,7 +7376,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7621,7 +7391,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -7637,7 +7406,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7664,7 +7432,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7691,7 +7458,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7714,7 +7480,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7737,7 +7502,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7760,7 +7524,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7781,9 +7544,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `int32`
@@ -7802,7 +7563,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7828,7 +7588,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7851,7 +7610,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7872,9 +7630,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `int32`
@@ -7893,7 +7649,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7919,7 +7674,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7940,7 +7694,6 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -7948,13 +7701,11 @@ Red
 **[1]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[2]** `boolean`
-
 
 
 </details>
@@ -7970,7 +7721,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -7991,9 +7741,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** `boolean`
-
 
 
 </details>
@@ -8009,7 +7757,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8030,7 +7777,6 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -8038,13 +7784,11 @@ Red
 **[1]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[2]** `string`
-
 
 
 </details>
@@ -8060,7 +7804,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8081,7 +7824,6 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -8089,13 +7831,11 @@ Red
 **[1]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[2]** [`DefaultLayout`](#defaultlayout)
-
 
 
 </details>
@@ -8111,7 +7851,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8132,9 +7871,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** [`DefaultLayout`](#defaultlayout)
-
 
 
 </details>
@@ -8150,7 +7887,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8171,7 +7907,6 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -8179,13 +7914,11 @@ Red
 **[1]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[2]** [`PathBuf`](#pathbuf)
-
 
 
 </details>
@@ -8201,7 +7934,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8222,9 +7954,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** [`PathBuf`](#pathbuf)
-
 
 
 </details>
@@ -8240,7 +7970,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8261,13 +7990,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[1]** `integer`
-
 
 
 - **Format:** `uint`
@@ -8277,13 +8004,11 @@ Red
 **[2]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[3]** [`DefaultLayout`](#defaultlayout)
-
 
 
 </details>
@@ -8299,7 +8024,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8320,9 +8044,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `uint`
@@ -8330,7 +8052,6 @@ Red
 
 
 **[2]** [`DefaultLayout`](#defaultlayout)
-
 
 
 </details>
@@ -8346,7 +8067,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8367,13 +8087,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[1]** `integer`
-
 
 
 - **Format:** `uint`
@@ -8383,13 +8101,11 @@ Red
 **[2]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[3]** [`PathBuf`](#pathbuf)
-
 
 
 </details>
@@ -8405,7 +8121,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8426,9 +8141,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `uint`
@@ -8436,7 +8149,6 @@ Red
 
 
 **[2]** [`PathBuf`](#pathbuf)
-
 
 
 </details>
@@ -8452,7 +8164,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8475,7 +8186,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8498,7 +8208,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -8514,7 +8223,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -8530,7 +8238,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8553,7 +8260,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8576,7 +8282,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8599,7 +8304,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -8615,7 +8319,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8638,7 +8341,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8661,7 +8363,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8682,9 +8383,7 @@ Red
 **[0]** `boolean`
 
 
-
 **[1]** <Badge text="optional" variant="note" /> [`AnimationPrefix`](#animationprefix)
-
 
 
 </details>
@@ -8700,7 +8399,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8721,13 +8419,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint64`
 - **Minimum:** 0
 
 
 **[1]** <Badge text="optional" variant="note" /> [`AnimationPrefix`](#animationprefix)
-
 
 
 </details>
@@ -8743,7 +8439,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8770,7 +8465,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8791,9 +8485,7 @@ Red
 **[0]** [`AnimationStyle`](#animationstyle)
 
 
-
 **[1]** <Badge text="optional" variant="note" /> [`AnimationPrefix`](#animationprefix)
-
 
 
 </details>
@@ -8809,7 +8501,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8832,7 +8523,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8853,9 +8543,7 @@ Red
 **[0]** [`WindowKind`](#windowkind)
 
 
-
 **[1]** `integer`
-
 
 
 - **Format:** `uint32`
@@ -8865,13 +8553,11 @@ Red
 **[2]** `integer`
 
 
-
 - **Format:** `uint32`
 - **Minimum:** 0
 
 
 **[3]** `integer`
-
 
 
 - **Format:** `uint32`
@@ -8891,7 +8577,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8914,7 +8599,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8940,7 +8624,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8966,7 +8649,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -8989,7 +8671,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9012,7 +8693,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9028,7 +8708,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9056,7 +8735,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9079,7 +8757,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9102,7 +8779,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9125,7 +8801,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9148,7 +8823,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9171,7 +8845,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9194,7 +8867,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9220,7 +8892,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9246,7 +8917,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9272,7 +8942,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9295,7 +8964,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9318,7 +8986,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9339,13 +9006,11 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[1]** [`Rect`](#rect)
-
 
 
 </details>
@@ -9361,7 +9026,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9382,7 +9046,6 @@ Red
 **[0]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
@@ -9390,13 +9053,11 @@ Red
 **[1]** `integer`
 
 
-
 - **Format:** `uint`
 - **Minimum:** 0
 
 
 **[2]** [`Rect`](#rect)
-
 
 
 </details>
@@ -9412,7 +9073,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9428,7 +9088,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9454,7 +9113,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9475,13 +9133,10 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
 
 
-
 **[2]** `integer`
-
 
 
 - **Format:** `uint`
@@ -9489,7 +9144,6 @@ Red
 
 
 **[3]** `integer`
-
 
 
 - **Format:** `uint`
@@ -9509,7 +9163,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9530,13 +9183,10 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
 
 
-
 **[2]** `string`
-
 
 
 </details>
@@ -9552,7 +9202,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9573,13 +9222,10 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
 
 
-
 **[2]** `integer`
-
 
 
 - **Format:** `uint`
@@ -9587,7 +9233,6 @@ Red
 
 
 **[3]** `integer`
-
 
 
 - **Format:** `uint`
@@ -9607,7 +9252,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9628,13 +9272,10 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
 
 
-
 **[2]** `string`
-
 
 
 </details>
@@ -9650,7 +9291,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9673,7 +9313,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9696,7 +9335,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9712,7 +9350,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9728,7 +9365,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9744,7 +9380,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9760,7 +9395,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -9776,7 +9410,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9797,9 +9430,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -9815,7 +9446,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9836,9 +9466,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -9854,7 +9482,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9875,9 +9502,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -9893,7 +9518,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9914,9 +9538,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -9932,7 +9554,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9953,9 +9574,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -9971,7 +9590,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -9992,9 +9610,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -10010,7 +9626,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10026,7 +9641,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10042,7 +9656,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10058,7 +9671,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10074,7 +9686,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10097,7 +9708,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10118,9 +9728,7 @@ Red
 **[0]** [`FocusFollowsMouseImplementation`](#focusfollowsmouseimplementation)
 
 
-
 **[1]** `boolean`
-
 
 
 </details>
@@ -10136,7 +9744,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10159,7 +9766,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10182,7 +9788,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10198,7 +9803,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10219,9 +9823,7 @@ Red
 **[0]** [`ApplicationIdentifier`](#applicationidentifier)
 
 
-
 **[1]** `string`
-
 
 
 </details>
@@ -10237,7 +9839,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10253,7 +9854,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10276,7 +9876,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10297,9 +9896,7 @@ Red
 **[0]** `string`
 
 
-
 **[1]** [`SubscribeOptions`](#subscribeoptions)
-
 
 
 </details>
@@ -10315,7 +9912,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10338,7 +9934,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10361,7 +9956,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10384,7 +9978,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10400,7 +9993,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10416,7 +10008,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10432,7 +10023,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10448,7 +10038,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10464,7 +10053,6 @@ Red
 
 ---
 `object`
-
 <details>
 <summary>Properties (2)</summary>
 
@@ -10526,7 +10114,6 @@ Red
 `number`
 
 
-
 - **Format:** `float`
 
 
@@ -10534,10 +10121,8 @@ Red
 [`IndividualSpacingConfig`](#individualspacingconfig)
 
 
-
 ---
 [`GroupedSpacingConfig`](#groupedspacingconfig)
-
 
 
 </details>
@@ -10686,7 +10271,6 @@ Hide when the current percentage is under this value [[1-100]]
 
 
 
-
 - **Format:** `uint8`
 - **Minimum:** 0
 - **Maximum:** 255
@@ -10699,7 +10283,6 @@ Select when the current percentage is over this value [[1-100]]
 
 
 
-
 - **Format:** `uint8`
 - **Minimum:** 0
 - **Maximum:** 255
@@ -10708,20 +10291,21 @@ Select when the current percentage is over this value [[1-100]]
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 10 seconds)
-
+Data refresh interval in seconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
 
+
+**Default:** `10`
+
 #### enable {#storageconfig-enable}
 
 <Badge text="required" variant="success" /> `boolean`
 
 Enable the Storage widget
-
 
 
 #### label_prefix {#storageconfig-label_prefix}
@@ -10731,22 +10315,22 @@ Enable the Storage widget
 Display label prefix
 
 
-
 #### show_read_only_disks {#storageconfig-show_read_only_disks}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Show disks that are read only. (default: false)
-
+Show disks that are read only
 
 
 #### show_removable_disks {#storageconfig-show_removable_disks}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Show removable disks. (default: true)
+Show removable disks
 
 
+
+**Default:** `true`
 
 
 </details>
@@ -10781,7 +10365,6 @@ Show removable disks. (default: true)
 <Badge text="required" variant="success" /> `boolean`
 
 Only emit notifications when the window manager state has changed
-
 
 
 
@@ -10822,8 +10405,7 @@ Only emit notifications when the window manager state has changed
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Change the icon depending on the time. The default icon is used between 8:30 and 12:00. (default: false)
-
+Change the icon depending on the time. The default icon is used between 8:30 and 12:00
 
 
 #### enable {#timeconfig-enable}
@@ -10833,13 +10415,11 @@ Change the icon depending on the time. The default icon is used between 8:30 and
 Enable the Time widget
 
 
-
 #### format {#timeconfig-format}
 
 <Badge text="required" variant="success" /> [`TimeFormat`](#timeformat)
 
 Set the Time format
-
 
 
 #### label_prefix {#timeconfig-label_prefix}
@@ -10849,22 +10429,22 @@ Set the Time format
 Display label prefix
 
 
-
 #### timezone {#timeconfig-timezone}
 
 <Badge text="optional" variant="note" /> `string`
 
 TimeZone (https://docs.rs/chrono-tz/latest/chrono_tz/enum.Tz.html)
+
 Use a custom format to display additional information, i.e.:
-\{
-    "Time": \{
+```json
+{
+    "Time": {
         "enable": true,
-        "format": \{ "Custom": "%T %Z (Tokyo)" \},
+        "format": { "Custom": "%T %Z (Tokyo)" },
         "timezone": "Asia/Tokyo"
-     \}
-\}
-
-
+     }
+}
+```
 
 
 
@@ -10897,45 +10477,31 @@ Use a custom format to display additional information, i.e.:
 
 
 ---
-`string` - Twelve-hour format (with seconds)
-
-
+Twelve-hour format (with seconds)
 **Value:** `"TwelveHour"`
 
 ---
-`string` - Twelve-hour format (without seconds)
-
-
+Twelve-hour format (without seconds)
 **Value:** `"TwelveHourWithoutSeconds"`
 
 ---
-`string` - Twenty-four-hour format (with seconds)
-
-
+Twenty-four-hour format (with seconds)
 **Value:** `"TwentyFourHour"`
 
 ---
-`string` - Twenty-four-hour format (without seconds)
-
-
+Twenty-four-hour format (without seconds)
 **Value:** `"TwentyFourHourWithoutSeconds"`
 
 ---
-`string` - Twenty-four-hour format displayed as a binary clock with circles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
-
-
+Twenty-four-hour format displayed as a binary clock with circles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
 **Value:** `"BinaryCircle"`
 
 ---
-`string` - Twenty-four-hour format displayed as a binary clock with rectangles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
-
-
+Twenty-four-hour format displayed as a binary clock with rectangles (with seconds) (https://en.wikipedia.org/wiki/Binary_clock)
 **Value:** `"BinaryRectangle"`
 
 ---
 `object` - Custom format (https://docs.rs/chrono/latest/chrono/format/strftime/index.html)
-
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -10980,13 +10546,15 @@ Use a custom format to display additional information, i.e.:
 
 <Badge text="optional" variant="note" /> `integer`
 
-Data refresh interval (default: 12 hours)
-
+Data refresh interval in hours
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
+
+
+**Default:** `12`
 
 #### enable {#updateconfig-enable}
 
@@ -10995,13 +10563,11 @@ Data refresh interval (default: 12 hours)
 Enable the Update widget
 
 
-
 #### label_prefix {#updateconfig-label_prefix}
 
 <Badge text="optional" variant="note" /> [`LabelPrefix`](#labelprefix)
 
 Display label prefix
-
 
 
 
@@ -11035,7 +10601,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11051,7 +10616,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11067,7 +10631,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11083,7 +10646,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11099,7 +10661,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11115,7 +10676,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11131,7 +10691,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11147,7 +10706,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11163,7 +10721,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11179,7 +10736,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11195,7 +10751,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11211,7 +10766,6 @@ Display label prefix
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -11291,26 +10845,19 @@ Display label prefix
 
 
 ---
-`string` - Show all icons only
-
-
+Show all icons only
 **Value:** `"AllIcons"`
 
 ---
-`string` - Show both all icons and text
-
-
+Show both all icons and text
 **Value:** `"AllIconsAndText"`
 
 ---
-`string` - Show all icons and text for the selected element, and all icons on the rest
-
-
+Show all icons and text for the selected element, and all icons on the rest
 **Value:** `"AllIconsAndTextOnSelected"`
 
 ---
 [`DisplayFormat`](#displayformat)
-
 
 
 </details>

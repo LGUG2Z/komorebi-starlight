@@ -15,14 +15,12 @@ Animations configuration options
 
 
 
-
 ---
 ### app_specific_configuration_path {#app_specific_configuration_path}
 
 <Badge text="optional" variant="note" /> [`AppSpecificConfigurationPath`](#appspecificconfigurationpath)
 
-Path to applications.json from komorebi-application-specific-configurations (default: None)
-
+Path to applications.json from komorebi-application-specific-configurations
 
 
 
@@ -35,15 +33,16 @@ Komorebi status bar configuration files for multiple instances on different moni
 
 
 
-
 ---
 ### border {#border}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Display window borders (default: true)
+Display window borders
 
 
+
+**Default:** `true`
 
 
 ---
@@ -55,15 +54,16 @@ Window border colours for different container types (has no effect if a theme is
 
 
 
-
 ---
 ### border_implementation {#border_implementation}
 
 <Badge text="optional" variant="note" /> [`BorderImplementation`](#borderimplementation)
 
-Window border implementation (default: Komorebi)
+Window border implementation
 
 
+
+**Default:** [`"Komorebi"`](#borderimplementation)
 
 
 ---
@@ -71,12 +71,14 @@ Window border implementation (default: Komorebi)
 
 <Badge text="optional" variant="note" /> `integer`
 
-Offset of window borders (default: -1)
-
+Offset of window borders
 
 
 
 - **Format:** `int32`
+
+
+**Default:** `-1`
 
 
 ---
@@ -88,15 +90,16 @@ Identify border overflow applications
 
 
 
-
 ---
 ### border_style {#border_style}
 
 <Badge text="optional" variant="note" /> [`BorderStyle`](#borderstyle)
 
-Window border style (default: System)
+Window border style
 
 
+
+**Default:** [`"System"`](#borderstyle)
 
 
 ---
@@ -104,12 +107,14 @@ Window border style (default: System)
 
 <Badge text="optional" variant="note" /> `integer`
 
-Width of window borders (default: 8)
-
+Width of window borders
 
 
 
 - **Format:** `int32`
+
+
+**Default:** `8`
 
 
 ---
@@ -121,15 +126,16 @@ DEPRECATED from v0.1.31: no longer required
 
 
 
-
 ---
 ### cross_boundary_behaviour {#cross_boundary_behaviour}
 
 <Badge text="optional" variant="note" /> [`CrossBoundaryBehaviour`](#crossboundarybehaviour)
 
-Determine what happens when an action is called on a window at a monitor boundary (default: Monitor)
+Determine what happens when an action is called on a window at a monitor boundary
 
 
+
+**Default:** [`"Monitor"`](#crossboundarybehaviour)
 
 
 ---
@@ -137,9 +143,11 @@ Determine what happens when an action is called on a window at a monitor boundar
 
 <Badge text="optional" variant="note" /> [`MoveBehaviour`](#movebehaviour)
 
-Determine what happens when a window is moved across a monitor boundary (default: Swap)
+Determine what happens when a window is moved across a monitor boundary
 
 
+
+**Default:** [`"Swap"`](#movebehaviour)
 
 
 ---
@@ -147,12 +155,14 @@ Determine what happens when a window is moved across a monitor boundary (default
 
 <Badge text="optional" variant="note" /> `integer`
 
-Global default container padding (default: 10)
-
+Global default container padding
 
 
 
 - **Format:** `int32`
+
+
+**Default:** `10`
 
 
 ---
@@ -160,12 +170,14 @@ Global default container padding (default: 10)
 
 <Badge text="optional" variant="note" /> `integer`
 
-Global default workspace padding (default: 10)
-
+Global default workspace padding
 
 
 
 - **Format:** `int32`
+
+
+**Default:** `10`
 
 
 ---
@@ -174,7 +186,6 @@ Global default workspace padding (default: 10)
 <Badge text="optional" variant="note" /> `object`
 
 Set display index preferences
-
 
 
 
@@ -191,8 +202,6 @@ Set display index preferences
 <Badge text="optional" variant="note" /> `boolean`
 
 Enable or disable float override, which makes it so every new window opens in floating mode
-(default: false)
-
 
 
 
@@ -201,9 +210,7 @@ Enable or disable float override, which makes it so every new window opens in fl
 
 <Badge text="optional" variant="note" /> [`Placement`](#placement)
 
-Determines the Placement to be used when spawning a window with float override active
-(default: None)
-
+Determines the `Placement` to be used when spawning a window with float override active
 
 
 
@@ -212,9 +219,8 @@ Determines the Placement to be used when spawning a window with float override a
 
 <Badge text="optional" variant="note" /> [`Placement`](#placement)
 
-Determines the Placement to be used when spawning a window that matches a
-floating_applications rule (default: None)
-
+Determines the `Placement` to be used when spawning a window that matches a
+`floating_applications` rule
 
 
 
@@ -227,16 +233,16 @@ Identify applications which should be managed as floating windows
 
 
 
-
 ---
 ### floating_layer_behaviour {#floating_layer_behaviour}
 
 <Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
 
-Determines what happens on a new window when on the FloatingLayer
-(default: Tile)
+Determines what happens on a new window when on the `FloatingLayer`
 
 
+
+**Default:** [`"Tile"`](#floatinglayerbehaviour)
 
 
 ---
@@ -244,10 +250,12 @@ Determines what happens on a new window when on the FloatingLayer
 
 <Badge text="optional" variant="note" /> [`Placement`](#placement)
 
-Determines the Placement to be used when spawning a window on the floating layer with the
-FloatingLayerBehaviour set to FloatingLayerBehaviour::Float (default: Center)
+Determines the `Placement` to be used when spawning a window on the floating layer with the
+`FloatingLayerBehaviour` set to `FloatingLayerBehaviour::Float`
 
 
+
+**Default:** [`"Center"`](#placement)
 
 
 ---
@@ -256,7 +264,6 @@ FloatingLayerBehaviour set to FloatingLayerBehaviour::Float (default: Center)
 <Badge text="optional" variant="note" /> [`AspectRatio`](#aspectratio)
 
 Aspect ratio to resize with when toggling floating mode for a window
-
 
 
 
@@ -269,14 +276,12 @@ END OF LIFE FEATURE: Use https://github.com/LGUG2Z/masir instead
 
 
 
-
 ---
 ### global_work_area_offset {#global_work_area_offset}
 
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
-Global work area (space used for tiling) offset (default: None)
-
+Global work area (space used for tiling) offset
 
 
 
@@ -289,7 +294,6 @@ Individual window floating rules
 
 
 
-
 ---
 ### invisible_borders {#invisible_borders}
 
@@ -299,14 +303,12 @@ DEPRECATED from v0.1.22: no longer required
 
 
 
-
 ---
 ### layered_applications {#layered_applications}
 
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
 
-Identify applications that have the WS_EX_LAYERED extended window style
-
+Identify applications that have the `WS_EX_LAYERED` extended window style
 
 
 
@@ -319,14 +321,12 @@ Individual window force-manage rules
 
 
 
-
 ---
 ### minimum_window_height {#minimum_window_height}
 
 <Badge text="optional" variant="note" /> `integer`
 
 DISCOURAGED: Minimum height for a window to be eligible for tiling
-
 
 
 
@@ -342,7 +342,6 @@ DISCOURAGED: Minimum width for a window to be eligible for tiling
 
 
 
-
 - **Format:** `int32`
 
 
@@ -352,7 +351,6 @@ DISCOURAGED: Minimum width for a window to be eligible for tiling
 <Badge text="optional" variant="note" /> `object`
 
 Set monitor index preferences
-
 
 
 
@@ -372,15 +370,16 @@ Monitor and workspace configurations
 
 
 
-
 ---
 ### mouse_follows_focus {#mouse_follows_focus}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Enable or disable mouse follows focus (default: true)
+Enable or disable mouse follows focus
 
 
+
+**Default:** `true`
 
 
 ---
@@ -388,8 +387,7 @@ Enable or disable mouse follows focus (default: true)
 
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
 
-Identify applications that send EVENT_OBJECT_NAMECHANGE on launch (very rare)
-
+Identify applications that send `EVENT_OBJECT_NAMECHANGE` on launch (very rare)
 
 
 
@@ -398,8 +396,7 @@ Identify applications that send EVENT_OBJECT_NAMECHANGE on launch (very rare)
 
 <Badge text="optional" variant="note" /> `array` `string`
 
-Do not process EVENT_OBJECT_NAMECHANGE events as Show events for identified applications matching these title regexes
-
+Do not process `EVENT_OBJECT_NAMECHANGE` events as Show events for identified applications matching these title regexes
 
 
 
@@ -412,18 +409,19 @@ HEAVILY DISCOURAGED: Identify applications for which komorebi should forcibly re
 
 
 
-
 ---
 ### resize_delta {#resize_delta}
 
 <Badge text="optional" variant="note" /> `integer`
 
-Delta to resize windows by (default 50)
-
+Delta to resize windows by
 
 
 
 - **Format:** `int32`
+
+
+**Default:** `50`
 
 
 ---
@@ -431,13 +429,15 @@ Delta to resize windows by (default 50)
 
 <Badge text="optional" variant="note" /> `integer`
 
-How long to wait when compensating for slow applications, in milliseconds (default: 20)
-
+How long to wait when compensating for slow applications, in milliseconds
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
+
+
+**Default:** `20`
 
 
 ---
@@ -446,7 +446,6 @@ How long to wait when compensating for slow applications, in milliseconds (defau
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
 
 Identify applications which are slow to send initial event notifications
-
 
 
 
@@ -459,7 +458,6 @@ Stackbar configuration options
 
 
 
-
 ---
 ### theme {#theme}
 
@@ -469,15 +467,16 @@ Theme configuration options
 
 
 
-
 ---
 ### toggle_float_placement {#toggle_float_placement}
 
 <Badge text="optional" variant="note" /> [`Placement`](#placement)
 
-Determines the placement of a new window when toggling to float (default: CenterAndResize)
+Determines the placement of a new window when toggling to float
 
 
+
+**Default:** [`"CenterAndResize"`](#placement)
 
 
 ---
@@ -485,8 +484,7 @@ Determines the placement of a new window when toggling to float (default: Center
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Add transparency to unfocused windows (default: false)
-
+Add transparency to unfocused windows
 
 
 
@@ -495,8 +493,7 @@ Add transparency to unfocused windows (default: false)
 
 <Badge text="optional" variant="note" /> `integer`
 
-Alpha value for unfocused window transparency [[0-255]] (default: 200)
-
+Alpha value for unfocused window transparency [[0-255]]
 
 
 
@@ -505,13 +502,15 @@ Alpha value for unfocused window transparency [[0-255]] (default: 200)
 - **Maximum:** 255
 
 
+**Default:** `200`
+
+
 ---
 ### transparency_ignore_rules {#transparency_ignore_rules}
 
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
 
 Individual window transparency ignore rules
-
 
 
 
@@ -524,15 +523,16 @@ Identify tray and multi-window applications
 
 
 
-
 ---
 ### unmanaged_window_operation_behaviour {#unmanaged_window_operation_behaviour}
 
 <Badge text="optional" variant="note" /> [`OperationBehaviour`](#operationbehaviour)
 
-Determine what happens when commands are sent while an unmanaged window is in the foreground (default: Op)
+Determine what happens when commands are sent while an unmanaged window is in the foreground
 
 
+
+**Default:** [`"Op"`](#operationbehaviour)
 
 
 ---
@@ -540,9 +540,11 @@ Determine what happens when commands are sent while an unmanaged window is in th
 
 <Badge text="optional" variant="note" /> [`WindowContainerBehaviour`](#windowcontainerbehaviour)
 
-Determine what happens when a new window is opened (default: Create)
+Determine what happens when a new window is opened
 
 
+
+**Default:** [`"Create"`](#windowcontainerbehaviour)
 
 
 ---
@@ -550,9 +552,11 @@ Determine what happens when a new window is opened (default: Create)
 
 <Badge text="optional" variant="note" /> [`WindowHandlingBehaviour`](#windowhandlingbehaviour)
 
-Which Windows API behaviour to use when manipulating windows (default: Sync)
+Which Windows API behaviour to use when manipulating windows
 
 
+
+**Default:** [`"Sync"`](#windowhandlingbehaviour)
 
 
 ---
@@ -560,9 +564,11 @@ Which Windows API behaviour to use when manipulating windows (default: Sync)
 
 <Badge text="optional" variant="note" /> [`HidingBehaviour`](#hidingbehaviour)
 
-Which Windows signal to use when hiding windows (default: Cloak)
+Which Windows signal to use when hiding windows
 
 
+
+**Default:** [`"Cloak"`](#hidingbehaviour)
 
 
 ---
@@ -584,7 +590,6 @@ Which Windows signal to use when hiding windows (default: Cloak)
 
 ---
 `string`
-
 <details>
 <summary>Enum variants (30)</summary>
 
@@ -623,7 +628,6 @@ Which Windows signal to use when hiding windows (default: Cloak)
 
 ---
 `object`
-
 <details>
 <summary>Properties (1)</summary>
 
@@ -667,36 +671,35 @@ Which Windows signal to use when hiding windows (default: Cloak)
 
 <Badge text="optional" variant="note" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig2) `integer`
 
-Set the animation duration in ms (default: 250)
-
+Set the animation duration in ms
 
 
 #### enabled {#animationsconfig-enabled}
 
 <Badge text="required" variant="success" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig) `boolean`
 
-Enable or disable animations (default: false)
-
+Enable or disable animations
 
 
 #### fps {#animationsconfig-fps}
 
 <Badge text="optional" variant="note" /> `integer`
 
-Set the animation FPS (default: 60)
-
+Set the animation FPS
 
 
 
 - **Format:** `uint64`
 - **Minimum:** 0
 
+
+**Default:** `60`
+
 #### style {#animationsconfig-style}
 
 <Badge text="optional" variant="note" /> [`PerAnimationPrefixConfig`](#peranimationprefixconfig3) [`AnimationStyle`](#animationstyle)
 
-Set the animation style (default: Linear)
-
+Set the animation style
 
 
 
@@ -724,15 +727,11 @@ Set the animation style (default: Linear)
 
 
 ---
-[`PathBuf`](#pathbuf) - A single applications.json file
-
-
+[`PathBuf`](#pathbuf) - A single `applications.json` file
 
 
 ---
-`array` [`PathBuf`](#pathbuf) - Multiple applications.json files
-
-
+`array` [`PathBuf`](#pathbuf) - Multiple `applications.json` files
 
 
 </details>
@@ -815,12 +814,8 @@ Set the animation style (default: Linear)
 [`PredefinedAspectRatio`](#predefinedaspectratio) - A predefined aspect ratio
 
 
-
-
 ---
 `array` `[integer; 2]` - A custom W:H aspect ratio
-
-
 
 
 </details>
@@ -1396,13 +1391,11 @@ Set the animation style (default: Linear)
 Border colour when the container is in floating mode
 
 
-
 #### monocle {#bordercolours-monocle}
 
 <Badge text="optional" variant="note" /> [`Colour`](#colour)
 
 Border colour when the container is in monocle mode
-
 
 
 #### single {#bordercolours-single}
@@ -1412,13 +1405,11 @@ Border colour when the container is in monocle mode
 Border colour when the container contains a single window
 
 
-
 #### stack {#bordercolours-stack}
 
 <Badge text="optional" variant="note" /> [`Colour`](#colour)
 
 Border colour when the container contains multiple windows
-
 
 
 #### unfocused {#bordercolours-unfocused}
@@ -1428,13 +1419,11 @@ Border colour when the container contains multiple windows
 Border colour when the container is unfocused
 
 
-
 #### unfocused_locked {#bordercolours-unfocused_locked}
 
 <Badge text="optional" variant="note" /> [`Colour`](#colour)
 
 Border colour when the container is unfocused and locked
-
 
 
 
@@ -1462,15 +1451,11 @@ Border colour when the container is unfocused and locked
 
 
 ---
-`string` - Use the adjustable komorebi border implementation
-
-
+Use the adjustable komorebi border implementation
 **Value:** `"Komorebi"`
 
 ---
-`string` - Use the thin Windows accent border implementation
-
-
+Use the thin Windows accent border implementation
 **Value:** `"Windows"`
 
 </details>
@@ -1497,21 +1482,15 @@ Border colour when the container is unfocused and locked
 
 
 ---
-`string` - Use the system border style
-
-
+Use the system border style
 **Value:** `"System"`
 
 ---
-`string` - Use the Windows 11-style rounded borders
-
-
+Use the Windows 11-style rounded borders
 **Value:** `"Rounded"`
 
 ---
-`string` - Use the Windows 10-style square borders
-
-
+Use the Windows 10-style square borders
 **Value:** `"Square"`
 
 </details>
@@ -1632,12 +1611,8 @@ Border colour when the container is unfocused and locked
 [`Rgb`](#rgb) - Colour represented as RGB
 
 
-
-
 ---
 [`Hex`](#hex) - Colour represented as Hex
-
-
 
 
 </details>
@@ -1693,15 +1668,11 @@ Border colour when the container is unfocused and locked
 
 
 ---
-`string` - Attempt to perform actions across a workspace boundary
-
-
+Attempt to perform actions across a workspace boundary
 **Value:** `"Workspace"`
 
 ---
-`string` - Attempt to perform actions across a monitor boundary
-
-
+Attempt to perform actions across a monitor boundary
 **Value:** `"Monitor"`
 
 </details>
@@ -1764,15 +1735,11 @@ Border colour when the container is unfocused and locked
 
 
 ---
-`string` - Tile new windows (unless they match a float rule or float override is active)
-
-
+Tile new windows (unless they match a float rule or float override is active)
 **Value:** `"Tile"`
 
 ---
-`string` - Float new windows
-
-
+Float new windows
 **Value:** `"Float"`
 
 </details>
@@ -1805,15 +1772,11 @@ Border colour when the container is unfocused and locked
 
 
 ---
-`string` - A custom FFM implementation (slightly more CPU-intensive)
-
-
+A custom FFM implementation (slightly more CPU-intensive)
 **Value:** `"Komorebi"`
 
 ---
-`string` - The native (legacy) Windows FFM implementation
-
-
+The native (legacy) Windows FFM implementation
 **Value:** `"Windows"`
 
 </details>
@@ -1843,7 +1806,6 @@ Border colour when the container is unfocused and locked
 <Badge text="required" variant="success" /> `integer`
 
 Maximum number of rows per grid column
-
 
 
 
@@ -1927,21 +1889,15 @@ Maximum number of rows per grid column
 
 
 ---
-`string` - END OF LIFE FEATURE: Use the SW_HIDE flag to hide windows when switching workspaces (has issues with Electron apps)
-
-
+END OF LIFE FEATURE: Use the `SW_HIDE` flag to hide windows when switching workspaces (has issues with Electron apps)
 **Value:** `"Hide"`
 
 ---
-`string` - Use the SW_MINIMIZE flag to hide windows when switching workspaces (has issues with frequent workspace switching)
-
-
+Use the `SW_MINIMIZE` flag to hide windows when switching workspaces (has issues with frequent workspace switching)
 **Value:** `"Minimize"`
 
 ---
-`string` - Use the undocumented SetCloak Win32 function to hide windows when switching workspaces
-
-
+Use the undocumented SetCloak Win32 function to hide windows when switching workspaces
 **Value:** `"Cloak"`
 
 </details>
@@ -2039,8 +1995,6 @@ Maximum number of rows per grid column
 
 ---
 `object` - A theme from catppuccin-egui
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -2048,32 +2002,37 @@ Maximum number of rows per grid column
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Komorebi status bar accent (default: Blue)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Blue"`](#catppuccinvalue)
 
 #### floating_border {#komorebitheme-oneof[0]-floating_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the window is floating (default: Yellow)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Yellow"`](#catppuccinvalue)
 
 #### monocle_border {#komorebitheme-oneof[0]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is in monocle mode (default: Pink)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Pink"`](#catppuccinvalue)
 
 #### name {#komorebitheme-oneof[0]-name}
 
 <Badge text="required" variant="success" /> [`Catppuccin`](#catppuccin)
 
 Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catppuccin)
-
 
 
 #### palette {#komorebitheme-oneof[0]-palette}
@@ -2087,65 +2046,77 @@ Name of the Catppuccin theme (theme previews: https://github.com/catppuccin/catp
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container contains a single window (default: Blue)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Blue"`](#catppuccinvalue)
 
 #### stack_border {#komorebitheme-oneof[0]-stack_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container contains multiple windows (default: Green)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Green"`](#catppuccinvalue)
 
 #### stackbar_background {#komorebitheme-oneof[0]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar tab background colour (default: Base)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base"`](#catppuccinvalue)
 
 #### stackbar_focused_text {#komorebitheme-oneof[0]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar focused tab text colour (default: Green)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Green"`](#catppuccinvalue)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[0]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Stackbar unfocused tab text colour (default: Text)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Text"`](#catppuccinvalue)
 
 #### unfocused_border {#komorebitheme-oneof[0]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is unfocused (default: Base)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base"`](#catppuccinvalue)
 
 #### unfocused_locked_border {#komorebitheme-oneof[0]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`CatppuccinValue`](#catppuccinvalue)
 
-Border colour when the container is unfocused and locked (default: Red)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Red"`](#catppuccinvalue)
 
 
 </details>
 
 ---
 `object` - A theme from base16-egui-themes
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -2153,32 +2124,37 @@ Border colour when the container is unfocused and locked (default: Red)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Komorebi status bar accent (default: Base0D)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### floating_border {#komorebitheme-oneof[1]-floating_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the window is floating (default: Base09)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Base09"`](#base16value)
 
 #### monocle_border {#komorebitheme-oneof[1]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is in monocle mode (default: Base0F)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Base0F"`](#base16value)
 
 #### name {#komorebitheme-oneof[1]-name}
 
 <Badge text="required" variant="success" /> [`Base16`](#base16)
 
 Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinted-gallery/)
-
 
 
 #### palette {#komorebitheme-oneof[1]-palette}
@@ -2192,65 +2168,77 @@ Name of the Base16 theme (theme previews: https://tinted-theming.github.io/tinte
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains a single window (default: Base0D)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### stack_border {#komorebitheme-oneof[1]-stack_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains multiple windows (default: Base0B)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_background {#komorebitheme-oneof[1]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar tab background colour (default: Base01)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### stackbar_focused_text {#komorebitheme-oneof[1]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar focused tab text colour (default: Base0B)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[1]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar unfocused tab text colour (default: Base05)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Base05"`](#base16value)
 
 #### unfocused_border {#komorebitheme-oneof[1]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused (default: Base01)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### unfocused_locked_border {#komorebitheme-oneof[1]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused and locked (default: Base08)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Base08"`](#base16value)
 
 
 </details>
 
 ---
 `object` - A custom Base16 theme
-
-
 <details>
 <summary>Properties (12)</summary>
 
@@ -2258,9 +2246,11 @@ Border colour when the container is unfocused and locked (default: Base08)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Komorebi status bar accent (default: Base0D)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### colours {#komorebitheme-oneof[2]-colours}
 
@@ -2269,22 +2259,25 @@ Komorebi status bar accent (default: Base0D)
 Colours of the custom Base16 theme palette
 
 
-
 #### floating_border {#komorebitheme-oneof[2]-floating_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the window is floating (default: Base09)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Base09"`](#base16value)
 
 #### monocle_border {#komorebitheme-oneof[2]-monocle_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is in monocle mode (default: Base0F)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Base0F"`](#base16value)
 
 #### palette {#komorebitheme-oneof[2]-palette}
 
@@ -2297,57 +2290,71 @@ Border colour when the container is in monocle mode (default: Base0F)
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains a single window (default: Base0D)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### stack_border {#komorebitheme-oneof[2]-stack_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains multiple windows (default: Base0B)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_background {#komorebitheme-oneof[2]-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar tab background colour (default: Base01)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### stackbar_focused_text {#komorebitheme-oneof[2]-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar focused tab text colour (default: Base0B)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_unfocused_text {#komorebitheme-oneof[2]-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar unfocused tab text colour (default: Base05)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Base05"`](#base16value)
 
 #### unfocused_border {#komorebitheme-oneof[2]-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused (default: Base01)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### unfocused_locked_border {#komorebitheme-oneof[2]-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused and locked (default: Base08)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Base08"`](#base16value)
 
 
 </details>
@@ -2381,13 +2388,11 @@ Border colour when the container is unfocused and locked (default: Base08)
 Options related to the Grid layout
 
 
-
 #### scrolling {#layoutoptions-scrolling}
 
 <Badge text="optional" variant="note" /> [`ScrollingLayoutOptions`](#scrollinglayoutoptions)
 
 Options related to the Scrolling layout
-
 
 
 
@@ -2421,10 +2426,8 @@ Options related to the Scrolling layout
 [`IdWithIdentifier`](#idwithidentifier)
 
 
-
 ---
 `array` [`IdWithIdentifier`](#idwithidentifier)
-
 
 
 </details>
@@ -2530,16 +2533,17 @@ Container padding (default: global)
 
 
 
-
 - **Format:** `int32`
 
 #### floating_layer_behaviour {#monitorconfig-floating_layer_behaviour}
 
 <Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
 
-Determine what happens to a new window when the Floating workspace layer is active (default: Tile)
+Determine what happens to a new window when the Floating workspace layer is active
 
 
+
+**Default:** [`"Tile"`](#floatinglayerbehaviour)
 
 #### wallpaper {#monitorconfig-wallpaper}
 
@@ -2548,32 +2552,31 @@ Determine what happens to a new window when the Floating workspace layer is acti
 Specify a wallpaper for this monitor
 
 
-
 #### window_based_work_area_offset {#monitorconfig-window_based_work_area_offset}
 
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
-Window based work area offset (default: None)
-
+Window based work area offset
 
 
 #### window_based_work_area_offset_limit {#monitorconfig-window_based_work_area_offset_limit}
 
 <Badge text="optional" variant="note" /> `integer`
 
-Open window limit after which the window based work area offset will no longer be applied (default: 1)
-
+Open window limit after which the window based work area offset will no longer be applied
 
 
 
 - **Format:** `int`
 
+
+**Default:** `1`
+
 #### work_area_offset {#monitorconfig-work_area_offset}
 
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
-Monitor-specific work area offset (default: None)
-
+Monitor-specific work area offset
 
 
 #### workspace_padding {#monitorconfig-workspace_padding}
@@ -2584,7 +2587,6 @@ Workspace padding (default: global)
 
 
 
-
 - **Format:** `int32`
 
 #### workspaces {#monitorconfig-workspaces}
@@ -2592,7 +2594,6 @@ Workspace padding (default: global)
 <Badge text="required" variant="success" /> `array` [`WorkspaceConfig`](#workspaceconfig)
 
 Workspace configurations
-
 
 
 
@@ -2620,21 +2621,15 @@ Workspace configurations
 
 
 ---
-`string` - Swap the window container with the window container at the edge of the adjacent monitor
-
-
+Swap the window container with the window container at the edge of the adjacent monitor
 **Value:** `"Swap"`
 
 ---
-`string` - Insert the window container into the focused workspace on the adjacent monitor
-
-
+Insert the window container into the focused workspace on the adjacent monitor
 **Value:** `"Insert"`
 
 ---
-`string` - Do nothing if trying to move a window container in the direction of an adjacent monitor
-
-
+Do nothing if trying to move a window container in the direction of an adjacent monitor
 **Value:** `"NoOp"`
 
 </details>
@@ -2661,15 +2656,11 @@ Workspace configurations
 
 
 ---
-`string` - Process komorebic commands on temporarily unmanaged/floated windows
-
-
+Process komorebic commands on temporarily unmanaged/floated windows
 **Value:** `"Op"`
 
 ---
-`string` - Ignore komorebic commands on temporarily unmanaged/floated windows
-
-
+Ignore komorebic commands on temporarily unmanaged/floated windows
 **Value:** `"NoOp"`
 
 </details>
@@ -2791,21 +2782,15 @@ Workspace configurations
 
 
 ---
-`string` - Does not change the size or position of the window
-
-
+Does not change the size or position of the window
 **Value:** `"None"`
 
 ---
-`string` - Center the window without changing the size
-
-
+Center the window without changing the size
 **Value:** `"Center"`
 
 ---
-`string` - Center the window and resize it according to the AspectRatio
-
-
+Center the window and resize it according to the `AspectRatio`
 **Value:** `"CenterAndResize"`
 
 </details>
@@ -2835,21 +2820,15 @@ Workspace configurations
 
 
 ---
-`string` - 21:9
-
-
+21:9
 **Value:** `"Ultrawide"`
 
 ---
-`string` - 16:9
-
-
+16:9
 **Value:** `"Widescreen"`
 
 ---
-`string` - 4:3
-
-
+4:3
 **Value:** `"Standard"`
 
 </details>
@@ -2885,7 +2864,6 @@ The bottom point in a Win32 Rect
 
 
 
-
 - **Format:** `int32`
 
 #### left {#rect-left}
@@ -2893,7 +2871,6 @@ The bottom point in a Win32 Rect
 <Badge text="required" variant="success" /> `integer`
 
 The left point in a Win32 Rect
-
 
 
 
@@ -2907,7 +2884,6 @@ The right point in a Win32 Rect
 
 
 
-
 - **Format:** `int32`
 
 #### top {#rect-top}
@@ -2915,7 +2891,6 @@ The right point in a Win32 Rect
 <Badge text="required" variant="success" /> `integer`
 
 The top point in a Win32 Rect
-
 
 
 
@@ -2961,7 +2936,6 @@ Blue
 
 
 
-
 - **Format:** `uint32`
 - **Minimum:** 0
 
@@ -2973,7 +2947,6 @@ Green
 
 
 
-
 - **Format:** `uint32`
 - **Minimum:** 0
 
@@ -2982,7 +2955,6 @@ Green
 <Badge text="required" variant="success" /> `integer`
 
 Red
-
 
 
 
@@ -3046,13 +3018,11 @@ Red
 With an odd number of visible columns, keep the focused window column centered
 
 
-
 #### columns {#scrollinglayoutoptions-columns}
 
 <Badge text="required" variant="success" /> `integer`
 
 Desired number of visible columns (default: 3)
-
 
 
 
@@ -3093,7 +3063,6 @@ Stackbar height
 
 
 
-
 - **Format:** `int32`
 
 #### label {#stackbarconfig-label}
@@ -3103,21 +3072,21 @@ Stackbar height
 Stackbar label
 
 
-
 #### mode {#stackbarconfig-mode}
 
 <Badge text="optional" variant="note" /> [`StackbarMode`](#stackbarmode)
 
-Stackbar mode (default: Never)
+Stackbar mode
 
 
+
+**Default:** [`"Never"`](#stackbarmode)
 
 #### tabs {#stackbarconfig-tabs}
 
 <Badge text="optional" variant="note" /> [`TabsConfig`](#tabsconfig)
 
 Stackbar tab configuration options
-
 
 
 
@@ -3207,13 +3176,11 @@ Stackbar tab configuration options
 Tab background colour
 
 
-
 #### focused_text {#tabsconfig-focused_text}
 
 <Badge text="optional" variant="note" /> [`Colour`](#colour)
 
 Focused tab text colour
-
 
 
 #### font_family {#tabsconfig-font_family}
@@ -3223,13 +3190,11 @@ Focused tab text colour
 Font family
 
 
-
 #### font_size {#tabsconfig-font_size}
 
 <Badge text="optional" variant="note" /> `integer`
 
 Font size
-
 
 
 
@@ -3242,13 +3207,11 @@ Font size
 Unfocused tab text colour
 
 
-
 #### width {#tabsconfig-width}
 
 <Badge text="optional" variant="note" /> `integer`
 
 Width of a stackbar tab
-
 
 
 
@@ -3284,89 +3247,111 @@ Width of a stackbar tab
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Komorebi status bar accent (default: Base0D)
+Komorebi status bar accent
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### floating_border {#themeoptions-floating_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the window is floating (default: Base09)
+Border colour when the window is floating
 
 
+
+**Default:** [`"Base09"`](#base16value)
 
 #### monocle_border {#themeoptions-monocle_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is in monocle mode (default: Base0F)
+Border colour when the container is in monocle mode
 
 
+
+**Default:** [`"Base0F"`](#base16value)
 
 #### single_border {#themeoptions-single_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains a single window (default: Base0D)
+Border colour when the container contains a single window
 
 
+
+**Default:** [`"Base0D"`](#base16value)
 
 #### stack_border {#themeoptions-stack_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container contains multiple windows (default: Base0B)
+Border colour when the container contains multiple windows
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_background {#themeoptions-stackbar_background}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar tab background colour (default: Base01)
+Stackbar tab background colour
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### stackbar_focused_text {#themeoptions-stackbar_focused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar focused tab text colour (default: Base0B)
+Stackbar focused tab text colour
 
 
+
+**Default:** [`"Base0B"`](#base16value)
 
 #### stackbar_unfocused_text {#themeoptions-stackbar_unfocused_text}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Stackbar unfocused tab text colour (default: Base05)
+Stackbar unfocused tab text colour
 
 
+
+**Default:** [`"Base05"`](#base16value)
 
 #### theme_variant {#themeoptions-theme_variant}
 
 <Badge text="optional" variant="note" /> [`ThemeVariant`](#themevariant)
 
-Specify Light or Dark variant for theme generation (default: Dark)
+Specify Light or Dark variant for theme generation
 
 
+
+**Default:** [`"Dark"`](#themevariant)
 
 #### unfocused_border {#themeoptions-unfocused_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused (default: Base01)
+Border colour when the container is unfocused
 
 
+
+**Default:** [`"Base01"`](#base16value)
 
 #### unfocused_locked_border {#themeoptions-unfocused_locked_border}
 
 <Badge text="optional" variant="note" /> [`Base16Value`](#base16value)
 
-Border colour when the container is unfocused and locked (default: Base08)
+Border colour when the container is unfocused and locked
 
 
+
+**Default:** [`"Base08"`](#base16value)
 
 
 </details>
@@ -3428,9 +3413,11 @@ Border colour when the container is unfocused and locked (default: Base08)
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Generate and apply Base16 theme for this wallpaper (default: true)
+Generate and apply Base16 theme for this wallpaper
 
 
+
+**Default:** `true`
 
 #### path {#wallpaper-path}
 
@@ -3439,14 +3426,15 @@ Generate and apply Base16 theme for this wallpaper (default: true)
 Path to the wallpaper image file
 
 
-
 #### theme_options {#wallpaper-theme_options}
 
 <Badge text="optional" variant="note" /> [`ThemeOptions`](#themeoptions)
 
-Specify Light or Dark variant for theme generation (default: Dark)
+Specify Light or Dark variant for theme generation
 
 
+
+**Default:** [`"Dark"`](#themeoptions)
 
 
 </details>
@@ -3478,15 +3466,11 @@ Specify Light or Dark variant for theme generation (default: Dark)
 
 
 ---
-`string` - Create a new container for each new window
-
-
+Create a new container for each new window
 **Value:** `"Create"`
 
 ---
-`string` - Append new windows to the focused window container
-
-
+Append new windows to the focused window container
 **Value:** `"Append"`
 
 </details>
@@ -3545,9 +3529,11 @@ Specify Light or Dark variant for theme generation (default: Dark)
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Apply this monitor's window-based work area offset (default: true)
+Apply this monitor's window-based work area offset
 
 
+
+**Default:** `true`
 
 #### container_padding {#workspaceconfig-container_padding}
 
@@ -3557,23 +3543,20 @@ Container padding (default: global)
 
 
 
-
 - **Format:** `int32`
 
 #### custom_layout {#workspaceconfig-custom_layout}
 
 <Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> [`PathBuf`](#pathbuf)
 
-END OF LIFE FEATURE: Custom Layout (default: None)
-
+END OF LIFE FEATURE: Custom Layout
 
 
 #### custom_layout_rules {#workspaceconfig-custom_layout_rules}
 
 <Badge text="deprecated" variant="danger" /> <Badge text="optional" variant="note" /> `object`
 
-END OF LIFE FEATURE: Custom layout rules (default: None)
-
+END OF LIFE FEATURE: Custom layout rules
 
 
 
@@ -3587,17 +3570,18 @@ END OF LIFE FEATURE: Custom layout rules (default: None)
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Enable or disable float override, which makes it so every new window opens in floating mode (default: false)
-
+Enable or disable float override, which makes it so every new window opens in floating mode
 
 
 #### floating_layer_behaviour {#workspaceconfig-floating_layer_behaviour}
 
 <Badge text="optional" variant="note" /> [`FloatingLayerBehaviour`](#floatinglayerbehaviour)
 
-Determine what happens to a new window when the Floating workspace layer is active (default: Tile)
+Determine what happens to a new window when the Floating workspace layer is active
 
 
+
+**Default:** [`"Tile"`](#floatinglayerbehaviour)
 
 #### initial_workspace_rules {#workspaceconfig-initial_workspace_rules}
 
@@ -3606,37 +3590,35 @@ Determine what happens to a new window when the Floating workspace layer is acti
 Initial workspace application rules
 
 
-
 #### layout {#workspaceconfig-layout}
 
 <Badge text="optional" variant="note" /> [`DefaultLayout`](#defaultlayout)
 
-Layout (default: BSP)
+Layout
 
 
+
+**Default:** [`"BSP"`](#defaultlayout)
 
 #### layout_flip {#workspaceconfig-layout_flip}
 
 <Badge text="optional" variant="note" /> [`Axis`](#axis)
 
-Specify an axis on which to flip the selected layout (default: None)
-
+Specify an axis on which to flip the selected layout
 
 
 #### layout_options {#workspaceconfig-layout_options}
 
 <Badge text="optional" variant="note" /> [`LayoutOptions`](#layoutoptions)
 
-Layout-specific options (default: None)
-
+Layout-specific options
 
 
 #### layout_rules {#workspaceconfig-layout_rules}
 
 <Badge text="optional" variant="note" /> `object`
 
-Layout rules in the format of threshold =&gt; layout (default: None)
-
+Layout rules in the format of threshold => layout
 
 
 
@@ -3653,14 +3635,15 @@ Layout rules in the format of threshold =&gt; layout (default: None)
 Name
 
 
-
 #### tile {#workspaceconfig-tile}
 
 <Badge text="optional" variant="note" /> `boolean`
 
-Enable or disable tiling for the workspace (default: true)
+Enable or disable tiling for the workspace
 
 
+
+**Default:** `true`
 
 #### wallpaper {#workspaceconfig-wallpaper}
 
@@ -3669,21 +3652,21 @@ Enable or disable tiling for the workspace (default: true)
 Specify a wallpaper for this workspace
 
 
-
 #### window_container_behaviour {#workspaceconfig-window_container_behaviour}
 
 <Badge text="optional" variant="note" /> [`WindowContainerBehaviour`](#windowcontainerbehaviour)
 
-Determine what happens when a new window is opened (default: Create)
+Determine what happens when a new window is opened
 
 
+
+**Default:** [`"Create"`](#windowcontainerbehaviour)
 
 #### window_container_behaviour_rules {#workspaceconfig-window_container_behaviour_rules}
 
 <Badge text="optional" variant="note" /> `object`
 
-Window container behaviour rules in the format of threshold =&gt; behaviour (default: None)
-
+Window container behaviour rules in the format of threshold => behaviour
 
 
 
@@ -3697,8 +3680,7 @@ Window container behaviour rules in the format of threshold =&gt; behaviour (def
 
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
-Workspace specific work area offset (default: None)
-
+Workspace specific work area offset
 
 
 #### workspace_padding {#workspaceconfig-workspace_padding}
@@ -3709,7 +3691,6 @@ Workspace padding (default: global)
 
 
 
-
 - **Format:** `int32`
 
 #### workspace_rules {#workspaceconfig-workspace_rules}
@@ -3717,7 +3698,6 @@ Workspace padding (default: global)
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
 
 Permanent workspace application rules
-
 
 
 
