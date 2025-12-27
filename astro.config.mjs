@@ -11,6 +11,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "komorebi",
+      logo: {
+        src: "./src/assets/watermelon.svg",
+        alt: "komorebi",
+      },
       favicon: "/favicon.svg",
       social: [
         {
