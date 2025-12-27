@@ -5,13 +5,16 @@ Usage: resize-axis <AXIS> <SIZING>
 
 Arguments:
   <AXIS>
-          [possible values: horizontal, vertical, horizontal-and-vertical]
+          Possible values:
+          - horizontal:              Horizontal axis
+          - vertical:                Vertical axis
+          - horizontal-and-vertical: Both horizontal and vertical axes
 
   <SIZING>
           [possible values: increase, decrease]
 
 Options:
   -h, --help
-          Print help
+          Print help (see a summary with '-h')
 
 ```

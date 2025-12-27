@@ -1383,23 +1383,127 @@ Day Date Month Year format (8 September 2024)
 
 ### DefaultLayout {#defaultlayout}
 
-`string`
+`string` `enum`
 
-
+A predefined komorebi layout
 
 
 <details>
 <summary>Enum variants (9)</summary>
 
-- `"BSP"`
-- `"Columns"`
-- `"Rows"`
-- `"VerticalStack"`
-- `"HorizontalStack"`
-- `"UltrawideVerticalStack"`
-- `"Grid"`
-- `"RightMainVerticalStack"`
-- `"Scrolling"`
+
+---
+BSP Layout
+
+```
++-------+-----+
+|       |     |
+|       +--+--+
+|       |  |--|
++-------+--+--+
+```
+**Value:** `"BSP"`
+
+---
+Columns Layout
+
+```
++--+--+--+--+
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
++--+--+--+--+
+```
+**Value:** `"Columns"`
+
+---
+Rows Layout
+
+```
++-----------+
+|-----------|
+|-----------|
+|-----------|
++-----------+
+```
+**Value:** `"Rows"`
+
+---
+Vertical Stack Layout
+
+```
++-------+-----+
+|       |     |
+|       +-----+
+|       |     |
++-------+-----+
+```
+**Value:** `"VerticalStack"`
+
+---
+Horizontal Stack Layout
+
+```
++------+------+
+|             |
+|------+------+
+|      |      |
++------+------+
+```
+**Value:** `"HorizontalStack"`
+
+---
+Ultrawide Vertical Stack Layout
+
+```
++-----+-----------+-----+
+|     |           |     |
+|     |           +-----+
+|     |           |     |
+|     |           +-----+
+|     |           |     |
++-----+-----------+-----+
+```
+**Value:** `"UltrawideVerticalStack"`
+
+---
+Grid Layout
+
+```
++-----+-----+   +---+---+---+   +---+---+---+   +---+---+---+
+|     |     |   |   |   |   |   |   |   |   |   |   |   |   |
+|     |     |   |   |   |   |   |   |   |   |   |   |   +---+
++-----+-----+   |   +---+---+   +---+---+---+   +---+---|   |
+|     |     |   |   |   |   |   |   |   |   |   |   |   +---+
+|     |     |   |   |   |   |   |   |   |   |   |   |   |   |
++-----+-----+   +---+---+---+   +---+---+---+   +---+---+---+
+ 4 windows       5 windows       6 windows       7 windows
+```
+**Value:** `"Grid"`
+
+---
+Right Main Vertical Stack Layout
+
+```
++-----+-------+
+|     |       |
++-----+       |
+|     |       |
++-----+-------+
+```
+**Value:** `"RightMainVerticalStack"`
+
+---
+Scrolling Layout
+
+```
++--+--+--+--+--+--+
+|     |     |     |
+|     |     |     |
+|     |     |     |
++--+--+--+--+--+--+
+```
+**Value:** `"Scrolling"`
 
 </details>
 #### Usages
@@ -2906,7 +3010,7 @@ The desired starting position of the bar (0,0 = top left of the screen)
 
 `object`
 
-
+Rectangle dimensions
 
 
 <details>
@@ -2916,7 +3020,7 @@ The desired starting position of the bar (0,0 = top left of the screen)
 
 <Badge text="required" variant="success" /> `integer`
 
-
+Height of the rectangle (from the top point)
 
 
 
@@ -2926,7 +3030,7 @@ The desired starting position of the bar (0,0 = top left of the screen)
 
 <Badge text="required" variant="success" /> `integer`
 
-
+Left point of the rectangle
 
 
 
@@ -2936,7 +3040,7 @@ The desired starting position of the bar (0,0 = top left of the screen)
 
 <Badge text="required" variant="success" /> `integer`
 
-
+Width of the recentangle (from the left point)
 
 
 
@@ -2946,7 +3050,7 @@ The desired starting position of the bar (0,0 = top left of the screen)
 
 <Badge text="required" variant="success" /> `integer`
 
-
+Top point of the rectangle
 
 
 
