@@ -5,13 +5,17 @@ Usage: manage-rule <IDENTIFIER> <ID>
 
 Arguments:
   <IDENTIFIER>
-          [possible values: exe, class, title, path]
+          Possible values:
+          - exe:   Executable name
+          - class: Class
+          - title: Window title
+          - path:  Executable path
 
   <ID>
           Identifier as a string
 
 Options:
   -h, --help
-          Print help
+          Print help (see a summary with '-h')
 
 ```

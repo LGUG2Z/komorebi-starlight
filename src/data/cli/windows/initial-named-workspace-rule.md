@@ -5,7 +5,11 @@ Usage: initial-named-workspace-rule <IDENTIFIER> <ID> <WORKSPACE>
 
 Arguments:
   <IDENTIFIER>
-          [possible values: exe, class, title, path]
+          Possible values:
+          - exe:   Executable name
+          - class: Class
+          - title: Window title
+          - path:  Executable path
 
   <ID>
           Identifier as a string
@@ -15,6 +19,6 @@ Arguments:
 
 Options:
   -h, --help
-          Print help
+          Print help (see a summary with '-h')
 
 ```
