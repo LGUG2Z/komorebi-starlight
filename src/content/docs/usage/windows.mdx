@@ -1,0 +1,51 @@
+---
+title: Windows
+description: Manipulating windows
+---
+import PlatformLink from '../../../components/PlatformLink.astro';
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+<Tabs syncKey="platform">
+  <TabItem label="Windows">
+  </TabItem>
+
+  <TabItem label="macOS">
+  </TabItem>
+</Tabs>
+
+
+## Focus
+
+Windows can be focused in the following ways.
+
+### Relative Direction
+
+Windows can be focused in a relative direction using the <PlatformLink command="focus"/> command.
+
+### Cycle Direction
+
+Windows can be focused in a cyclic direction using the <PlatformLink command="cycle-focus" /> command.
+
+### Largest Tile
+
+The window at the largest tile can be focused using the <PlatformLink command="promote-focus" /> command.
+
+### Eager focus
+
+It is possible to attempt to focus the first window on any workspace matching an executable name using the <PlatformLink command="eager-focus" /> command.
+
+## Movement
+
+Windows can be moved in the following ways.
+
+### Relative Direction
+
+Windows can be moved in a relative direction using the <PlatformLink command="move"/> command.
+
+### Cycle Direction
+
+Windows can be moved in a cyclic direction using the <PlatformLink command="cycle-move" /> command.
+
+### Largest Tile
+
+Windows can be moved to the largest tile using the <PlatformLink command="promote-swap" /> command. This command is reversible.

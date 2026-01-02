@@ -43,7 +43,23 @@ export default defineConfig({
             },
             { label: "Quickstart", slug: "guides/quickstart" },
             { label: "Upgrades", slug: "guides/upgrades" },
+            { label: "Known Issues", slug: "guides/known-issues" },
             { label: "Uninstallation", slug: "guides/uninstallation" },
+          ],
+        },
+        {
+          label: "Usage",
+          items: [
+            { label: "Windows", slug: "usage/windows" }, // focusing, moving, resizing
+            { label: "Containers", slug: "usage/containers" }, // stacking
+            { label: "Workspaces", slug: "usage/workspaces" }, // send-to / move-to, padding, offsets, layouts, layout flips
+            { label: "Monitors", slug: "usage/monitors" }, // send-to / move-to, padding, offsets, move behavior
+            { label: "Layers", slug: "usage/layers" }, // floating vs tiling layer
+            { label: "Borders", slug: "usage/borders" }, // borders and colors
+            { label: "Themes", slug: "usage/themes" }, // themes for borders (and the bar)
+            { label: "Animations", slug: "usage/animations" }, // experimental animations
+            { label: "Wallpapers", slug: "usage/wallpapers" }, // wallpapers per monitor/workspace and themegen
+            { label: "Rules", slug: "usage/rules" }, // layout rules, behavior rules, matching rules, composite rules
           ],
         },
         {

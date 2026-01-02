@@ -32,3 +32,10 @@ This is currently a manual process - most days this shouldn't take more than
 
 If you haven't had a reply to your email within 24h you can reach out to me on
 [Discord](https://discord.gg/mGkn66PHkx).
+
+## Edge Cases on Windows
+
+There are always edge cases, and if you are using komorebi for personal use and
+think you have been caught up in one of them you can email me with a screenshot
+of the output from `dsregcmd /status` and a few lines about why the device you
+are using is enrolled in (BYOD) MDM and I can usually add an override for you.
