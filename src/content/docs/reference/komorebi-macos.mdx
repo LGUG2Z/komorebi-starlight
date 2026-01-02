@@ -298,6 +298,15 @@ Delta to resize windows by
 
 
 ---
+### tabbed_applications {#tabbed_applications}
+
+<Badge text="optional" variant="note" /> `array` `string`
+
+Identify applications which use native tabs for special handling
+
+
+
+---
 ### theme {#theme}
 
 <Badge text="optional" variant="note" /> [`KomorebiTheme`](#komorebitheme)
@@ -305,6 +314,15 @@ Delta to resize windows by
 Theme configuration options
 
 If a theme is specified, `border_colours` will have no effect
+
+
+
+---
+### titleless_applications {#titleless_applications}
+
+<Badge text="optional" variant="note" /> `array` `string`
+
+Identify applications which should be managed despite not reporting titles to the system
 
 
 
@@ -847,7 +865,6 @@ Custom Cubic Bézier function
 
 **Configuration:**
 - [`.animation.style`](#peranimationprefixconfig3)
-- [`.animation.style[*]`](#peranimationprefixconfig3)
 
 
 **Referenced by:**
