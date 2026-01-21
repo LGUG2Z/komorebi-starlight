@@ -31,6 +31,7 @@ export default defineConfig({
             { label: "Community", slug: "about/community" },
             { label: "Licensing", slug: "about/licensing" },
             { label: "Sponsorship", slug: "about/sponsorship" },
+            { label: "Expectations", slug: "about/expectations" },
           ],
         },
         {
@@ -50,9 +51,9 @@ export default defineConfig({
         {
           label: "Usage",
           items: [
-            { label: "Windows", slug: "usage/windows" }, // focusing, moving, resizing
-            { label: "Containers", slug: "usage/containers" }, // stacking
-            { label: "Workspaces", slug: "usage/workspaces" }, // send-to / move-to, padding, offsets, layouts, layout flips
+            { label: "Windows", slug: "usage/windows" },
+            { label: "Containers", slug: "usage/containers" },
+            { label: "Workspaces", slug: "usage/workspaces" }, // padding, offsets, layouts, layout flips
             { label: "Monitors", slug: "usage/monitors" }, // send-to / move-to, padding, offsets, move behavior
             { label: "Layers", slug: "usage/layers" }, // floating vs tiling layer
             { label: "Borders", slug: "usage/borders" }, // borders and colors
