@@ -34,7 +34,7 @@ The window at the largest tile can be focused using the <PlatformLink command="p
 
 It is possible to attempt to focus the first window on any workspace matching an executable name using the <PlatformLink command="eager-focus" /> command.
 
-## Movement
+## Movement on a Workspace
 
 Windows can be moved in the following ways.
 
@@ -49,3 +49,40 @@ Windows can be moved in a cyclic direction using the <PlatformLink command="cycl
 ### Largest Tile
 
 Windows can be moved to the largest tile using the <PlatformLink command="promote-swap" /> command. This command is reversible.
+
+## Movement Across Workspaces
+
+The commands covering movement of windows across workspaces in komorebi come in two flavors:
+
+- `move` - these commands move the focused window to a target workspace and then focus the target workspace
+- `send` - these commands move the focused window to a target workspace while remaining on the currently focused workspace
+
+### By Workspace Index
+
+The focused window can be moved or sent to a workspace on the focused monitor identified by an index using the <PlatformLink command="move-to-workspace"/> and <PlatformLink command="send-to-workspace"/> commands respectively.
+
+### Cycle Direction
+
+The focused window can be moved or sent to a workspace on the focused monitor in a cyclic direction using the <PlatformLink command="cycle-move-to-workspace"/> and <PlatformLink command="cycle-send-to-workspace"/> commands respectively.
+
+### By Monitor and Workspace Index
+
+The focused window can be moved or sent to a workspace on a specific monitor identified by monitor and workspace indicies using the <PlatformLink command="move-to-monitor-workspace"/> and <PlatformLink command="send-to-monitor-workspace"/> commands respectively.
+
+### By Name
+
+The focused window can be moved or sent to a workspace in a monitor-agnostic manner by name using the <PlatformLink command="move-to-named-workspace"/> and <PlatformLink command="send-to-named-workspace"/> commands respectively.
+
+### By Last Workspace
+
+The focused window can be moved or sent to a last focused workspace on the focused monitor using the <PlatformLink command="move-to-last-workspace"/> and <PlatformLink command="send-to-last-workspace"/> commands respectively.
+
+## Movement Across Monitors
+
+### By Monitor Index
+
+The focused window can be moved or sent the focused workspace at a monitor identified by index using the <PlatformLink command="move-to-monitor"/> and <PlatformLink command="send-to-monitor"/> commands respectively.
+
+### Cycle Direction
+
+The focused window can be moved or sent to the focused workspace of a monitor in a cyclic direction using the <PlatformLink command="cycle-move-to-monitor"/> and <PlatformLink command="cycle-send-to-monitor"/> commands respectively.

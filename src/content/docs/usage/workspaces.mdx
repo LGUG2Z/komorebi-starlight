@@ -3,4 +3,42 @@ title: Workspaces
 description: Configuring workspaces
 ---
 
-TODO
+import PlatformLink from '../../../components/PlatformLink.astro';
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+<Tabs syncKey="platform">
+  <TabItem label="Windows">
+  </TabItem>
+
+  <TabItem label="macOS">
+  </TabItem>
+</Tabs>
+
+
+## Focus
+
+Workspaces can be focused in the following ways.
+
+### By Index
+
+Workspaces can be focused by index on the focused monitor using the <PlatformLink command="focus-workspace"/> command, or by a mixture of monitor index and workspace index using the <PlatformLink command="focus-monitor-workspace"/> command.
+
+### By Name
+
+Workspaces can be focused in a monitor-agnostic manner by name using the <PlatformLink command="focus-named-workspace"/> command. All of your workspaces should have unique names. If two workspaces have the same name, the first match in the window manager state will be focused.
+
+### By Last Workspace
+
+The last focused workspace on the focused monitor can be focused using the <PlatformLink command="focus-last-workspace"/> command.
+
+### Across Multiple Monitors
+
+Workspaces can be focused by index across all monitors using the <PlatformLink command="focus-workspaces"/> command. This will focus the same workspace index on all monitors simultaneously, giving the feeling of a workspaces which span all monitors.
+
+## Movement
+
+Workspaces can be moved to other monitors in the following ways.
+
+### By Focus and Index
+
+The focused workspace can be moved to a monitor identified by an index using the <PlatformLink command="move-workspace-to-monitor"/> command.
