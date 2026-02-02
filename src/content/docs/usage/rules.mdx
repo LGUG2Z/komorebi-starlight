@@ -126,40 +126,51 @@ Workspace rules (including initial workspace rules) can be enforced in realtime 
 
 <KomorebiConfigPlatformLink command="manage_rules" text="Manage rules" /> are used to identify applications or windows which should be forcibly managed. This is typically a nuclear option for extremely uncooperative applications.
 
-<Tabs syncKey="platform">
-  <TabItem label="Windows">
+### Tray and Multi-Window Applications
+:::note[Windows]
+These rules are only applicable to komorebi for Windows
+:::
 
-  ### Tray and Multi-Window Applications
+<KomorebiConfigPlatformLink command="tray_and_multi_window_applications" text="Tray and multi-window application rules" /> are used to identify multi-window applications and applications which minmize to the system tray.
 
-  <KomorebiConfigPlatformLink command="tray_and_multi_window_applications" text="Tray and multi-window application rules" /> are used to identify multi-window applications and applications which minmize to the system tray.
+### Slow Application Identifier Rules
+:::note[Windows]
+These rules are only applicable to komorebi for Windows
+:::
 
-  ### Slow Application Identifier Rules
+<KomorebiConfigPlatformLink command="slow_application_identifiers" text="Slow application identifier rules" /> are used to identify applications which are slow to send initial event notifications.
 
-  <KomorebiConfigPlatformLink command="slow_application_identifiers" text="Slow application identifier rules" /> are used to identify applications which are slow to send initial event notifications.
+### Layered Applications
+:::note[Windows]
+These rules are only applicable to komorebi for Windows
+:::
 
-  ### Layered Applications
+<KomorebiConfigPlatformLink command="layered_applications" text="Layered application rules" /> are used to identify applications have the `WS_EX_LAYERED` extended window style, but should still be managed.
 
-  <KomorebiConfigPlatformLink command="layered_applications" text="Layered application rules" /> are used to identify applications have the `WS_EX_LAYERED` extended window style, but should still be managed.
+### Object Name Change Applications
+:::note[Windows]
+These rules are only applicable to komorebi for Windows
+:::
 
-  ### Object Name Change Applications
+<KomorebiConfigPlatformLink command="object_name_change_applications" text="Object name change application rules" /> are used to identify applications which send `EVENT_OBJECT_NAMECHANGE` on launch. This is very rare, but includes popular applications such as Firefox (and derivatives), as well as JetBrains IDEs.
 
-  <KomorebiConfigPlatformLink command="object_name_change_applications" text="Object name change application rules" /> are used to identify applications which send `EVENT_OBJECT_NAMECHANGE` on launch. This is very rare, but includes popular applications such as Firefox (and derivatives), as well as JetBrains IDEs.
+### Slow Applications
+:::note[Windows]
+These rules are only applicable to komorebi for Windows
+:::
 
-  ### Slow Applications
+<KomorebiConfigPlatformLink command="slow_application_identifiers" text="Slow application identifier rules" /> are used to identify applications which are slow to send initial event notifications.
 
-  <KomorebiConfigPlatformLink command="slow_application_identifiers" text="Slow application identifier rules" /> are used to identify applications which are slow to send initial event notifications.
+### Tabbed Applications
+:::note[macOS]
+These rules are only applicable to komorebi for Mac
+:::
 
-  </TabItem>
+<KomorebiConfigPlatformLink command="tabbed_applications" text="Tabbed application rules" /> are used to identify applications which use native macOS tabs (Finder, Ghostty etc.) - these are identified using their application name.
 
-  <TabItem label="macOS">
+### Titleless Applications
+:::note[macOS]
+These rules are only applicable to komorebi for Mac
+:::
 
-  ### Tabbed Applications
-
-  <KomorebiConfigPlatformLink command="tabbed_applications" text="Tabbed application rules" /> are used to identify applications which use native macOS tabs (Finder, Ghostty etc.) - these are identified using their application name.
-
-  ### Titleless Applications
-
-  <KomorebiConfigPlatformLink command="titleless_applications" text="Titleless application rules" /> are used to identify applications which launch without a title - these are identified using their application name.
-
-  </TabItem>
-</Tabs>
+<KomorebiConfigPlatformLink command="titleless_applications" text="Titleless application rules" /> are used to identify applications which launch without a title - these are identified using their application name.
