@@ -1,17 +1,17 @@
 ---
-// src/components/PlatformLink.astro
+// src/components/KomorebiConfigPlatformLink.astro
 interface Props {
   command: string;
   text?: string;
 }
 
 const { command, text } = Astro.props;
-const displayText = text || `komorebic ${command}`;
+const displayText = text || `${command}`;
 ---
 <a
-  class="platform-link"
+  class="config-platform-link"
   data-command={command}
-  href={`/reference/komorebic-macos/#${command}`}
+  href={`/reference/komorebi-macos/#${command}`}
 >{displayText}</a>
 
 <script>
@@ -27,9 +27,9 @@ const displayText = text || `komorebic ${command}`;
 
   function updateLinks() {
     const platform = getPlatform();
-    document.querySelectorAll('.platform-link').forEach(link => {
+    document.querySelectorAll('.config-platform-link').forEach(link => {
       const cmd = link.getAttribute('data-command');
-      link.setAttribute('href', `/reference/komorebic-${platform}/#${cmd}`);
+      link.setAttribute('href', `/reference/komorebi-${platform}/#${cmd}`);
     });
   }
 

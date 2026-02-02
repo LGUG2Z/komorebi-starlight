@@ -3,7 +3,8 @@ title: Workspaces
 description: Configuring workspaces
 ---
 
-import PlatformLink from '../../../components/PlatformLink.astro';
+import KomorebicPlatformLink from '../../../components/KomorebicPlatformLink.astro';
+import KomorebiConfigPlatformLink from '../../../components/KomorebiConfigPlatformLink.astro';
 import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
 
 <Tabs syncKey="platform">
@@ -21,19 +22,23 @@ Workspaces can be focused in the following ways.
 
 ### By Index
 
-Workspaces can be focused by index on the focused monitor using the <PlatformLink command="focus-workspace"/> command, or by a mixture of monitor index and workspace index using the <PlatformLink command="focus-monitor-workspace"/> command.
+Workspaces can be focused by index on the focused monitor using the <KomorebicPlatformLink command="focus-workspace"/> command, or by a mixture of monitor index and workspace index using the <KomorebicPlatformLink command="focus-monitor-workspace"/> command.
 
 ### By Name
 
-Workspaces can be focused in a monitor-agnostic manner by name using the <PlatformLink command="focus-named-workspace"/> command. All of your workspaces should have unique names. If two workspaces have the same name, the first match in the window manager state will be focused.
+Workspaces can be focused in a monitor-agnostic manner by name using the <KomorebicPlatformLink command="focus-named-workspace"/> command. All of your workspaces should have unique names. If two workspaces have the same name, the first match in the window manager state will be focused.
 
-### By Last Workspace
+### Cycle Direction
 
-The last focused workspace on the focused monitor can be focused using the <PlatformLink command="focus-last-workspace"/> command.
+Workspaces can be focused in a cyclic direction using the <KomorebicPlatformLink command="cycle-workspace" /> command.
+
+### Last Workspace
+
+The last focused workspace on the focused monitor can be focused using the <KomorebicPlatformLink command="focus-last-workspace"/> command.
 
 ### Across Multiple Monitors
 
-Workspaces can be focused by index across all monitors using the <PlatformLink command="focus-workspaces"/> command. This will focus the same workspace index on all monitors simultaneously, giving the feeling of a workspaces which span all monitors.
+Workspaces can be focused by index across all monitors using the <KomorebicPlatformLink command="focus-workspaces"/> command. This will focus the same workspace index on all monitors simultaneously, giving the feeling of a workspaces which span all monitors.
 
 ## Movement
 
@@ -41,18 +46,4 @@ Workspaces can be moved to other monitors in the following ways.
 
 ### By Focus and Index
 
-The focused workspace can be moved to a monitor identified by an index using the <PlatformLink command="move-workspace-to-monitor"/> command.
-
-## Layouts
-### Layout Rules
-TODO
-
-## Padding
-### Workspace Padding
-### Container Padding
-
-TODO
-
-## Offsets
-
-TODO
+The focused workspace can be moved to a monitor identified by an index using the <KomorebicPlatformLink command="move-workspace-to-monitor"/> command.

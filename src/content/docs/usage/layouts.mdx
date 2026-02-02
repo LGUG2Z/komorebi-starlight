@@ -1,0 +1,60 @@
+---
+title: Layouts
+description: Configuring layouts
+---
+
+import KomorebicPlatformLink from '../../../components/KomorebicPlatformLink.astro';
+import KomorebiConfigPlatformLink from '../../../components/KomorebiConfigPlatformLink.astro';
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+<Tabs syncKey="platform">
+  <TabItem label="Windows">
+  </TabItem>
+
+  <TabItem label="macOS">
+  </TabItem>
+</Tabs>
+
+## Layout Selection
+
+<KomorebiConfigPlatformLink command="defaultlayout" text="Layouts"/> are selected using the <KomorebiConfigPlatformLink command="workspaceconfig-layout" text="layout configuration option"/> for each workspace and can be pre-configured as <KomorebiConfigPlatformLink command="workspaceconfig-layout_flip" text="layout_flip" text="flipped on specific axis"/>.
+
+Certain layouts have <KomorebiConfigPlatformLink command="workspaceconfig-layout_options" text="options"/> which adjust how they arrange containers on a workspace.
+
+The layout for the focused workspace switched in realtime using the <KomorebicPlatformLink command="change-layout"/> command.
+
+The layout for the focused workspace can be cycled in realtime using the <KomorebicPlatformLink command="cycle-layout"/> command.
+
+The layout for the a workspace identified by monitor and workspace index can be set in realtime using the <KomorebicPlatformLink command="workspace-layout"/> command.
+
+The layout for the a workspace by name can be set in realtime using the <KomorebicPlatformLink command="named-workspace-layout"/> command.
+
+## Layout Rules
+
+<KomorebiConfigPlatformLink command="workspaceconfig-layout_rules" text="Layout rules"/> are used to automatically change the layout on a specified workspace when a threshold of window containers is met.
+
+```json
+{
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "workspace with layout rules",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "UltrawideVerticalStack",
+            "7": "Grid"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+In the above example
+* When there are between 1 and 3 window containers on the workspace, the BSP layout will be applied
+* When there are between 4 and 6 window containers on the workspace, the UltrawideVerticalStack layout will be applied
+* When there are between 7 or more window containers on the workspace, the Grid layout will be applied
+
+Layout rules can be cleared from a workspace by monitor and workspace index using the <KomorebicPlatformLink command="clear-workspace-layout-rules"/> command, and by workspace name using the <KomorebiConfigPlatformLink command="clear-named-workspace-layout-rules"/> command.

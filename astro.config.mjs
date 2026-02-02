@@ -53,9 +53,11 @@ export default defineConfig({
           items: [
             { label: "Windows", slug: "usage/windows" },
             { label: "Containers", slug: "usage/containers" },
-            { label: "Workspaces", slug: "usage/workspaces" }, // padding, offsets, layouts, layout flips
-            { label: "Monitors", slug: "usage/monitors" }, // send-to / move-to, padding, offsets, move behavior
-            { label: "Layers", slug: "usage/layers" }, // floating vs tiling layer
+            { label: "Workspaces", slug: "usage/workspaces" },
+            { label: "Monitors", slug: "usage/monitors" },
+            { label: "Layouts", slug: "usage/layouts" },
+            { label: "Padding", slug: "usage/padding" },
+            { label: "Layers", slug: "usage/layers" },
             { label: "Borders", slug: "usage/borders" }, // borders and colors
             { label: "Themes", slug: "usage/themes" }, // themes for borders (and the bar)
             { label: "Animations", slug: "usage/animations" }, // experimental animations
