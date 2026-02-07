@@ -1078,7 +1078,6 @@ Custom Cubic Bézier function
 
 **Configuration:**
 - [`.animation.style`](#peranimationprefixconfig3)
-- [`.animation.style[*]`](#peranimationprefixconfig3)
 
 
 **Referenced by:**
@@ -7847,10 +7846,40 @@ Options for specific layouts
 
 
 <details open>
-<summary>Properties (2)</summary>
+<summary>Properties (4)</summary>
 
 
 
+#### column_ratios {#layoutoptions-column_ratios}
+
+<Badge text="optional" variant="note" /> `array` <Badge text="optional" variant="note" /> `number`
+
+Column width ratios (up to MAX_RATIOS values between 0.1 and 0.9)
+
+- Used by Columns layout: ratios for each column width
+- Used by Grid layout: ratios for column widths
+- Used by BSP, VerticalStack, RightMainVerticalStack: column_ratios[0] as primary split ratio
+- Used by HorizontalStack: column_ratios[0] as primary split ratio (top area height)
+- Used by UltrawideVerticalStack: column_ratios[0] as center ratio, column_ratios[1] as left ratio
+
+Columns without a ratio share remaining space equally.
+Example: `[0.3, 0.4, 0.3]` for 30%-40%-30% columns
+
+
+
+- **Min items:** 5
+- **Max items:** 5
+<details open>
+<summary>Array Items</summary>
+
+<Badge text="optional" variant="note" /> `number`
+
+
+
+
+- **Format:** `float`
+
+</details>
 #### grid {#layoutoptions-grid}
 
 <Badge text="optional" variant="note" /> [`GridLayoutOptions`](#gridlayoutoptions)
@@ -7858,6 +7887,33 @@ Options for specific layouts
 Options related to the Grid layout
 
 
+#### row_ratios {#layoutoptions-row_ratios}
+
+<Badge text="optional" variant="note" /> `array` <Badge text="optional" variant="note" /> `number`
+
+Row height ratios (up to MAX_RATIOS values between 0.1 and 0.9)
+
+- Used by Rows layout: ratios for each row height
+- Used by Grid layout: ratios for row heights
+
+Rows without a ratio share remaining space equally.
+Example: `[0.5, 0.5]` for 50%-50% rows
+
+
+
+- **Min items:** 5
+- **Max items:** 5
+<details open>
+<summary>Array Items</summary>
+
+<Badge text="optional" variant="note" /> `number`
+
+
+
+
+- **Format:** `float`
+
+</details>
 #### scrolling {#layoutoptions-scrolling}
 
 <Badge text="optional" variant="note" /> [`ScrollingLayoutOptions`](#scrollinglayoutoptions)
