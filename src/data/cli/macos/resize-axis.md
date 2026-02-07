@@ -11,7 +11,9 @@ Arguments:
           - horizontal-and-vertical: Both horizontal and vertical axes
 
   <SIZING>
-          [possible values: increase, decrease]
+          Possible values:
+          - increase: Increase
+          - decrease: Decrease
 
 Options:
   -h, --help
