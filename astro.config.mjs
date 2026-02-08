@@ -69,6 +69,10 @@ export default defineConfig({
           label: "Reference",
           autogenerate: { directory: "reference" },
         },
+        {
+          label: "Common Workflows",
+          autogenerate: { directory: "common-workflows" },
+        },
       ],
     }),
   ],
