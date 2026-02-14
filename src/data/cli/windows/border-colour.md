@@ -21,7 +21,9 @@ Options:
           - monocle:          Monocle container
           - unfocused:        Unfocused window
           - unfocused-locked: Unfocused locked container
-          - floating:         Floating window[default: single]
+          - floating:         Floating window
+          
+          [default: single]
 
   -h, --help
           Print help (see a summary with '-h')
