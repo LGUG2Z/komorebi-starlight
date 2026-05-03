@@ -8201,7 +8201,7 @@ Storage widget configuration
 
 
 <details open>
-<summary>Properties (7)</summary>
+<summary>Properties (8)</summary>
 
 
 #### enable {#storageconfig-enable}
@@ -8274,6 +8274,13 @@ Show removable disks
 
 **Default:** `true`
 
+#### storage_display_name {#storageconfig-storage_display_name}
+
+<Badge text="optional" variant="note" /> [`StorageDisplayName`](#storagedisplayname)
+
+Storage display name
+
+
 
 </details>
 #### Usages
@@ -8281,6 +8288,89 @@ Show removable disks
 
 **Referenced by:**
 - [`WidgetConfig`](#widgetconfig)
+
+
+
+---
+
+
+### StorageDisplayName {#storagedisplayname}
+
+
+
+
+
+
+<details open>
+<summary>Enum variants (4)</summary>
+
+
+---
+
+#### Mount
+
+
+Display label as mount point eg. /
+
+
+
+
+**Value:** `"Mount"`
+
+
+
+
+---
+
+#### Name
+
+
+Display label as name eg. Macintosh HD
+
+
+
+
+**Value:** `"Name"`
+
+
+
+
+---
+
+#### MountAndName
+
+
+Display label as mount then name eg. / Macintosh HD
+
+
+
+
+**Value:** `"MountAndName"`
+
+
+
+
+---
+
+#### NameAndMount
+
+
+Display label as name then mount eg. Macintosh HD /
+
+
+
+
+**Value:** `"NameAndMount"`
+
+
+
+
+</details>
+#### Usages
+
+
+**Referenced by:**
+- [`StorageConfig`](#storageconfig)
 
 
 

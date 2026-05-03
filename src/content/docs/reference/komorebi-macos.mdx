@@ -250,6 +250,24 @@ Individual window floating rules
 
 
 ---
+### layout_defaults {#layout_defaults}
+
+<Badge text="optional" variant="note" /> `object`
+
+Per-layout default options and rules, keyed by layout name.
+Applied as fallback when a workspace does not define its own layout_options or layout_options_rules.
+If a workspace defines either setting, all global defaults for that layout are completely replaced.
+
+<details open>
+<summary>Additional Properties</summary>
+
+[`LayoutDefaultEntry`](#layoutdefaultentry)
+
+
+
+</details>
+
+---
 ### manage_rules {#manage_rules}
 
 <Badge text="optional" variant="note" /> `array` [`MatchingRule`](#matchingrule)
@@ -6738,7 +6756,10 @@ Maximum number of rows per grid column
 #### Usages
 
 **Configuration:**
+- [`.layout_defaults[*].layout_options.grid`](#layoutoptions-grid)
+- [`.layout_defaults[*].layout_options_rules[*].grid`](#layoutoptions-grid)
 - [`.monitors[].workspaces[].layout_options.grid`](#layoutoptions-grid)
+- [`.monitors[].workspaces[].layout_options_rules[*].grid`](#layoutoptions-grid)
 
 
 **Referenced by:**
@@ -7244,6 +7265,53 @@ Unfocused locked window border colour
 ---
 
 
+### LayoutDefaultEntry {#layoutdefaultentry}
+
+Per-layout default options entry for the `layout_defaults` global setting.
+Contains both base layout options and threshold-based layout options rules.
+
+
+<details open>
+<summary>Properties (2)</summary>
+
+
+
+#### layout_options {#layoutdefaultentry-layout_options}
+
+<Badge text="optional" variant="note" /> [`LayoutOptions`](#layoutoptions)
+
+Default layout options for this layout
+
+
+#### layout_options_rules {#layoutdefaultentry-layout_options_rules}
+
+<Badge text="optional" variant="note" /> `object`
+
+Threshold-based layout options rules in the format of threshold => options.
+When container count >= threshold, the highest matching threshold's options
+fully replace the base `layout_options`.
+
+
+
+
+**Key:** `"<integer>"` **→** [`LayoutOptions`](#layoutoptions)
+
+
+
+
+
+</details>
+#### Usages
+
+**Configuration:**
+- [`.layout_defaults[*]`](#layout_defaults)
+
+
+
+
+---
+
+
 ### LayoutOptions {#layoutoptions}
 
 Options for specific layouts
@@ -7330,10 +7398,14 @@ Options related to the Scrolling layout
 #### Usages
 
 **Configuration:**
+- [`.layout_defaults[*].layout_options`](#layoutdefaultentry-layout_options)
+- [`.layout_defaults[*].layout_options_rules[*]`](#layoutdefaultentry-layout_options_rules)
 - [`.monitors[].workspaces[].layout_options`](#workspaceconfig-layout_options)
+- [`.monitors[].workspaces[].layout_options_rules[*]`](#workspaceconfig-layout_options_rules)
 
 
 **Referenced by:**
+- [`LayoutDefaultEntry`](#layoutdefaultentry)
 - [`WorkspaceConfig`](#workspaceconfig)
 
 
@@ -8161,6 +8233,7 @@ Top point of the rectangle
 - [`.monitors[].window_based_work_area_offset`](#monitorconfig-window_based_work_area_offset)
 - [`.monitors[].work_area_offset`](#monitorconfig-work_area_offset)
 - [`.monitors[].workspaces[].work_area_offset`](#workspaceconfig-work_area_offset)
+- [`.monitors[].workspaces[].work_area_offset_rules[*]`](#workspaceconfig-work_area_offset_rules)
 
 
 **Referenced by:**
@@ -8285,7 +8358,10 @@ With an odd number of visible columns, keep the focused window column centered
 #### Usages
 
 **Configuration:**
+- [`.layout_defaults[*].layout_options.scrolling`](#layoutoptions-scrolling)
+- [`.layout_defaults[*].layout_options_rules[*].scrolling`](#layoutoptions-scrolling)
 - [`.monitors[].workspaces[].layout_options.scrolling`](#layoutoptions-scrolling)
+- [`.monitors[].workspaces[].layout_options_rules[*].scrolling`](#layoutoptions-scrolling)
 
 
 **Referenced by:**
@@ -8632,7 +8708,7 @@ Workspace configuration
 
 
 <details open>
-<summary>Properties (17)</summary>
+<summary>Properties (19)</summary>
 
 
 #### name {#workspaceconfig-name}
@@ -8711,6 +8787,23 @@ Specify an axis on which to flip the selected layout
 Layout-specific options
 
 
+#### layout_options_rules {#workspaceconfig-layout_options_rules}
+
+<Badge text="optional" variant="note" /> `object`
+
+Threshold-based layout options rules in the format of threshold => options.
+When container count >= threshold, the highest matching threshold's options
+fully replace the base `layout_options`.
+This follows the same threshold logic as `layout_rules`.
+
+
+
+
+**Key:** `"<integer>"` **→** [`LayoutOptions`](#layoutoptions)
+
+
+
+
 #### layout_rules {#workspaceconfig-layout_rules}
 
 <Badge text="optional" variant="note" /> `object`
@@ -8771,6 +8864,20 @@ Window container behaviour rules in the format of threshold => behaviour
 <Badge text="optional" variant="note" /> [`Rect`](#rect)
 
 Workspace specific work area offset
+
+
+#### work_area_offset_rules {#workspaceconfig-work_area_offset_rules}
+
+<Badge text="optional" variant="note" /> `object`
+
+Work area offset rules in the format of threshold => Rect (default: None)
+
+
+
+
+**Key:** `"<integer>"` **→** [`Rect`](#rect)
+
+
 
 
 #### workspace_padding {#workspaceconfig-workspace_padding}
